@@ -21,15 +21,15 @@
   },
   "professors": {
     "alanGrant": {
-      "name": "Prof. Alan Grant",
+      "name": "艾伦·格兰特教授",
       "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoYUYWzjaimkgnR6_eDlLikk4RvlcD2DMsLvz_A-h1BnZWlTlMIctb3f-20Xr8KGxTVeeFEfdudyD5YoVXQrJTQCFHTIfNLYGf6_2ZoXwxsqtSUtlQMxAqLS7C8Bpx7wLhuZS9K-EkAtNDNGww0kdgvnuDEKPRNDX3EYPOrK5Ei7gTZGtWV7-O2cJKk3k8GBS0jom2aPhW44xv0Dc2XQv26kWvNCEcOXBkYVSjymXPf5Polw5N3RGHtg2d5Ex1-pRwHsXdT20o9bI"
     },
     "rivera": {
-      "name": "Prof. Rivera",
+      "name": "里维拉教授",
       "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAP3VWgfGl63LDNPS0uReLqf3a8d3w_VCnFhtaD-5vBOCZMZINtTLJpckx1XkqkIZddIFJanPy19Vv6v2rFjZ9_NDj4DBtKhcayyqFSiX25mjL2j2aiz28aYM7qQ-LaOIcI01W2u3xYMmpxm4_1ken_NR1H3RD0XapEdcz82D1PuTz1uWNdpwkXJskv8ZCf5Rd3zfBJCUi4rbaPmD9ZoqosE-glZb4p3_aoNptTM9QWXClFSGAIm7r7hlAIToGvAopRmUAz6Qy1uAc"
     },
     "smith": {
-      "name": "Prof. Smith",
+      "name": "史密斯教授",
       "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuB1FfK5bAJhgZQq1F90Tq48rOstm895oz3B_OWiVCPsPttXlQrxouI2rubAI8gsZ-D_oNNOYez2fdEHr3gfIAs5iPVgZF_SGpVF-_dycY7aeA0i7Dz-foh7bVM52-MoJBqraNS27f8aCtkpb3sB5bLEq1I-m-3PwsqeJzvos6mmcGGoi64DDIm6mrnPN6feYLK8RR3bOv2r6nLEIqwSnvLTZpz7ndgy15X8Jcb7lr_0c_hnjaeAQXFBEIWg7LoymPAu-mxQAJvBhGg"
     }
   },

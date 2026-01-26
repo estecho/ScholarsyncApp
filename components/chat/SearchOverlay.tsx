@@ -34,7 +34,7 @@ export default function SearchOverlay() {
       title: "Project_Outline_Draft.docx",
       subtitle: "Word • 1.8 MB",
       matchPercentage: 65,
-      matchLabel: "Low Match",
+                      matchLabel: "低匹配",
       icon: "description",
       iconBgColor: "bg-blue-50",
       iconColor: "text-blue-600",
@@ -45,7 +45,7 @@ export default function SearchOverlay() {
       title: "Discussion about presentation",
       subtitle: "CS 101 Group • 3 days ago",
       matchPercentage: 58,
-      matchLabel: "Low Match",
+                      matchLabel: "低匹配",
       icon: "forum",
       iconBgColor: "bg-purple-50",
       iconColor: "text-purple-600",
@@ -177,7 +177,7 @@ export default function SearchOverlay() {
                         handleSearch();
                       }
                     }}
-                    placeholder="Search messages..."
+                    placeholder="搜索消息..."
                   />
                   <button
                     onClick={handleSearch}
@@ -195,7 +195,7 @@ export default function SearchOverlay() {
                   </button>
                   <button className="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary/10 dark:bg-primary/20 backdrop-blur-md rounded-full border border-primary/20 shadow-sm cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all active:scale-95">
                     <span className="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
-                    <span className="text-primary text-sm font-semibold">Last 7 Days</span>
+                    <span className="text-primary text-sm font-semibold">最近 7 天</span>
                   </button>
                   <button className="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary/10 dark:bg-primary/20 backdrop-blur-md rounded-full border border-primary/20 shadow-sm cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all active:scale-95">
                     <span className="material-symbols-outlined text-primary text-[18px]">attachment</span>
@@ -219,7 +219,7 @@ export default function SearchOverlay() {
                         <span className="material-symbols-outlined text-[#EA4335] text-[28px]">slideshow</span>
                       </div>
                       <div className="flex flex-col">
-                        <h3 className="text-[#0d121b] dark:text-white font-bold text-lg leading-tight">Group_Presentation_v2.pptx</h3>
+                        <h3 className="text-[#0d121b] dark:text-white font-bold text-lg leading-tight">小组演示_v2.pptx</h3>
                         <p className="text-gray-500 text-xs mt-1 font-medium uppercase tracking-wide">PowerPoint • 4.2 MB</p>
                       </div>
                     </div>
@@ -230,12 +230,12 @@ export default function SearchOverlay() {
                   <div className="bg-background-light dark:bg-gray-800/80 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
                     <div className="flex items-center gap-2 mb-1.5">
                       <span className="material-symbols-outlined text-gray-400 text-[16px]">forum</span>
-                      <span className="text-gray-600 dark:text-gray-300 text-xs font-semibold">CS 101 Group</span>
+                      <span className="text-gray-600 dark:text-gray-300 text-xs font-semibold">CS 101 小组</span>
                       <span className="text-gray-400 text-[10px]">•</span>
-                      <span className="text-gray-400 text-xs">2 days ago</span>
+                      <span className="text-gray-400 text-xs">2 天前</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 text-sm italic line-clamp-2">
-                      "Here is the draft for the presentation, please review slides 4-6..."
+                      "这是演示文稿的草稿，请查看第 4-6 页幻灯片..."
                     </p>
                   </div>
                   <button
@@ -243,7 +243,7 @@ export default function SearchOverlay() {
                     className="w-full h-11 bg-primary hover:bg-blue-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 transition-all active:scale-[0.98]"
                   >
                     <span className="material-symbols-outlined text-[20px]">open_in_new</span>
-                    Open File
+                    打开文件
                   </button>
                 </motion.div>
 
@@ -348,7 +348,7 @@ export default function SearchOverlay() {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search messages..."
+                      placeholder="搜索消息..."
                     />
                     <button className="flex items-center justify-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
                       <span className="material-symbols-outlined text-[20px]">mic</span>
@@ -361,18 +361,18 @@ export default function SearchOverlay() {
                   <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x">
                     <div className="flex items-center gap-1.5 pl-2 pr-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full shrink-0 snap-start animate-[fadeIn_0.3s_ease-out]">
                       <span className="material-symbols-outlined text-primary text-[18px]">person</span>
-                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">Sender:</span>
+                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">发送者：</span>
                       <span className="text-sm font-semibold text-primary">Alex</span>
                     </div>
                     <div className="flex items-center gap-1.5 pl-2 pr-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full shrink-0 snap-start animate-[fadeIn_0.4s_ease-out]">
                       <span className="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
-                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">Time:</span>
-                      <span className="text-sm font-semibold text-primary">Last 7 Days</span>
+                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">时间：</span>
+                      <span className="text-sm font-semibold text-primary">最近 7 天</span>
                     </div>
                     <div className="flex items-center gap-1.5 pl-2 pr-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full shrink-0 snap-start animate-[fadeIn_0.5s_ease-out]">
                       <span className="material-symbols-outlined text-primary text-[18px]">attach_file</span>
-                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">Type:</span>
-                      <span className="text-sm font-semibold text-primary">Documents</span>
+                      <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider">类型：</span>
+                      <span className="text-sm font-semibold text-primary">文档</span>
                     </div>
                   </div>
                 </div>
@@ -381,8 +381,8 @@ export default function SearchOverlay() {
                 <div className="flex flex-col gap-4 overflow-y-auto pb-32 no-scrollbar">
                   {/* Best Match */}
                   <div className="flex justify-between items-end px-1" onClick={(e) => e.stopPropagation()}>
-                    <h2 className="text-sm font-bold text-slate-500 uppercase tracking-wide">Best Match</h2>
-                    <span className="text-xs text-primary font-medium">AI Confidence: 98%</span>
+                    <h2 className="text-sm font-bold text-slate-500 uppercase tracking-wide">最佳匹配</h2>
+                    <span className="text-xs text-primary font-medium">AI 置信度：98%</span>
                   </div>
                   <div 
                     className="glass-panel rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
@@ -399,13 +399,13 @@ export default function SearchOverlay() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex justify-between items-start">
-                          <h3 className="text-base font-bold text-slate-900 dark:text-white truncate pr-2">Lecture_Notes_v2.pdf</h3>
-                          <span className="text-xs text-slate-400 whitespace-nowrap">2d ago</span>
+                          <h3 className="text-base font-bold text-slate-900 dark:text-white truncate pr-2">课程笔记_v2.pdf</h3>
+                          <span className="text-xs text-slate-400 whitespace-nowrap">2 天前</span>
                         </div>
                         <p className="text-xs text-slate-500 font-medium mb-3 mt-0.5 flex items-center gap-1">
                           2.4 MB
                           <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-                          Shared in "Study Group A"
+                          在"学习小组 A"中分享
                         </p>
                         {/* Context Snippet */}
                         <div className="bg-white/60 dark:bg-white/5 rounded-lg p-3 border border-white/50 dark:border-white/10 relative mt-2">
@@ -413,7 +413,7 @@ export default function SearchOverlay() {
                           <div className="flex gap-2">
                             <div className="w-1 bg-primary/30 rounded-full h-auto"></div>
                             <p className="text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
-                              "...here are the <span className="bg-yellow-200/50 dark:bg-yellow-500/30 text-slate-900 dark:text-white font-semibold px-0.5 rounded">notes</span> you asked for regarding the mid-terms..."
+                              "...这是您要的关于期中考试的<span className="bg-yellow-200/50 dark:bg-yellow-500/30 text-slate-900 dark:text-white font-semibold px-0.5 rounded">笔记</span>..."
                             </p>
                           </div>
                         </div>
@@ -424,16 +424,16 @@ export default function SearchOverlay() {
                         onClick={handleOpenFile}
                         className="flex-1 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20"
                       >
-                        Open File
+                        打开文件
                       </button>
                       <button className="px-4 py-2 rounded-lg bg-white dark:bg-white/10 border border-slate-200/50 dark:border-slate-600 text-slate-700 dark:text-white text-sm font-medium hover:bg-slate-50 dark:hover:bg-white/20 transition-colors">
-                        Jump to Chat
+                        跳转到聊天
                       </button>
                     </div>
                   </div>
 
                   {/* Other Related Files */}
-                  <h2 className="text-sm font-bold text-slate-500 uppercase tracking-wide mt-4 px-1" onClick={(e) => e.stopPropagation()}>Other Related Files</h2>
+                  <h2 className="text-sm font-bold text-slate-500 uppercase tracking-wide mt-4 px-1" onClick={(e) => e.stopPropagation()}>其他相关文件</h2>
                   <div 
                     className="glass-panel rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:bg-white/40 dark:hover:bg-white/10 transition-colors"
                     onClick={(e) => e.stopPropagation()}
@@ -442,8 +442,8 @@ export default function SearchOverlay() {
                       <span className="material-symbols-outlined text-blue-600 text-[24px]">description</span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">Project_Outline_Draft.docx</p>
-                      <p className="text-xs text-slate-500 truncate">Sent by Alex • 5 days ago</p>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">项目大纲_草稿.docx</p>
+                      <p className="text-xs text-slate-500 truncate">Alex 发送 • 5 天前</p>
                     </div>
                     <span className="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
                   </div>
@@ -455,8 +455,8 @@ export default function SearchOverlay() {
                       <span className="material-symbols-outlined text-orange-500 text-[24px]">image</span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">Whiteboard_Session_3.jpg</p>
-                      <p className="text-xs text-slate-500 truncate">Sent by Alex • 6 days ago</p>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">白板会议_3.jpg</p>
+                      <p className="text-xs text-slate-500 truncate">Alex 发送 • 6 天前</p>
                     </div>
                     <span className="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
                   </div>

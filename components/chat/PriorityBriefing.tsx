@@ -15,7 +15,7 @@ export default function PriorityBriefing({ items }: PriorityBriefingProps) {
             <span className="material-symbols-outlined text-primary" style={{ fontSize: "20px" }}>
               auto_awesome
             </span>
-            {items.length} Priorities Today
+            今日 {items.length} 项优先事项
           </h2>
         </div>
         <div className="flex flex-col gap-2.5">

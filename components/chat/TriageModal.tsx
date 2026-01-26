@@ -71,10 +71,10 @@ export default function TriageModal({ isOpen, onClose, onExecute }: TriageModalP
                   <span className="material-symbols-outlined text-[32px] drop-shadow-sm">auto_awesome</span>
                 </div>
                 <h3 className="font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-                  AI Inbox Triage
+                  AI 收件箱整理
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-slate-500 dark:text-slate-400 max-w-[260px]">
-                  <span className="font-bold text-primary dark:text-blue-400">150</span> Low-priority messages found.
+                  发现 <span className="font-bold text-primary dark:text-blue-400">150</span> 条低优先级消息。
                 </p>
               </div>
 
@@ -92,68 +92,68 @@ export default function TriageModal({ isOpen, onClose, onExecute }: TriageModalP
                       }}
                     ></div>
                     <div className="flex flex-col min-w-0 pr-2">
-                      <span className="truncate text-sm font-bold text-slate-900 dark:text-white">Basketball Group</span>
-                      <span className="truncate text-xs font-medium text-slate-400">2h ago</span>
-                    </div>
-                  </div>
-                  {/* Smart Action Badge */}
-                  <div className="flex shrink-0 items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-xs font-bold text-primary dark:bg-blue-500/10 dark:text-blue-400">
-                    <span className="material-symbols-outlined text-sm font-bold">summarize</span>
-                    <span>Summarize 1 Update</span>
+                    <span className="truncate text-sm font-bold text-slate-900 dark:text-white">篮球小组</span>
+                    <span className="truncate text-xs font-medium text-slate-400">2 小时前</span>
                   </div>
                 </div>
-
-                {/* Row 2: Class Announce */}
-                <div className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/60 p-3 pr-2 shadow-sm ring-1 ring-black/5 transition-all hover:bg-white/80 dark:bg-white/5 dark:ring-white/5 dark:hover:bg-white/10">
-                  <div className="flex items-center gap-3 min-w-0">
-                    <div
-                      className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white dark:ring-white/10"
-                      style={{
-                        backgroundImage:
-                          'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoUvyDn297_4tep8ZoWEYfMKXdSwBrZYKzmywr7RkXqVJKgYi3LLlJ0ZEYSLDySi0m7Mg2WRiQgf3jdOnNnXcPNWHwjXWYMvDl_H78Zumw4ikSA1u7b4_wAAudqACOy4l8Vhqs7_aD1yUt4MEQ9EcTKXDwns7iidwhgCvxZgUVxT0OiudYIC-FaFp9EzpooSYs_qeqreGe_lpN4wkMv2yavs6avl5jAbUo3SJPGgOIw5ES9mU2-42zjsXVXfHy8WeAeEGQFOI-WpI")',
-                        backgroundSize: "cover",
-                      }}
-                    ></div>
-                    <div className="flex flex-col min-w-0 pr-2">
-                      <span className="truncate text-sm font-bold text-slate-900 dark:text-white">Class Announce</span>
-                      <span className="truncate text-xs font-medium text-slate-400">Prof. Smith</span>
-                    </div>
-                  </div>
-                  {/* Secondary Action Badge */}
-                  <div className="flex shrink-0 items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-1.5 text-xs font-bold text-gray-500 dark:bg-white/5 dark:text-gray-400">
-                    <span className="material-symbols-outlined text-sm">mark_chat_unread</span>
-                    <span>Keep Unread</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-center pt-1">
-                  <span className="text-xs font-medium text-gray-400 dark:text-gray-600">+148 more items</span>
+                {/* Smart Action Badge */}
+                <div className="flex shrink-0 items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-xs font-bold text-primary dark:bg-blue-500/10 dark:text-blue-400">
+                  <span className="material-symbols-outlined text-sm font-bold">summarize</span>
+                  <span>摘要 1 条更新</span>
                 </div>
               </div>
 
-              {/* Footer Primary Button */}
-              <motion.button
-                onClick={handleExecute}
-                whileTap={{ scale: 0.98 }}
-                className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-600 transition-all hover:bg-blue-600 hover:shadow-blue-500/40"
-              >
-                {isExecuting ? (
-                  <>
-                    <motion.span
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                      className="material-symbols-outlined text-lg"
-                    >
-                      sync
-                    </motion.span>
-                    <span>Processing...</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="material-symbols-outlined text-lg">done_all</span>
-                    <span>Execute Triage & Mark Read</span>
-                  </>
-                )}
+              {/* Row 2: Class Announce */}
+              <div className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/60 p-3 pr-2 shadow-sm ring-1 ring-black/5 transition-all hover:bg-white/80 dark:bg-white/5 dark:ring-white/5 dark:hover:bg-white/10">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div
+                    className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white dark:ring-white/10"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoUvyDn297_4tep8ZoWEYfMKXdSwBrZYKzmywr7RkXqVJKgYi3LLlJ0ZEYSLDySi0m7Mg2WRiQgf3jdOnNnXcPNWHwjXWYMvDl_H78Zumw4ikSA1u7b4_wAAudqACOy4l8Vhqs7_aD1yUt4MEQ9EcTKXDwns7iidwhgCvxZgUVxT0OiudYIC-FaFp9EzpooSYs_qeqreGe_lpN4wkMv2yavs6avl5jAbUo3SJPGgOIw5ES9mU2-42zjsXVXfHy8WeAeEGQFOI-WpI")',
+                      backgroundSize: "cover",
+                    }}
+                  ></div>
+                  <div className="flex flex-col min-w-0 pr-2">
+                    <span className="truncate text-sm font-bold text-slate-900 dark:text-white">课程通知</span>
+                    <span className="truncate text-xs font-medium text-slate-400">史密斯教授</span>
+                  </div>
+                </div>
+                {/* Secondary Action Badge */}
+                <div className="flex shrink-0 items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-1.5 text-xs font-bold text-gray-500 dark:bg-white/5 dark:text-gray-400">
+                  <span className="material-symbols-outlined text-sm">mark_chat_unread</span>
+                  <span>保持未读</span>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center pt-1">
+                <span className="text-xs font-medium text-gray-400 dark:text-gray-600">+148 更多项</span>
+              </div>
+            </div>
+
+            {/* Footer Primary Button */}
+            <motion.button
+              onClick={handleExecute}
+              whileTap={{ scale: 0.98 }}
+              className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-600 transition-all hover:bg-blue-600 hover:shadow-blue-500/40"
+            >
+              {isExecuting ? (
+                <>
+                  <motion.span
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    className="material-symbols-outlined text-lg"
+                  >
+                    sync
+                  </motion.span>
+                  <span>处理中...</span>
+                </>
+              ) : (
+                <>
+                  <span className="material-symbols-outlined text-lg">done_all</span>
+                  <span>执行整理并标记为已读</span>
+                </>
+              )}
               </motion.button>
             </motion.div>
           </div>

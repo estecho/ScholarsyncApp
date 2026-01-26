@@ -172,7 +172,7 @@ export default function GPAPage() {
   const currentPoint = {
     x: segmentWidth * (currentIndex + 1),
     y: gpaToY(currentGPA),
-    label: "Now",
+    label: "现在",
     gpa: currentGPA,
   };
 
@@ -237,7 +237,7 @@ export default function GPAPage() {
           <div className="flex flex-col gap-1">
             <div className="flex items-end justify-between">
               <p className="text-text-sub dark:text-gray-400 text-sm font-medium uppercase tracking-wider">
-                GPA Trajectory
+                GPA 轨迹
               </p>
               <div className="flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5">
                 <span className="material-symbols-outlined text-success" style={{ fontSize: "16px" }}>
@@ -459,7 +459,7 @@ export default function GPAPage() {
                     }}
                     className="flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-white"
                   >
-                    <span>View Study Plan</span>
+                    <span>查看学习计划</span>
                     <span className="material-symbols-outlined" style={{ fontSize: "14px" }}>
                       arrow_forward
                     </span>

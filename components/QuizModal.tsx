@@ -61,7 +61,7 @@ export default function QuizModal({
                           auto_awesome
                         </span>
                         <span className="text-primary text-xs font-bold uppercase tracking-wide">
-                          Generated from Syllabus
+                          从课程大纲生成
                         </span>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ export default function QuizModal({
                     onClick={handleDeepDive}
                     className="group flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md hover:bg-gray-50 transition-all"
                   >
-                    <span className="text-xs font-bold text-primary">Deep Dive</span>
+                    <span className="text-xs font-bold text-primary">深度解析</span>
                     <span className="material-symbols-outlined text-primary text-[18px] group-hover:translate-x-0.5 transition-transform">
                       open_in_new
                     </span>
@@ -85,7 +85,7 @@ export default function QuizModal({
                 {/* The Question */}
                 <div className="mb-8">
                   <h1 className="text-[28px] leading-tight font-extrabold text-[#0d121b] dark:text-white tracking-tight">
-                    What is the time complexity of QuickSort?
+                    快速排序的时间复杂度是多少？
                   </h1>
                 </div>
 
@@ -134,7 +134,7 @@ export default function QuizModal({
                     {/* Success Feedback Text */}
                     <div className="absolute -right-2 -bottom-8 flex items-center gap-1 opacity-0 animate-[fadeIn_0.5s_0.4s_forwards]">
                       <span className="text-primary font-bold text-sm bg-primary/10 px-2 py-0.5 rounded-full backdrop-blur-sm">
-                        Correct! +50xp
+                        正确！+50 经验值
                       </span>
                     </div>
                   </button>

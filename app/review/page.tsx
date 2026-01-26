@@ -559,14 +559,14 @@ export default function ReviewPage() {
   return (
     <PageTransition>
       <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display antialiased text-slate-900 dark:text-white">
-        <SimpleHeader title="Review Courses" backHref="/scan" />
+        <SimpleHeader title="审核课程" backHref="/scan" />
         <main className="flex-1 flex flex-col max-w-lg mx-auto w-full px-4 pb-32 pt-20">
           <div className="mb-8">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 leading-tight">
-              We found {courses.length} course{courses.length !== 1 ? "s" : ""} from your upload.
+              我们从您的上传中找到了 {courses.length} 门课程。
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-sm">
-              Please review details before saving to your calendar.
+              请在保存到日历前审核详细信息。
             </p>
           </div>
           <div className="flex flex-col gap-5">
@@ -592,7 +592,7 @@ export default function ReviewPage() {
               className="w-full bg-primary hover:bg-blue-600 active:bg-blue-700 text-white font-bold text-base h-14 rounded-2xl shadow-lg shadow-blue-500/20 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2"
             >
               <span>
-                Confirm &amp; Add {courses.length} Course{courses.length !== 1 ? "s" : ""}
+                确认并添加 {courses.length} 门课程
               </span>
               <span className="material-symbols-outlined text-xl">
                 arrow_forward

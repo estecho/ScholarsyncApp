@@ -13,21 +13,21 @@ export default function SmartSuggestionDetail({
       return {
         icon: "☕",
         crowdLevel: 35,
-        crowdStatus: "Low Crowd",
+        crowdStatus: "人少",
         recommendedTime: "12:15 PM",
         currentCapacity: "35%",
-        estimatedWaitTime: "2-3 min",
-        features: ["Fresh food", "WiFi available", "Quiet corner"],
+        estimatedWaitTime: "2-3 分钟",
+        features: ["新鲜食物", "WiFi 可用", "安静角落"],
       };
     } else {
       return {
         icon: "📚",
         crowdLevel: 25,
-        crowdStatus: "Quiet",
+        crowdStatus: "安静",
         recommendedTime: "12:20 PM",
         currentCapacity: "25%",
-        estimatedWaitTime: "No wait",
-        features: ["Study rooms", "24/7 access", "Coffee bar"],
+        estimatedWaitTime: "无需等待",
+        features: ["自习室", "24/7 开放", "咖啡吧"],
       };
     }
   };
@@ -56,7 +56,7 @@ export default function SmartSuggestionDetail({
             {location}
           </h3>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Real-time data
+            实时数据
           </p>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function SmartSuggestionDetail({
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-            Current Capacity
+            当前容量
           </span>
           <span
             className={`text-sm font-bold px-2 py-1 rounded-md ${getCrowdBgColor(
@@ -88,7 +88,7 @@ export default function SmartSuggestionDetail({
           ></div>
         </div>
         <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
-          <span>{data.currentCapacity} full</span>
+          <span>{data.currentCapacity} 已满</span>
           <span>{data.estimatedWaitTime}</span>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function SmartSuggestionDetail({
           </div>
           <div className="flex-1">
             <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-              Recommended Time
+              推荐时间
             </p>
             <p className="text-lg font-bold text-primary">
               {data.recommendedTime}
@@ -115,7 +115,7 @@ export default function SmartSuggestionDetail({
       {/* Features */}
       <div className="space-y-2">
         <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-          Features
+          特色
         </p>
         <div className="flex flex-wrap gap-2">
           {data.features.map((feature, index) => (

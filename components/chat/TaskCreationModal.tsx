@@ -16,8 +16,8 @@ interface TaskCreationModalProps {
 }
 
 export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData }: TaskCreationModalProps) {
-  const [title, setTitle] = useState(taskData?.title || "Submit Draft to Prof. Jenkins");
-  const [dueDate, setDueDate] = useState(taskData?.dueDate || "Friday, Oct 24 @ 11:59 PM");
+  const [title, setTitle] = useState(taskData?.title || "提交草稿给詹金斯教授");
+  const [dueDate, setDueDate] = useState(taskData?.dueDate || "周五，10 月 24 日 @ 11:59 PM");
 
   const handleAddToCalendar = () => {
     // 先关闭弹窗
@@ -63,7 +63,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
                 {/* TopAppBar / Header */}
                 <div className="px-6 pb-2 pt-2 flex items-center justify-between">
                   <h2 className="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-tight">
-                    New Task
+                    新任务
                   </h2>
                   <button
                     onClick={onClose}
@@ -79,7 +79,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
                   <div className="mb-6">
                     <div className="inline-flex h-8 items-center justify-center gap-x-1.5 rounded-full bg-primary/10 pl-3 pr-4 border border-primary/20">
                       <span className="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
-                      <p className="text-primary text-xs font-semibold uppercase tracking-wide">AI Extracted</p>
+                      <p className="text-primary text-xs font-semibold uppercase tracking-wide">AI 提取</p>
                     </div>
                   </div>
 
@@ -87,7 +87,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
                   <div className="space-y-5">
                     {/* Title Field */}
                     <div className="flex flex-col gap-2">
-                      <label className="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">Title</label>
+                      <label className="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">标题</label>
                       <input
                         className="form-input w-full rounded-xl border-none bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary/50 text-[#0d121b] dark:text-white placeholder:text-gray-400 p-4 text-base font-medium shadow-sm transition-all"
                         type="text"
@@ -98,7 +98,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
 
                     {/* Time Field (Highlighted) */}
                     <div className="flex flex-col gap-2">
-                      <label className="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">Due Date</label>
+                      <label className="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">截止日期</label>
                       <div className="relative flex items-center w-full">
                         <input
                           className="form-input w-full rounded-xl border-none bg-primary/5 dark:bg-primary/10 focus:ring-2 focus:ring-primary/50 text-primary dark:text-blue-400 placeholder:text-gray-400 p-4 pr-12 text-base font-bold shadow-sm transition-all"
@@ -117,7 +117,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
                       <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 group cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                         <span className="material-symbols-outlined text-gray-500 text-[16px] rotate-45">link</span>
                         <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
-                          Source: {taskData?.source || "Email Thread"}
+                          来源：{taskData?.source || "邮件线程"}
                         </span>
                       </div>
                     </div>
@@ -130,7 +130,7 @@ export default function TaskCreationModal({ isOpen, onClose, onSuccess, taskData
                       className="group relative flex w-full items-center justify-center gap-2 rounded-xl bg-primary hover:bg-blue-600 py-4 px-6 text-white shadow-lg shadow-primary/30 transition-all active:scale-[0.98]"
                     >
                       <span className="material-symbols-outlined text-[20px]">event_available</span>
-                      <span className="text-base font-bold">Add to Calendar & Remind Me</span>
+                      <span className="text-base font-bold">添加到日历并提醒我</span>
                     </button>
                   </div>
                   <div className="h-6"></div>

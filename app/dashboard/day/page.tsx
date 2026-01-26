@@ -72,8 +72,8 @@ export default function DashboardDayPage() {
     <PageTransition>
       <div className="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark pb-24 overflow-hidden shadow-2xl">
         <DashboardHeader
-          date="Oct 24"
-          dayName="Wednesday"
+          date="10 月 24 日"
+          dayName="星期三"
           weather="22°C"
           view="day"
           onViewChange={(view) => {
@@ -109,7 +109,7 @@ export default function DashboardDayPage() {
                 <span className="material-symbols-outlined text-[18px]">coffee</span>
               </div>
               <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                Morning Coffee
+                晨间咖啡
               </span>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function DashboardDayPage() {
           location="Room 304"
           courseId="cs-101"
           statusOverride="urgent"
-          textOverride="Leave now for Room 304"
+          textOverride="立即前往 304 室"
           onClick={() => router.push(`/navigation?destination=Room 304&courseId=cs-101`)}
         />
 
@@ -164,7 +164,7 @@ export default function DashboardDayPage() {
                         className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold bg-red-500/90 text-white border border-red-400 shadow-sm animate-pulse hover:bg-red-500 transition-colors cursor-pointer"
                       >
                         <span className="material-symbols-outlined text-[14px]">warning</span>
-                        Assignment Due Today
+                        作业今日到期
                       </button>
                     </div>
                     <h3 className="text-xl font-bold mb-1">{course.title}</h3>
@@ -217,7 +217,7 @@ export default function DashboardDayPage() {
                       schedule
                     </span>
                     <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
-                      Class ends {course.time.end}
+                      课程结束 {course.time.end}
                     </span>
                   </div>
                 </div>
@@ -257,7 +257,7 @@ export default function DashboardDayPage() {
                     </div>
                     <div className="flex-1 flex items-center justify-between">
                       <h4 className="text-sm font-bold text-slate-800 dark:text-white">
-                        AI suggestion
+                        AI 建议
                       </h4>
                       <motion.span
                         className="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[20px]"
@@ -283,7 +283,7 @@ export default function DashboardDayPage() {
                           <span className="text-2xl">📚</span>
                         </div>
                         <span className="text-xs text-slate-500 dark:text-slate-400">
-                          You have a 2h gap
+                          您有 2 小时空闲时间
                         </span>
                       </motion.div>
                     )}
@@ -299,7 +299,7 @@ export default function DashboardDayPage() {
                         className="mt-3"
                       >
                         <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-3">
-                          You have a 2h gap. Based on crowd levels:
+                          您有 2 小时空闲时间。根据人流情况：
                         </p>
                         <div className="grid grid-cols-2 gap-3">
                           <button
@@ -312,10 +312,10 @@ export default function DashboardDayPage() {
                             <span className="text-xl">☕</span>
                             <div>
                               <span className="block text-xs font-bold text-slate-800 dark:text-white">
-                                Cafeteria
+                                食堂
                               </span>
                               <span className="block text-[10px] text-green-600 dark:text-green-400 font-bold bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded-md w-fit mt-0.5">
-                                Low Crowd
+                                人少
                               </span>
                             </div>
                           </button>
@@ -329,10 +329,10 @@ export default function DashboardDayPage() {
                             <span className="text-xl">📚</span>
                             <div>
                               <span className="block text-xs font-bold text-slate-800 dark:text-white">
-                                Library
+                                图书馆
                               </span>
                               <span className="block text-[10px] text-primary font-medium bg-primary/10 px-1.5 py-0.5 rounded-md w-fit mt-0.5">
-                                Quiet
+                                安静
                               </span>
                             </div>
                           </button>
@@ -403,7 +403,7 @@ export default function DashboardDayPage() {
           location="Room 405"
           courseId="advanced-psychology"
           statusOverride="ok"
-          textOverride="Leave in 30 min for Room 405"
+          textOverride="30 分钟后前往 405 室"
           onClick={() => router.push(`/navigation?destination=Room 405&courseId=advanced-psychology`)}
         />
 
@@ -515,7 +515,7 @@ export default function DashboardDayPage() {
                     </div>
                     <div className="flex-1 flex items-center justify-between">
                       <h4 className="text-sm font-bold text-slate-800 dark:text-white">
-                        AI suggestion
+                        AI 建议
                       </h4>
                       <motion.span
                         className="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[20px]"
@@ -637,7 +637,7 @@ export default function DashboardDayPage() {
         isOpen={taskModalOpen}
         onClose={() => setTaskModalOpen(false)}
         assignmentId="assignment-due-today"
-        courseName="Computer Science 101"
+        courseName="计算机科学 101"
       />
       </div>
     </PageTransition>

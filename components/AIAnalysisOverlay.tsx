@@ -84,7 +84,7 @@ export default function AIAnalysisOverlay({
                   </span>
                 </button>
                 <span className="text-sm font-semibold text-white tracking-wide drop-shadow-md">
-                  Summary
+                  摘要
                 </span>
               </motion.div>
 
@@ -105,7 +105,7 @@ export default function AIAnalysisOverlay({
                   </span>
                 </button>
                 <span className="text-sm font-semibold text-white tracking-wide drop-shadow-md">
-                  Quiz Me
+                  测验我
                 </span>
               </motion.div>
 
@@ -123,7 +123,7 @@ export default function AIAnalysisOverlay({
                   </span>
                 </button>
                 <span className="text-sm font-semibold text-white tracking-wide drop-shadow-md">
-                  Find Buddy
+                  找伙伴
                 </span>
               </motion.div>
             </div>

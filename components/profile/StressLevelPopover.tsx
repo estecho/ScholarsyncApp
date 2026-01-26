@@ -39,21 +39,21 @@ export default function StressLevelPopover({ isOpen, onClose, onSelect, position
             className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors text-left"
           >
             <div className="size-3 rounded-full bg-emerald-400"></div>
-            <span className="text-sm font-medium text-gray-900 dark:text-white">Low</span>
+            <span className="text-sm font-medium text-gray-900 dark:text-white">低</span>
           </button>
           <button
             onClick={() => handleSelect("medium")}
             className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors text-left"
           >
             <div className="size-3 rounded-full bg-orange-400"></div>
-            <span className="text-sm font-medium text-gray-900 dark:text-white">Medium</span>
+            <span className="text-sm font-medium text-gray-900 dark:text-white">中</span>
           </button>
           <button
             onClick={() => handleSelect("high")}
             className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors text-left"
           >
             <div className="size-3 rounded-full bg-red-500"></div>
-            <span className="text-sm font-medium text-gray-900 dark:text-white">High</span>
+            <span className="text-sm font-medium text-gray-900 dark:text-white">高</span>
           </button>
         </div>
       </motion.div>

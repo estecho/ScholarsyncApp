@@ -18,6 +18,7 @@ RUN npm run build
 
 # 7. 暴露端口
 EXPOSE 3000
+ENV PORT 3000
 
 # 8. 启动应用
-CMD ["npm", "start"]
+CMD ["node", ".next/standalone/server.js"]

@@ -44,7 +44,7 @@ export default function ProfilePage() {
         </div>
         <div className="glass-pill self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full shadow-sm">
           <span className="material-symbols-outlined text-primary text-[18px]">psychology</span>
-          <span className="text-sm font-semibold text-gray-800 dark:text-white">Mode: {PROFILE_DATA.mode}</span>
+          <span className="text-sm font-semibold text-gray-800 dark:text-white">模式：{PROFILE_DATA.mode}</span>
         </div>
       </header>
 
@@ -62,7 +62,7 @@ export default function ProfilePage() {
                 <span className="p-1.5 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400">
                   <span className="material-symbols-outlined text-[20px]">spa</span>
                 </span>
-                <h3 className="font-bold text-gray-900 dark:text-white">Wellness</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white">健康</h3>
               </div>
               <span className="text-xs font-medium text-orange-500 bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded-md">
                 {PROFILE_DATA.wellness.stressLevel}
@@ -81,10 +81,10 @@ export default function ProfilePage() {
                 ></div>
               </div>
               <div className="flex justify-between items-center mt-2">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Feeling a bit overwhelmed?</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">感觉有点压力？</p>
                 <button className="flex items-center justify-center gap-1.5 px-4 py-2 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-xl transition-all shadow-md shadow-primary/20">
                   <span className="material-symbols-outlined text-[18px]">self_improvement</span>
-                  <span>Decompress</span>
+                  <span>放松</span>
                 </button>
               </div>
             </div>
@@ -106,13 +106,13 @@ export default function ProfilePage() {
                 <span className="p-1.5 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-primary">
                   <span className="material-symbols-outlined text-[20px]">timer</span>
                 </span>
-                <h3 className="font-bold text-gray-900 dark:text-white text-sm">Deep Work</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-sm">深度专注</h3>
               </div>
               <div className="flex items-baseline gap-1 mt-1">
                 <span className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
-                  {PROFILE_DATA.deepWork.totalHours}h
+                  {PROFILE_DATA.deepWork.totalHours} 小时
                 </span>
-                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">this week</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">本周</span>
               </div>
             </div>
             <button
@@ -126,7 +126,7 @@ export default function ProfilePage() {
               className="mt-auto relative z-20 flex items-center justify-center w-full h-10 bg-primary hover:bg-primary-dark text-white rounded-xl transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25 pointer-events-auto"
             >
               <span className="material-symbols-outlined">play_arrow</span>
-              <span className="ml-1 text-sm font-semibold">Start</span>
+              <span className="ml-1 text-sm font-semibold">开始</span>
             </button>
           </div>
 
@@ -180,7 +180,7 @@ export default function ProfilePage() {
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
               }`}
             >
-              Smart Tasks
+              智能任务
             </button>
             <button
               onClick={() => setActiveTab("activity")}
@@ -190,7 +190,7 @@ export default function ProfilePage() {
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
               }`}
             >
-              Activity
+              活动
             </button>
           </div>
           <div className="space-y-3">
@@ -217,7 +217,7 @@ export default function ProfilePage() {
                   </div>
                   <div className="flex-shrink-0 ml-2">
                     <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold ${task.badgeColor}`}>
-                      {task.badge === "Campus" && <span className="material-symbols-outlined text-[14px]">location_on</span>}
+                      {task.badge === "校园" && <span className="material-symbols-outlined text-[14px]">location_on</span>}
                       {task.badge}
                     </span>
                   </div>
@@ -225,7 +225,7 @@ export default function ProfilePage() {
               ))}
             {activeTab === "activity" && (
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                <p>No activity yet</p>
+                <p>暂无活动</p>
               </div>
             )}
           </div>

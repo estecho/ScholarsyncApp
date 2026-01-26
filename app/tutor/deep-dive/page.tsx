@@ -32,10 +32,10 @@ export default function DeepDivePage() {
           </button>
           <div className="flex flex-col items-center">
             <h1 className="text-base font-bold tracking-tight text-slate-900 dark:text-white">
-              AI Tutor: Algorithms
+              AI 导师：算法
             </h1>
             <span className="text-[10px] font-medium text-primary uppercase tracking-widest opacity-80">
-              Deep Dive Mode
+              深度探讨模式
             </span>
           </div>
           <div className="w-10"></div>
@@ -48,7 +48,7 @@ export default function DeepDivePage() {
             <div className="glass-panel px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
               <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                Ref: QuickSort Complexity
+                参考：快速排序复杂度
               </p>
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function DeepDivePage() {
                   code
                 </span>
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                  Show Code Example
+                  显示代码示例
                 </span>
               </button>
               <button className="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700/60 rounded-xl shadow-sm transition-all active:scale-95 group">

@@ -78,7 +78,7 @@ export default function BottomNav() {
                 >
                   home
                 </span>
-                <span className="text-[10px] font-medium">Home</span>
+                <span className="text-[10px] font-medium">首页</span>
               </Link>
 
               {/* Schedule */}
@@ -102,7 +102,7 @@ export default function BottomNav() {
                 >
                   calendar_month
                 </span>
-                <span className="text-[10px] font-medium">Schedule</span>
+                <span className="text-[10px] font-medium">课表</span>
               </Link>
 
               {/* AI Orb (Center, Protruding) */}
@@ -137,7 +137,7 @@ export default function BottomNav() {
                   chat_bubble
                   <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-rose-500 border border-white dark:border-background-dark"></span>
                 </span>
-                <span className="text-[10px] font-medium">Chat</span>
+                <span className="text-[10px] font-medium">聊天</span>
               </Link>
 
               {/* Profile */}
@@ -161,7 +161,7 @@ export default function BottomNav() {
                 >
                   person
                 </span>
-                <span className="text-[10px] font-medium">Profile</span>
+                <span className="text-[10px] font-medium">个人</span>
               </Link>
             </div>
           </motion.nav>
@@ -213,7 +213,7 @@ export default function BottomNav() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 dark:bg-white/10 backdrop-blur-md border border-white/10">
               <span className="material-symbols-outlined text-electric-blue text-sm animate-pulse">auto_awesome</span>
               <span className="text-sm font-semibold text-white tracking-wide">
-                {currentView === "campus-life" ? "Drop to Do More" : "Drop to Analyze Syllabus & Quiz"}
+                {currentView === "campus-life" ? "放下以执行更多操作" : "放下以分析课程大纲和测验"}
               </span>
             </div>
           </motion.div>

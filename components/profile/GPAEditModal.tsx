@@ -39,7 +39,7 @@ export default function GPAEditModal({ isOpen, onClose, currentGPA, onConfirm }:
             className="fixed bottom-0 left-0 right-0 z-[100] max-w-md mx-auto bg-white dark:bg-gray-900 rounded-t-2xl shadow-2xl p-6"
           >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Edit GPA Goal</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">编辑 GPA 目标</h3>
               <button
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -50,7 +50,7 @@ export default function GPAEditModal({ isOpen, onClose, currentGPA, onConfirm }:
 
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Target GPA (0.0 - 4.0)
+                目标 GPA (0.0 - 4.0)
               </label>
               <input
                 type="number"
@@ -68,13 +68,13 @@ export default function GPAEditModal({ isOpen, onClose, currentGPA, onConfirm }:
                 onClick={onClose}
                 className="flex-1 py-3 px-4 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
-                Cancel
+                取消
               </button>
               <button
                 onClick={handleConfirm}
                 className="flex-1 py-3 px-4 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
               >
-                Confirm
+                确认
               </button>
             </div>
           </motion.div>

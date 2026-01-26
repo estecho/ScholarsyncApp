@@ -84,7 +84,7 @@ export default function ChatDetailPage() {
   if (!message) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <p className="text-gray-500">Message not found</p>
+        <p className="text-gray-500">未找到消息</p>
       </div>
     );
   }
@@ -116,7 +116,7 @@ export default function ChatDetailPage() {
               <h1 className="text-base font-bold leading-tight break-words">{message.sender}</h1>
               <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                 <span className="material-symbols-outlined text-[14px]">mail</span>
-                <span>Active via Email</span>
+                <span>通过邮件活跃</span>
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function ChatDetailPage() {
         {/* Timestamp */}
         <div className="flex justify-center">
           <span className="text-xs font-medium text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
-            Today 9:41 AM
+            今天 9:41 AM
           </span>
         </div>
 
@@ -174,8 +174,8 @@ export default function ChatDetailPage() {
                     <span className="material-symbols-outlined text-[14px]">calendar_today</span>
                   </div>
                   <div className="flex flex-col items-start">
-                    <span className="text-xs font-semibold text-indigo-700 dark:text-indigo-300">Create Task</span>
-                    <span className="text-[11px] text-indigo-600/80 dark:text-indigo-300/80">Draft Due Friday</span>
+                    <span className="text-xs font-semibold text-indigo-700 dark:text-indigo-300">创建任务</span>
+                    <span className="text-[11px] text-indigo-600/80 dark:text-indigo-300/80">草稿周五到期</span>
                   </div>
                   <span className="material-symbols-outlined text-indigo-400 text-[16px] ml-1 group-hover/chip:translate-x-0.5 transition-transform">
                     arrow_forward
@@ -194,12 +194,12 @@ export default function ChatDetailPage() {
           {/* Active Button */}
           <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-future-lab shadow-md shadow-indigo-500/30 dark:shadow-indigo-500/20 text-white transition-transform active:scale-95 backdrop-blur-sm">
             <span className="material-symbols-outlined text-[16px] animate-pulse">auto_awesome</span>
-            <span className="text-sm font-medium">Make Professional</span>
+            <span className="text-sm font-medium">专业化</span>
           </button>
           {/* Secondary Button */}
           <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-md shadow-gray-200/50 dark:shadow-gray-900/50 text-slate-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all border border-gray-200/50 dark:border-gray-700/50">
             <span className="material-symbols-outlined text-[16px]">calendar_clock</span>
-            <span className="text-sm font-medium">Check Schedule</span>
+            <span className="text-sm font-medium">查看日程</span>
           </button>
         </div>
 
@@ -210,11 +210,11 @@ export default function ChatDetailPage() {
             <div className="mb-2 relative">
               <div className="absolute -top-1 left-2 w-0.5 h-full bg-gradient-to-b from-indigo-400 to-purple-400 rounded-full opacity-50"></div>
               <div className="pl-4">
-                <p className="text-xs font-semibold text-indigo-500 mb-0.5 flex items-center gap-1">
+                  <p className="text-xs font-semibold text-indigo-500 mb-0.5 flex items-center gap-1">
                   <span className="material-symbols-outlined text-[12px]">psychology</span>
-                  Suggested Rewrite
+                  建议重写
                 </p>
-                <p className="text-sm text-gray-400 italic">"Understood, Dr. Jenkins. I will ensure..."</p>
+                <p className="text-sm text-gray-400 italic">"明白了，詹金斯博士。我将确保..."</p>
               </div>
             </div>
           )}
@@ -226,7 +226,7 @@ export default function ChatDetailPage() {
             <div className="flex-1 py-1 relative min-w-0">
               <input
                 className="w-full bg-transparent border-none p-0 text-[16px] text-slate-900 dark:text-white placeholder-gray-400 focus:ring-0 leading-normal"
-                placeholder="Message..."
+                placeholder="消息..."
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -243,7 +243,7 @@ export default function ChatDetailPage() {
       </footer>
 
       {/* Toast */}
-      <Toast message="Task added to Schedule" isVisible={showToast} onClose={() => setShowToast(false)} />
+      <Toast message="任务已添加到日程" isVisible={showToast} onClose={() => setShowToast(false)} />
 
       {/* Task Creation Modal */}
       <TaskCreationModal
@@ -256,9 +256,9 @@ export default function ChatDetailPage() {
           }, 2500);
         }}
         taskData={{
-          title: "Submit Draft to Prof. Jenkins",
-          dueDate: "Friday, Oct 24 @ 11:59 PM",
-          source: "Email Thread",
+          title: "提交草稿给詹金斯教授",
+          dueDate: "周五，10 月 24 日 @ 11:59 PM",
+          source: "邮件线程",
         }}
       />
     </div>

@@ -67,12 +67,12 @@ export default function DynamicAlertCard({
   const getText = () => {
     if (textOverride) return textOverride;
     if (minutesUntilClass <= 0) {
-      return "Time to leave now!";
+      return "该出发了！";
     }
     if (minutesUntilClass === 1) {
-      return "Leave in 1 min";
+      return "1 分钟后出发";
     }
-    return `Leave in ${minutesUntilClass} min`;
+    return `${minutesUntilClass} 分钟后出发`;
   };
 
   return (
@@ -150,7 +150,7 @@ export default function DynamicAlertCard({
             </div>
             <div className="min-w-0 flex-1">
               <p className="font-bold text-sm leading-tight break-words">{getText()}</p>
-              <p className="text-xs text-white/80 font-medium break-words">for {location}</p>
+              <p className="text-xs text-white/80 font-medium break-words">前往 {location}</p>
             </div>
           </div>
           <div className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center">

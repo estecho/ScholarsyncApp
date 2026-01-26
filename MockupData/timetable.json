@@ -1,12 +1,12 @@
 {
-  "semester": "2025-26 Term 2 Postgraduate - Taught",
+  "semester": "2025-26 第二学期 研究生 - 授课型",
   "courses": [
     {
       "code": "BMEG 5530",
-      "name": "Tissue Engineering",
-      "status": "Enrolled",
+      "name": "组织工程学",
+      "status": "已选课",
       "units": 3.0,
-      "grading_basis": "Graded",
+      "grading_basis": "计分制",
       "components": [
         {
           "class_number": "4460",
@@ -28,19 +28,19 @@
             "4/20",
             "4/27"
           ],
-          "day": "Monday",
+          "day": "星期一",
           "start_time": "18:45",
           "end_time": "21:30",
-          "room": "Science Centre L2"
+          "room": "科学中心 L2"
         }
       ]
     },
     {
       "code": "BMEG 5760",
-      "name": "Bioelectronics & Nanotechnolog",
-      "status": "Enrolled",
+      "name": "生物电子学与纳米技术",
+      "status": "已选课",
       "units": 3.0,
-      "grading_basis": "Graded",
+      "grading_basis": "计分制",
       "components": [
         {
           "class_number": "4622",
@@ -61,19 +61,19 @@
             "4/17",
             "4/24"
           ],
-          "day": "Friday",
+          "day": "星期五",
           "start_time": "18:45",
           "end_time": "21:30",
-          "room": "Esther Lee Bldg LT4"
+          "room": "Esther Lee 大楼 LT4"
         }
       ]
     },
     {
       "code": "BMEG 5790",
-      "name": "Bioinformatics",
-      "status": "Enrolled",
+      "name": "生物信息学",
+      "status": "已选课",
       "units": 3.0,
-      "grading_basis": "Graded",
+      "grading_basis": "计分制",
       "components": [
         {
           "class_number": "2005",
@@ -96,19 +96,19 @@
             "4/23",
             "4/30"
           ],
-          "day": "Thursday",
+          "day": "星期四",
           "start_time": "18:45",
           "end_time": "21:30",
-          "room": "William MW Mong Eng Bldg 1122"
+          "room": "William MW Mong 工程大楼 1122"
         }
       ]
     },
     {
       "code": "BMEG 5840",
-      "name": "BME Laboratories",
-      "status": "Enrolled",
+      "name": "生物医学工程实验室",
+      "status": "已选课",
       "units": 3.0,
-      "grading_basis": "Graded",
+      "grading_basis": "计分制",
       "components": [
         {
           "class_number": "2021",
@@ -131,10 +131,10 @@
             "4/25",
             "5/2"
           ],
-          "day": "Saturday",
+          "day": "星期六",
           "start_time": "15:30",
           "end_time": "17:15",
-          "room": "Wu Ho Man Yuen Bldg 304"
+          "room": "胡浩文苑大楼 304"
         },
         {
           "class_number": "2022",
@@ -156,19 +156,19 @@
             "4/25",
             "5/2"
           ],
-          "day": "Saturday",
+          "day": "星期六",
           "start_time": "14:30",
           "end_time": "15:15",
-          "room": "Wu Ho Man Yuen Bldg 304"
+          "room": "胡浩文苑大楼 304"
         }
       ]
     },
     {
       "code": "BMEG 5850",
-      "name": "Medical Device Regulatory & IP",
-      "status": "Enrolled",
+      "name": "医疗器械法规与知识产权",
+      "status": "已选课",
       "units": 3.0,
-      "grading_basis": "Graded",
+      "grading_basis": "计分制",
       "components": [
         {
           "class_number": "4579",
@@ -189,10 +189,10 @@
             "4/14",
             "4/21"
           ],
-          "day": "Tuesday",
+          "day": "星期二",
           "start_time": "18:45",
           "end_time": "21:30",
-          "room": "Wu Ho Man Yuen Bldg 505"
+          "room": "胡浩文苑大楼 505"
         }
       ]
     }

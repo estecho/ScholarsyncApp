@@ -75,7 +75,7 @@ export default function FocusTimerPage() {
         </button>
         <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/5 backdrop-blur-sm">
           <span className="material-symbols-outlined text-primary text-[16px]">psychology</span>
-          <span className="text-white/80 text-xs font-medium tracking-wide uppercase">Deep Focus</span>
+          <span className="text-white/80 text-xs font-medium tracking-wide uppercase">深度专注</span>
         </div>
         <button
           onClick={() => setShowSettings(true)}
@@ -98,7 +98,7 @@ export default function FocusTimerPage() {
             {formatTime(timeLeft)}
           </h1>
           <p className="text-primary/80 text-sm font-medium tracking-[0.2em] uppercase mt-4">
-            {isRunning ? "Focusing" : timeLeft === initialTime ? "Ready" : "Paused"}
+            {isRunning ? "专注中" : timeLeft === initialTime ? "准备就绪" : "已暂停"}
           </p>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function FocusTimerPage() {
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-surface-dark/80 to-surface-dark/40 backdrop-blur-md border border-white/5 rounded-full px-4 py-2 shadow-lg">
             <span className="material-symbols-outlined text-yellow-400 text-[18px]">emoji_events</span>
-            <p className="text-white/90 text-xs font-medium">You are in the top 10% of focused students today.</p>
+            <p className="text-white/90 text-xs font-medium">您今天的专注度排名前 10%。</p>
           </div>
         </div>
 
@@ -123,11 +123,11 @@ export default function FocusTimerPage() {
             {/* Text Info */}
             <div className="flex flex-1 flex-col justify-center min-w-0">
               <div className="flex items-center gap-2">
-                <h3 className="text-white text-sm font-semibold leading-tight truncate">AI Mix: Rain + LoFi</h3>
+                <h3 className="text-white text-sm font-semibold leading-tight truncate">AI 混音：雨声 + LoFi</h3>
                 <span className="flex h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]"></span>
               </div>
               <p className="text-slate-400 text-xs font-normal leading-normal truncate mt-0.5">
-                Soundscape Active • Adaptive Volume
+                音景已激活 • 自适应音量
               </p>
             </div>
             {/* Fake Waveform Visualizer */}
@@ -151,7 +151,7 @@ export default function FocusTimerPage() {
             className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-all active:scale-95 border border-white/5"
           >
             <span className="material-symbols-outlined text-[20px]">flag</span>
-            <span className="text-base font-medium">Give Up</span>
+            <span className="text-base font-medium">放弃</span>
           </button>
           <button
             onClick={isRunning ? handlePause : handleStart}
@@ -162,7 +162,7 @@ export default function FocusTimerPage() {
             }`}
           >
             <span className="material-symbols-outlined text-[20px]">{isRunning ? "pause" : "play_arrow"}</span>
-            <span className="text-base font-semibold">{buttonText}</span>
+            <span className="text-base font-semibold">{buttonText === "Pause" ? "暂停" : buttonText === "Start" ? "开始" : "继续"}</span>
           </button>
         </div>
       </div>

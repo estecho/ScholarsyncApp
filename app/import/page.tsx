@@ -39,14 +39,14 @@ export default function ImportPage() {
                   verified_user
                 </span>
                 <span className="text-xs font-medium text-emerald-100/90 tracking-wide">
-                  End-to-end Encrypted
+                  端到端加密
                 </span>
               </div>
               <div className="absolute top-[28%] left-[8%] sm:left-[12%] animate-[bounce_4s_infinite]">
                 <div className="flex flex-col items-center gap-1 p-3 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
                   <span className="text-2xl">🎓</span>
                   <span className="text-[10px] font-semibold text-white/80">
-                    Credits &amp; GPA
+                    学分与 GPA
                   </span>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export default function ImportPage() {
                 <div className="flex flex-col items-center gap-1 p-3 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
                   <span className="text-2xl">📝</span>
                   <span className="text-[10px] font-semibold text-white/80">
-                    Schedule
+                    日程
                   </span>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function ImportPage() {
                 <div className="flex flex-col items-center gap-1 p-3 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
                   <span className="text-2xl">🏷️</span>
                   <span className="text-[10px] font-semibold text-white/80">
-                    Requirements
+                    要求
                   </span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function ImportPage() {
                 <div className="absolute left-[-64px] top-[-40px] flex flex-col items-center gap-1 p-3 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform animate-[bounce_4s_infinite]">
                   <span className="text-2xl">🏛️</span>
                   <span className="text-[10px] font-semibold text-white/80">
-                    Transcripts
+                    成绩单
                   </span>
                 </div>
               </div>
@@ -90,10 +90,10 @@ export default function ImportPage() {
               </div>
               <div className="mt-8 space-y-1">
                 <h2 className="text-3xl font-bold text-white tracking-tight drop-shadow-md">
-                  School Connect
+                  学校连接
                 </h2>
                 <p className="text-indigo-200/70 text-sm font-medium">
-                  Unlock God Mode
+                  解锁完整功能
                 </p>
               </div>
             </div>
@@ -103,8 +103,8 @@ export default function ImportPage() {
           <div className="relative -mt-6 mx-2 mb-2 rounded-[2rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] p-6 pb-10 flex flex-col items-center gap-5 w-full">
             <div className="w-12 h-1 rounded-full bg-slate-300 dark:bg-slate-700 hidden"></div>
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 text-center">
-              Or import manually{" "}
-              <span className="hidden sm:inline">(Limited AI features)</span>
+              或手动导入{" "}
+              <span className="hidden sm:inline">（AI 功能受限）</span>
             </p>
             <div className="grid grid-cols-3 gap-4 w-full">
               <button 
@@ -132,7 +132,7 @@ export default function ImportPage() {
                     ? 'text-indigo-600 dark:text-indigo-400'
                     : 'text-slate-600 dark:text-slate-400'
                 }`}>
-                  Scan Paper
+                  扫描文档
                 </span>
               </button>
               <button 
@@ -160,7 +160,7 @@ export default function ImportPage() {
                     ? 'text-purple-600 dark:text-purple-400'
                     : 'text-slate-600 dark:text-slate-400'
                 }`}>
-                  Upload File
+                  上传文件
                 </span>
               </button>
               <button 
@@ -188,7 +188,7 @@ export default function ImportPage() {
                     ? 'text-pink-600 dark:text-pink-400'
                     : 'text-slate-600 dark:text-slate-400'
                 }`}>
-                  Paste Text
+                  粘贴文本
                 </span>
               </button>
             </div>
@@ -220,7 +220,7 @@ export default function ImportPage() {
                 <div className="relative -mt-6 mx-2 mb-2 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] p-6 pb-10 flex flex-col items-center gap-5 w-full max-w-md pointer-events-auto max-h-[92vh] overflow-y-auto">
                   <div className="w-12 h-1 rounded-full bg-slate-300 dark:bg-slate-700 hidden"></div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 text-center">
-                    Scan Document
+                    扫描文档
                   </p>
                   {/* Three Import Type Buttons */}
                   <div className="grid grid-cols-3 gap-4 w-full">
@@ -249,7 +249,7 @@ export default function ImportPage() {
                           ? 'text-indigo-600 dark:text-indigo-400'
                           : 'text-slate-600 dark:text-slate-400'
                       }`}>
-                        Scan Paper
+                        扫描文档
                       </span>
                     </button>
                     <button 
@@ -277,7 +277,7 @@ export default function ImportPage() {
                           ? 'text-purple-600 dark:text-purple-400'
                           : 'text-slate-600 dark:text-slate-400'
                       }`}>
-                        Upload File
+                        上传文件
                       </span>
                     </button>
                     <button 
@@ -305,7 +305,7 @@ export default function ImportPage() {
                           ? 'text-pink-600 dark:text-pink-400'
                           : 'text-slate-600 dark:text-slate-400'
                       }`}>
-                        Paste Text
+                        粘贴文本
                       </span>
                     </button>
                   </div>

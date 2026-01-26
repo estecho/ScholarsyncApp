@@ -6,7 +6,7 @@ import BottomNav from "@/components/BottomNav";
 import SearchOverlay from "@/components/chat/SearchOverlay";
 
 export const metadata: Metadata = {
-  title: "ScholarSync - Your AI Academic Companion",
+  title: "ScholarSync - 您的 AI 学术伙伴",
   description: "ScholarSync 校园生活 Web App",
 };
 

@@ -41,8 +41,8 @@ export default function SchedulingPollCard({ onVote, initialVotes }: SchedulingP
             </span>
             <span className="text-primary text-xs font-bold uppercase tracking-wider">ScholarSync AI</span>
           </div>
-          <h3 className="text-slate-900 dark:text-white text-lg font-bold leading-tight">Best Meeting Times</h3>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Found 3 slots based on 4 schedules.</p>
+          <h3 className="text-slate-900 dark:text-white text-lg font-bold leading-tight">最佳会议时间</h3>
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-0.5">根据 4 个日程找到 3 个时间段。</p>
         </div>
 
         {/* Timeline Visualization */}
@@ -89,10 +89,10 @@ export default function SchedulingPollCard({ onVote, initialVotes }: SchedulingP
                 <div className="flex items-center gap-2">
                   <span className="text-slate-900 dark:text-white font-semibold text-sm">4:00 PM</span>
                   <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    All Free
+                    全部有空
                   </span>
                 </div>
-                <span className="text-slate-500 dark:text-slate-400 text-xs">1 hr duration</span>
+                <span className="text-slate-500 dark:text-slate-400 text-xs">1 小时时长</span>
               </div>
             </div>
             <div className="size-6 rounded-full border-2 border-slate-300 dark:border-slate-600 group-hover/slot:border-primary flex items-center justify-center">
@@ -122,10 +122,10 @@ export default function SchedulingPollCard({ onVote, initialVotes }: SchedulingP
                 <div className="flex items-center gap-2">
                   <span className="text-slate-900 dark:text-white font-semibold text-sm">10:00 AM</span>
                   <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    3/4 Free
+                    3/4 有空
                   </span>
                 </div>
-                <span className="text-slate-500 dark:text-slate-400 text-xs">Mike is busy</span>
+                <span className="text-slate-500 dark:text-slate-400 text-xs">Mike 很忙</span>
               </div>
             </div>
             <div className="size-6 rounded-full border-2 border-slate-300 dark:border-slate-600 group-hover/slot:border-primary flex items-center justify-center">
@@ -150,7 +150,7 @@ export default function SchedulingPollCard({ onVote, initialVotes }: SchedulingP
             }}
             className="w-full h-11 bg-primary hover:bg-blue-700 active:bg-blue-800 text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-colors shadow-lg shadow-blue-500/20"
           >
-            <span>Vote for Wed 4 PM</span>
+            <span>投票选择周三下午 4 点</span>
             <span className="material-symbols-outlined text-[18px]">check</span>
           </button>
           <div className="flex items-center justify-center gap-2 mt-4">
@@ -167,7 +167,7 @@ export default function SchedulingPollCard({ onVote, initialVotes }: SchedulingP
               />
             </div>
             <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-              Emily and Alex voted
+              Emily 和 Alex 已投票
             </span>
           </div>
         </div>

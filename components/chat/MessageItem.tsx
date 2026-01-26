@@ -40,7 +40,7 @@ export default function MessageItem({ message }: MessageItemProps) {
               </span>
             </div>
           )}
-          {isChat && message.badge === "Summary Available" && (
+          {isChat && message.badge === "摘要可用" && (
             <div className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-primary ring-2 ring-white dark:ring-background-dark"></div>
           )}
         </div>
@@ -56,7 +56,7 @@ export default function MessageItem({ message }: MessageItemProps) {
                       : "bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 ring-purple-700/10"
                   }`}
                 >
-                  {message.badge === "Summary Available" && (
+                  {message.badge === "摘要可用" && (
                     <span className="material-symbols-outlined mr-1" style={{ fontSize: "10px" }}>
                       auto_awesome
                     </span>
@@ -79,11 +79,11 @@ export default function MessageItem({ message }: MessageItemProps) {
                 <span className="material-symbols-outlined" style={{ fontSize: "10px" }}>
                   auto_awesome
                 </span>
-                Summary Available
+                摘要可用
               </span>
             </div>
           ) : null}
-          <p className={`text-sm line-clamp-1 break-words ${isChat && message.badge === "Summary Available" ? "text-slate-900 dark:text-slate-200 font-medium" : "text-slate-500 dark:text-slate-400"}`}>
+          <p className={`text-sm line-clamp-1 break-words ${isChat && message.badge === "摘要可用" ? "text-slate-900 dark:text-slate-200 font-medium" : "text-slate-500 dark:text-slate-400"}`}>
             {isChat && message.preview.includes(":") ? (
               <>
                 <span className="text-slate-500 font-normal">

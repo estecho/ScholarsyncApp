@@ -21,10 +21,10 @@ export default function HomePage() {
   const { viewMode, setViewMode, currentView, setCurrentView } = useNav();
   
   const [courseData, setCourseData] = useState({
-    name: "Advanced Algorithms",
+    name: "高级算法",
     time: "10:00 - 11:30 AM",
-    location: "Room 304",
-    professor: "Prof. Smith",
+    location: "304 室",
+    professor: "史密斯教授",
   });
 
   // OmniPostModal state
@@ -260,7 +260,7 @@ export default function HomePage() {
                   isScrolled ? "text-lg" : "text-2xl"
                 }`}
               >
-                Good Morning, Alex
+                早上好，Alex
               </h1>
             </div>
             <button
@@ -312,7 +312,7 @@ export default function HomePage() {
                     : "text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200"
                 }`}
               >
-                My Day
+                我的日程
               </span>
             </button>
             <button
@@ -326,7 +326,7 @@ export default function HomePage() {
                     : "text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200"
                 }`}
               >
-                Campus Life
+                校园生活
               </span>
             </button>
           </div>
@@ -358,7 +358,7 @@ export default function HomePage() {
                         <span className="text-sm font-medium">24°C Sunny</span>
                       </div>
                       <h1 className="text-2xl font-bold tracking-tight text-[#1d1d1f] dark:text-white">
-                        Good Morning, Alex
+                        早上好，Alex
                       </h1>
                     </div>
                     <button
@@ -393,11 +393,11 @@ export default function HomePage() {
                       }}
                     />
                     <button className="relative flex h-full grow items-center justify-center overflow-hidden rounded-full px-2 transition-all duration-300 z-10">
-                      <span className="text-sm font-semibold text-white">My Day</span>
+                      <span className="text-sm font-semibold text-white">我的日程</span>
                     </button>
                     <button className="relative flex h-full grow items-center justify-center overflow-hidden rounded-full px-2 transition-all duration-300 z-10">
                       <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">
-                        Campus Life
+                        校园生活
                       </span>
                     </button>
                   </div>
@@ -419,7 +419,7 @@ export default function HomePage() {
                               warning
                             </span>
                             <span className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wide">
-                              Attendance Likely
+                              可能点名
                             </span>
                           </div>
                         </div>

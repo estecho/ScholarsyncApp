@@ -33,8 +33,8 @@ export default function OmniPostModal({
   if (!isOpen) return null;
 
   const getTitle = () => {
-    if (mode === "photo") return "AI Omni-Post";
-    return "AI Composer";
+    if (mode === "photo") return "AI 全息发布";
+    return "AI 创作助手";
   };
 
   const getIcon = () => {
@@ -202,12 +202,12 @@ function TalkModeContent({ contextItem }: { contextItem?: CampusItem | null }) {
         </div>
         <div className="text-center space-y-1">
           <p className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
-            Listening...
+            正在聆听...
           </p>
           <p className="text-xl font-medium text-slate-900 dark:text-white leading-relaxed mt-0">
             {contextItem
-              ? `"Looking for ${contextItem.title.toLowerCase()}..."`
-              : '"Looking for a math study buddy..."'}
+              ? `"寻找 ${contextItem.title.toLowerCase()}..."`
+              : '"寻找数学学习伙伴..."'}
           </p>
         </div>
       </div>
@@ -221,18 +221,18 @@ function TalkModeContent({ contextItem }: { contextItem?: CampusItem | null }) {
           <div className="flex flex-col gap-1 w-full">
             <div className="flex items-center gap-2">
               <span className="text-xs text-slate-500 dark:text-slate-400">
-                Analyzing intent:
+                分析意图：
               </span>
               <span className="text-xs font-bold bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md border border-indigo-200 dark:border-indigo-800/50">
-                🧠 {contextItem?.type === "social" ? "Social" : contextItem?.type === "event" ? "Event" : "General"}
+                🧠 {contextItem?.type === "social" ? "社交" : contextItem?.type === "event" ? "活动" : "通用"}
               </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-xs text-slate-500 dark:text-slate-400">
-                Extracting topic:
+                提取主题：
               </span>
               <span className="text-xs font-bold bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/50 w-[234px]">
-                📐 {contextItem?.title || "General"}
+                📐 {contextItem?.title || "通用"}
               </span>
             </div>
           </div>
@@ -282,12 +282,12 @@ function PhotoModeContent({ contextItem }: { contextItem?: CampusItem | null }) 
               view_in_ar
             </span>
             <span className="text-xs font-bold text-white tracking-wide text-shadow-sm">
-              Detected: {contextItem?.title || "Yeti Rambler 20oz"}
+              检测到：{contextItem?.title || "Yeti Rambler 20oz"}
             </span>
           </div>
           <div className="px-2.5 py-1 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 shadow-md">
             <span className="text-[10px] font-medium text-white/90">
-              Category: {contextItem?.type === "marketplace" ? "Lost & Found" : "Item"}
+              类别：{contextItem?.type === "marketplace" ? "失物招领" : "物品"}
             </span>
           </div>
         </div>
@@ -297,7 +297,7 @@ function PhotoModeContent({ contextItem }: { contextItem?: CampusItem | null }) 
           <div className="px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/10">
             <p className="text-xs font-medium text-white/90 tracking-wide flex items-center gap-2">
               <span className="block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Scanning object... Tap to capture.
+              正在扫描物体...点击拍摄。
             </p>
           </div>
         </div>
@@ -310,8 +310,8 @@ function PhotoModeContent({ contextItem }: { contextItem?: CampusItem | null }) 
 function TypeModeContent({ contextItem }: { contextItem?: CampusItem | null }) {
   const [text, setText] = useState(
     contextItem?.type === "marketplace"
-      ? `Selling my old ${contextItem.title.toLowerCase()}`
-      : `Looking for ${contextItem?.title.toLowerCase() || "help"}...`
+      ? `出售我的旧 ${contextItem.title.toLowerCase()}`
+      : `寻找 ${contextItem?.title.toLowerCase() || "帮助"}...`
   );
 
   return (
@@ -329,8 +329,8 @@ function TypeModeContent({ contextItem }: { contextItem?: CampusItem | null }) {
             {text}
             <span className="text-blue-400 dark:text-blue-300/80 opacity-70 italic">
               {contextItem?.type === "marketplace"
-                ? "...for Math 101? Condition: Good?"
-                : "...need help?"}
+                ? "...用于数学 101？状态：良好？"
+                : "...需要帮助？"}
             </span>
             <span className="animate-pulse text-primary ml-0.5 inline-block w-0.5 h-6 align-middle bg-primary rounded-full"></span>
           </p>
@@ -341,19 +341,19 @@ function TypeModeContent({ contextItem }: { contextItem?: CampusItem | null }) {
           <button className="flex items-center gap-1.5 px-3.5 py-2 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-indigo-100 dark:border-indigo-500/30 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-slate-800 transition-all group">
             <span className="text-sm">🏷️</span>
             <span className="text-xs font-bold text-indigo-600 dark:text-indigo-300 group-hover:text-indigo-700">
-              Add Price
+              添加价格
             </span>
           </button>
           <button className="flex items-center gap-1.5 px-3.5 py-2 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-blue-100 dark:border-blue-500/30 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-slate-800 transition-all group">
             <span className="text-sm">📚</span>
             <span className="text-xs font-bold text-blue-600 dark:text-blue-300 group-hover:text-blue-700">
-              Link Course
+              关联课程
             </span>
           </button>
           <button className="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-purple-50/80 to-pink-50/80 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border border-purple-100 dark:border-purple-500/30 shadow-sm hover:shadow-md transition-all group">
             <span className="text-sm">✨</span>
             <span className="text-xs font-bold text-purple-600 dark:text-purple-300 group-hover:text-purple-700">
-              Rephrase
+              重新措辞
             </span>
           </button>
         </div>

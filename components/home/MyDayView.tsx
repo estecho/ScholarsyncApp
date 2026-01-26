@@ -149,7 +149,7 @@ export default function MyDayView({
               <div className="flex items-center gap-3">
                 <button className="flex-1 py-4 px-6 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
                   <span className="material-symbols-outlined text-[20px]">flag</span>
-                  <span>Mark Keypoint</span>
+                  <span>标记重点</span>
                 </button>
                 <button 
                   onClick={handlePauseClick}
@@ -179,7 +179,7 @@ export default function MyDayView({
                 warning
               </span>
               <span className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wide">
-                Attendance Likely
+                可能点名
               </span>
             </div>
           </div>
@@ -222,10 +222,10 @@ export default function MyDayView({
               </div>
               <div className="flex flex-col">
                 <span className="text-xs font-bold text-gray-900 dark:text-white">
-                  AI Recording
+                  AI 录音
                 </span>
                 <span className="text-[10px] text-gray-500">
-                  Capturing highlights...
+                  正在捕获重点...
                 </span>
               </div>
             </div>
@@ -245,13 +245,13 @@ export default function MyDayView({
               <span className="material-symbols-outlined text-[18px]">
                 auto_awesome
               </span>
-              <span>Smart Note</span>
+              <span>智能笔记</span>
             </button>
             <button className="flex items-center justify-center gap-2 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 px-4 py-3 rounded-xl font-semibold text-sm transition-all active:scale-95">
               <span className="material-symbols-outlined text-[18px]">
                 co_present
               </span>
-              <span>View Slides</span>
+              <span>查看幻灯片</span>
             </button>
           </div>
             </>
@@ -275,7 +275,7 @@ export default function MyDayView({
           <div>
             <p className="text-3xl font-bold text-gray-900 dark:text-white">2</p>
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">
-              Assignments<br />Due Today
+              作业<br />今日到期
             </p>
           </div>
         </div>
@@ -294,9 +294,9 @@ export default function MyDayView({
             </div>
           </div>
           <div>
-            <p className="text-3xl font-bold text-gray-900 dark:text-white">3h 20m</p>
+            <p className="text-3xl font-bold text-gray-900 dark:text-white">3 小时 20 分钟</p>
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">
-              Focus Time<br />Today
+              专注时间<br />今日
             </p>
           </div>
         </div>
@@ -305,9 +305,9 @@ export default function MyDayView({
       {/* Up Next Section */}
       <div className="bg-white dark:bg-surface-dark rounded-3xl p-6 shadow-soft" style={{ paddingTop: "10px", paddingBottom: "10px" }}>
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white">Up Next</h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">接下来</h3>
           <button className="text-primary text-sm font-semibold hover:opacity-80">
-            Full Schedule
+            完整课表
           </button>
         </div>
         <div className="relative pl-2">
@@ -322,17 +322,17 @@ export default function MyDayView({
               <div className="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-r from-purple-50/90 to-indigo-50/50 dark:from-purple-900/30 dark:to-indigo-900/20 border border-purple-100 dark:border-purple-500/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-all cursor-pointer">
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="text-[10px] font-bold text-accent-purple uppercase tracking-wider flex items-center gap-1">
-                    Gap Time Detected
+                    检测到空闲时间
                   </span>
                   <span className="text-[10px] text-gray-400 font-medium">
                     11:30 - 12:00
                   </span>
                 </div>
                 <p className="text-sm font-bold text-gray-800 dark:text-gray-100 leading-snug">
-                  Library 3F is quiet now.
+                  图书馆 3 楼现在很安静。
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  Perfect for finishing that reading assignment.
+                  非常适合完成阅读作业。
                 </p>
               </div>
             </div>
@@ -344,14 +344,14 @@ export default function MyDayView({
             <div className="flex-1 pt-1">
               <div className="flex justify-between items-baseline mb-1">
                 <h4 className="font-bold text-gray-800 dark:text-gray-100 text-base">
-                  Lunch Recommendation
+                  午餐推荐
                 </h4>
                 <span className="text-xs font-semibold text-gray-400">12:00 PM</span>
               </div>
               <div className="flex items-center gap-2">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Student Center</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">学生中心</p>
                 <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300 text-[10px] font-bold tracking-tight">
-                  Low Crowd
+                  人少
                 </span>
               </div>
             </div>
@@ -363,16 +363,16 @@ export default function MyDayView({
             <div className="flex-1 pt-1">
               <div className="flex justify-between items-baseline mb-1">
                 <h4 className="font-bold text-gray-800 dark:text-gray-100 text-base">
-                  Find Study Buddy
+                  找学习伙伴
                 </h4>
-                <span className="text-xs font-semibold text-gray-400">Anytime</span>
+                <span className="text-xs font-semibold text-gray-400">随时</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-gray-400 text-[14px]">
                   sync
                 </span>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Schedule Match: 3 friends free
+                  日程匹配：3 位朋友有空
                 </p>
               </div>
             </div>
@@ -395,15 +395,15 @@ export default function MyDayView({
             </div>
             <div>
               <h3 className="font-bold text-gray-900 dark:text-white leading-tight text-lg">
-                Find Lunch Partner
+                找午餐伙伴
               </h3>
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300 mt-0.5">
-                3 friends are free around 12:00 PM.
+                3 位朋友在 12:00 PM 左右有空。
               </p>
             </div>
           </div>
           <button className="flex-shrink-0 w-full sm:w-auto bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-gray-900 pl-5 pr-5 py-3 rounded-2xl font-bold text-sm shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 self-end sm:self-center" style={{ paddingTop: "6px", paddingBottom: "6px", paddingLeft: "20px", paddingRight: "20px" }}>
-            <span>Match Now</span>
+            <span>立即匹配</span>
             <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
           </button>
         </div>

@@ -24,7 +24,7 @@ export default function CourseDetailPage() {
     return (
       <PageTransition>
         <div className="flex items-center justify-center min-h-screen">
-          <p className="text-gray-500">Course not found</p>
+          <p className="text-gray-500">未找到课程</p>
         </div>
       </PageTransition>
     );
@@ -84,7 +84,7 @@ export default function CourseDetailPage() {
             </span>
           </button>
           <h2 className="text-[#0d121b] dark:text-white text-lg font-bold leading-tight flex-1 text-center">
-            Course Details
+            课程详情
           </h2>
           <div className="flex w-10 items-center justify-end">
             <button className="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
@@ -150,7 +150,7 @@ export default function CourseDetailPage() {
                   <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
                     mail
                   </span>
-                  Email
+                  邮件
                 </button>
                 <button
                   onClick={() => setShowAIComposer(!showAIComposer)}
@@ -159,7 +159,7 @@ export default function CourseDetailPage() {
                   <span className="material-symbols-outlined text-indigo-500" style={{ fontSize: "18px" }}>
                     article
                   </span>
-                  Request Leave
+                  请假申请
                 </button>
                 {showAIComposer && (
                   <div className="absolute top-full right-0 mt-3 w-64 bg-white dark:bg-[#1a2235] rounded-xl shadow-ai-glow border border-indigo-100 dark:border-indigo-900 overflow-hidden transform transition-all animate-[fadeIn_0.3s_ease-out]">
@@ -170,11 +170,11 @@ export default function CourseDetailPage() {
                           auto_awesome
                         </span>
                         <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-500">
-                          AI Composer
+                          AI 创作助手
                         </span>
                       </div>
                       <div className="text-sm text-gray-700 dark:text-gray-200 font-medium leading-snug font-mono bg-indigo-50/50 dark:bg-indigo-900/10 p-2 rounded-lg">
-                        "Dear {course.professor.name.split(" ")[0]}, I am writing to request...
+                        "尊敬的 {course.professor.name.split(" ")[0]}，我写信请求...
                         <span className="inline-block w-0.5 h-4 bg-indigo-500 align-middle ml-0.5 animate-cursor"></span>"
                       </div>
                     </div>
@@ -205,7 +205,7 @@ export default function CourseDetailPage() {
                   onClick={handleAcknowledgeRoomChange}
                   className="text-orange-600 dark:text-orange-400 text-xs font-semibold underline text-left w-fit hover:text-orange-700 dark:hover:text-orange-300"
                 >
-                  Acknowledge
+                  确认
                 </button>
               </div>
             </motion.div>
@@ -237,9 +237,9 @@ export default function CourseDetailPage() {
               <div className="absolute top-3 left-3 right-3 bg-white/95 dark:bg-[#101622]/95 backdrop-blur-md rounded-lg p-2.5 shadow-lg flex items-center gap-3 border-l-4 border-indigo-500 animate-[slideDown_0.5s_ease-out]">
                 <div className="text-xl">🌧️</div>
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-800 dark:text-white">Rain detected</p>
+                  <p className="text-xs font-bold text-gray-800 dark:text-white">检测到下雨</p>
                   <p className="text-[10px] font-medium text-gray-500 dark:text-gray-400">
-                    Leave in 5 min to arrive on time.
+                    5 分钟后出发以准时到达。
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function CourseDetailPage() {
                   <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>
                     near_me
                   </span>
-                  Start Navigation
+                  开始导航
                 </button>
               </div>
             </div>
@@ -265,12 +265,12 @@ export default function CourseDetailPage() {
             className="rounded-2xl bg-white dark:bg-[#1a2235] p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4"
           >
             <div className="flex items-center justify-between">
-              <h3 className="text-[#0d121b] dark:text-white text-base font-bold">Course Tasks</h3>
+              <h3 className="text-[#0d121b] dark:text-white text-base font-bold">课程任务</h3>
               <span className="text-xs font-medium text-gray-400 dark:text-gray-500 flex items-center gap-1">
                 <span className="material-symbols-outlined" style={{ fontSize: "14px" }}>
                   sync
                 </span>
-                Syncs to Home
+                同步到首页
               </span>
             </div>
             <div className="flex flex-col gap-3">
@@ -314,7 +314,7 @@ export default function CourseDetailPage() {
                                   auto_awesome
                                 </span>
                                 <span className="text-[9px] font-bold uppercase tracking-wider">
-                                  AI Breakdown
+                                  AI 分解
                                 </span>
                               </div>
                             </div>
@@ -366,7 +366,7 @@ export default function CourseDetailPage() {
                 onChange={(e) => setNewTaskInput(e.target.value)}
                 onKeyDown={handleInputKeyDown}
                 className="w-full rounded-full bg-background-light dark:bg-background-dark/50 border-none py-2.5 pl-10 pr-4 text-sm font-medium text-[#0d121b] dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/20"
-                placeholder="Add a task..."
+                placeholder="添加任务..."
                 type="text"
               />
             </div>
@@ -382,18 +382,18 @@ export default function CourseDetailPage() {
             <div className="flex flex-col gap-3">
               <div className="flex grid-cols-3 grid-rows-1 gap-[132px] items-center px-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-[#0d121b] dark:text-white text-base font-bold">Classmates</h3>
+                  <h3 className="text-[#0d121b] dark:text-white text-base font-bold">同学</h3>
                   <div className="flex items-center gap-1 pl-2 pr-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-100 dark:border-indigo-500/30">
                     <span className="material-symbols-outlined text-indigo-500 animate-pulse-slow" style={{ fontSize: "14px" }}>
                       auto_awesome
                     </span>
                     <span className="text-[10px] font-bold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-                      AI Matched
+                      AI 匹配
                     </span>
                   </div>
                 </div>
                 <button className="text-primary text-sm font-medium hover:text-indigo-600 transition-colors">
-                  View All
+                  查看全部
                 </button>
               </div>
               <div className="flex gap-[3px] overflow-x-auto py-[5px] px-0 hide-scrollbar snap-x snap-mandatory justify-center items-end w-full overflow-visible">
@@ -404,7 +404,7 @@ export default function CourseDetailPage() {
                   >
                     {student.match && (
                       <div className="absolute -top-2 right-1 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm z-10">
-                        {student.match}% Match
+                        {student.match}% 匹配
                       </div>
                     )}
                     <div className="relative mt-1">
@@ -452,8 +452,8 @@ export default function CourseDetailPage() {
                     ))}
                   </div>
                   <div className="text-center pb-2">
-                    <p className="text-xs font-bold text-gray-400 dark:text-gray-500">+12 Others</p>
-                    <button className="mt-2 text-[10px] font-semibold text-primary underline">See All</button>
+                    <p className="text-xs font-bold text-gray-400 dark:text-gray-500">+12 人</p>
+                    <button className="mt-2 text-[10px] font-semibold text-primary underline">查看全部</button>
                   </div>
                 </div>
               </div>
@@ -468,10 +468,10 @@ export default function CourseDetailPage() {
             className="px-1 mt-2 space-y-3"
           >
             <div className="flex items-center justify-between">
-              <h3 className="text-[#0d121b] dark:text-white text-base font-bold">About this course</h3>
+              <h3 className="text-[#0d121b] dark:text-white text-base font-bold">关于本课程</h3>
               <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-md">
                 <span className="material-symbols-outlined text-sm">psychology</span>
-                AI Parsed
+                AI 解析
               </span>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -486,7 +486,7 @@ export default function CourseDetailPage() {
               {course.examDate && (
                 <span className="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700 dark:bg-rose-900/30 dark:text-rose-200 text-xs font-semibold border border-rose-100 dark:border-rose-800 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">event</span>
-                  Exam: {course.examDate}
+                  考试：{course.examDate}
                 </span>
               )}
             </div>
@@ -498,7 +498,7 @@ export default function CourseDetailPage() {
                 download
               </span>
               <span className="text-sm font-semibold ai-gradient-text">
-                Import 4 Deadlines from Syllabus
+                从课程大纲导入 4 个截止日期
               </span>
             </button>
           </motion.div>

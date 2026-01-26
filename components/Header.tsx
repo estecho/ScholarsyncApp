@@ -14,8 +14,8 @@ interface DashboardHeaderProps {
 }
 
 export function DashboardHeader({
-  date = "Oct 24",
-  dayName = "Wednesday",
+  date = "10 月 24 日",
+  dayName = "星期三",
   weather = "22°C",
   view = "day",
   onViewChange,
@@ -69,7 +69,7 @@ export function DashboardHeader({
                   : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium"
               }`}
             >
-              Day
+              日
             </button>
             <button
               onClick={() => onViewChange?.("week")}
@@ -79,7 +79,7 @@ export function DashboardHeader({
                   : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium"
               }`}
             >
-              Week
+              周
             </button>
           </div>
         </div>
@@ -104,7 +104,7 @@ export function SimpleHeader({
       <div className="flex items-center justify-between p-4 h-16 max-w-lg mx-auto w-full">
         <Link
           href={backHref}
-          aria-label="Go back"
+          aria-label="返回"
           className="flex items-center justify-center w-10 h-10 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
         >
           <span className="material-symbols-outlined text-2xl">

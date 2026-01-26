@@ -109,7 +109,7 @@ export default function WellnessPage() {
         >
           <span className="material-symbols-outlined text-text-main dark:text-white text-[20px]">arrow_back_ios_new</span>
         </button>
-        <h2 className="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Wellness & Focus</h2>
+        <h2 className="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">健康与专注</h2>
         <div className="flex size-10 shrink-0 items-center justify-center">
           <div
             className="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark shadow-sm"
@@ -123,7 +123,7 @@ export default function WellnessPage() {
         <div className="flex flex-col gap-3">
           <div className="flex justify-between items-end px-1">
             <h3 className="text-text-main dark:text-white text-xl font-bold leading-tight tracking-tight">
-              Monthly Stress Heatmap
+              月度压力热图
             </h3>
             <span className="text-sm text-text-soft dark:text-gray-400 font-medium bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-sm border border-gray-100 dark:border-gray-700">
               {currentMonth}
@@ -139,11 +139,11 @@ export default function WellnessPage() {
               <div className="flex gap-3">
                 <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
                   <div className="size-2 rounded-full bg-emerald-400"></div>
-                  <span className="text-[10px] uppercase font-bold text-gray-400 dark:text-gray-500 tracking-wider">Low</span>
+                  <span className="text-[10px] uppercase font-bold text-gray-400 dark:text-gray-500 tracking-wider">低</span>
                 </div>
                 <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
                   <div className="size-2 rounded-full bg-red-500"></div>
-                  <span className="text-[10px] uppercase font-bold text-gray-400 dark:text-gray-500 tracking-wider">High</span>
+                  <span className="text-[10px] uppercase font-bold text-gray-400 dark:text-gray-500 tracking-wider">高</span>
                 </div>
               </div>
               <button className="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-full transition-colors text-gray-400 hover:text-primary">
@@ -260,10 +260,10 @@ export default function WellnessPage() {
               </p>
               <div className="flex gap-3">
                 <button className="flex-1 bg-primary hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2 group">
-                  <span>Schedule Break</span>
+                  <span>安排休息</span>
                 </button>
                 <button className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-soft dark:text-gray-300 font-semibold py-2.5 px-4 rounded-xl text-sm transition-all border border-gray-200 dark:border-gray-700">
-                  Dismiss
+                  忽略
                 </button>
               </div>
             </div>

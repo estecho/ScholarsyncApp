@@ -38,7 +38,7 @@ export default function TimerSettingsModal({ isOpen, onClose, currentTime, onCon
             className="fixed bottom-0 left-0 right-0 z-[100] max-w-md mx-auto bg-white dark:bg-gray-900 rounded-t-2xl shadow-2xl p-6"
           >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Set Focus Duration</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">设置专注时长</h3>
               <button
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -59,7 +59,7 @@ export default function TimerSettingsModal({ isOpen, onClose, currentTime, onCon
                       : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                   }`}
                 >
-                  {minutes}m
+                  {minutes} 分钟
                 </button>
               ))}
             </div>
@@ -67,7 +67,7 @@ export default function TimerSettingsModal({ isOpen, onClose, currentTime, onCon
             {/* Custom Input */}
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Custom Duration (minutes)
+                自定义时长（分钟）
               </label>
               <input
                 type="number"
@@ -85,13 +85,13 @@ export default function TimerSettingsModal({ isOpen, onClose, currentTime, onCon
                 onClick={onClose}
                 className="flex-1 py-3 px-4 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
-                Cancel
+                取消
               </button>
               <button
                 onClick={handleConfirm}
                 className="flex-1 py-3 px-4 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
               >
-                Confirm
+                确认
               </button>
             </div>
           </motion.div>

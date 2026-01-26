@@ -42,7 +42,7 @@ export default function NavigationPage() {
               </span>
             </button>
             <h2 className="text-[#0d121b] dark:text-white text-lg font-bold leading-tight flex-1 text-center">
-              Navigation
+              导航
             </h2>
             <div className="flex w-10 items-center justify-end">
               <button className="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
@@ -75,7 +75,7 @@ export default function NavigationPage() {
                 </span>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Destination</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">目的地</p>
                 <p className="text-base font-bold text-[#0d121b] dark:text-white break-words">{destination}</p>
                 {course && (
                   <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 break-words">{course.title}</p>
@@ -120,10 +120,10 @@ export default function NavigationPage() {
                   <span className="material-symbols-outlined text-primary text-base">
                     directions_walk
                   </span>
-                  <p className="text-xs font-bold text-gray-800 dark:text-white">Walking Route</p>
+                  <p className="text-xs font-bold text-gray-800 dark:text-white">步行路线</p>
                 </div>
                 <p className="text-[10px] font-medium text-gray-500 dark:text-gray-400">
-                  Estimated time: 5-7 minutes
+                  预计时间：5-7 分钟
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function NavigationPage() {
                   <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>
                     near_me
                   </span>
-                  Start Navigation
+                  开始导航
                 </button>
               </div>
             </div>
@@ -149,15 +149,15 @@ export default function NavigationPage() {
             transition={{ delay: 0.2 }}
             className="rounded-2xl bg-white dark:bg-[#1a2235] p-4 shadow-sm border border-gray-100 dark:border-gray-800"
           >
-            <h3 className="text-base font-bold text-[#0d121b] dark:text-white mb-3">Route Details</h3>
+            <h3 className="text-base font-bold text-[#0d121b] dark:text-white mb-3">路线详情</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-white text-xs">check</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">Start from current location</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Main Building, Floor 2</p>
+                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">从当前位置出发</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">主楼，2 层</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -165,8 +165,8 @@ export default function NavigationPage() {
                   <span className="text-white text-xs font-bold">1</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">Walk straight for 200m</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Follow the main corridor</p>
+                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">直行 200 米</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">沿着主走廊</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -174,8 +174,8 @@ export default function NavigationPage() {
                   <span className="text-white text-xs font-bold">2</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">Turn right at Science Block</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Look for Room 304 sign</p>
+                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">在科学楼右转</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">寻找 304 室标识</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -183,8 +183,8 @@ export default function NavigationPage() {
                   <span className="material-symbols-outlined text-white text-xs">location_on</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">Arrive at {destination}</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Destination reached</p>
+                  <p className="text-sm font-medium text-[#0d121b] dark:text-white">到达 {destination}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">已到达目的地</p>
                 </div>
               </div>
             </div>

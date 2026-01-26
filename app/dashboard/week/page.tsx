@@ -15,8 +15,8 @@ export default function DashboardWeekPage() {
     <PageTransition>
       <div className="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark pb-24 overflow-hidden shadow-2xl">
         <DashboardHeader
-          date="Oct 21-25"
-          dayName="Week 9"
+          date="10 月 21-25 日"
+          dayName="第 9 周"
           weather="22°C"
           view="week"
           onViewChange={(view) => {
@@ -56,7 +56,7 @@ export default function DashboardWeekPage() {
             <div className="absolute w-full z-30 pointer-events-none top-[256px]">
               <div className="relative w-full">
                 <div className="absolute -left-1 -top-2 bg-action-red text-white text-[9px] font-bold px-1.5 py-0.5 rounded-r text-center shadow-md">
-                  Now
+                  现在
                 </div>
                 <div className="border-t-2 border-action-red w-full shadow-[0_0_8px_rgba(239,68,68,0.5)]"></div>
               </div>
@@ -89,12 +89,12 @@ export default function DashboardWeekPage() {
             <div className="relative border-r border-slate-50 dark:border-slate-800/30 bg-white dark:bg-transparent">
               <div className="absolute top-[66px] left-0.5 right-0.5 h-[60px] rounded-md bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-800 p-1 flex flex-col shadow-sm z-10 opacity-90">
                 <span className="text-[9px] font-bold text-purple-700 dark:text-purple-200 leading-tight">
-                  Physics
+                  物理
                 </span>
               </div>
-              <div className="absolute top-[96px] left-0.5 right-0.5 h-[60px] rounded-md bg-white dark:bg-surface-dark border-2 border-action-red/20 dark:border-action-red/30 p-1 flex flex-col shadow-md z-20">
+                  <div className="absolute top-[96px] left-0.5 right-0.5 h-[60px] rounded-md bg-white dark:bg-surface-dark border-2 border-action-red/20 dark:border-action-red/30 p-1 flex flex-col shadow-md z-20">
                 <span className="text-[9px] font-bold text-slate-700 dark:text-slate-200 leading-tight">
-                  Bio Lab
+                  生物实验
                 </span>
               </div>
               <div className="absolute top-[86px] -right-2 z-30 bg-action-red text-white w-5 h-5 rounded-full flex items-center justify-center border-2 border-white dark:border-background-dark shadow-action animate-bounce">
@@ -125,7 +125,7 @@ export default function DashboardWeekPage() {
               })()}
               <div className="absolute top-[296px] left-0.5 right-0.5 h-[80px] rounded-md bg-slate-200 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 p-1 flex flex-col shadow-sm z-10">
                 <span className="text-[9px] font-bold text-slate-700 dark:text-slate-200">
-                  Study
+                  学习
                 </span>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function DashboardWeekPage() {
             <div className="relative bg-emerald-50/60 dark:bg-emerald-900/20">
               <div className="absolute top-[56px] left-0.5 right-0.5 h-[60px] rounded-md bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-200 dark:border-emerald-800 p-1 flex flex-col shadow-sm z-10">
                 <span className="text-[9px] font-bold text-emerald-700 dark:text-emerald-200">
-                  Gym
+                  健身房
                 </span>
               </div>
               <div className="absolute top-[336px] left-1 right-1 h-auto py-3 px-1 rounded-2xl bg-white/40 dark:bg-slate-800/40 backdrop-blur-md border border-white/50 dark:border-slate-700/50 flex flex-col items-center justify-center shadow-glass cursor-pointer hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all group z-20">
@@ -177,9 +177,9 @@ export default function DashboardWeekPage() {
                   ))}
                 </div>
                 <span className="text-[8px] font-bold text-slate-700 dark:text-slate-300 text-center leading-tight">
-                  Group Free
+                  小组空闲
                   <br />
-                  Time
+                  时间
                 </span>
               </div>
             </div>

@@ -89,21 +89,21 @@ export default function ScanPage() {
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                   </div>
                   <span className="text-primary text-sm font-semibold tracking-wide uppercase">
-                    AI Agent Active
+                    AI 代理已激活
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 text-gray-400 dark:text-gray-500">
                   <span className="material-symbols-outlined text-[16px]">lock</span>
-                  <span className="text-xs font-medium">Secure Connection</span>
+                  <span className="text-xs font-medium">安全连接</span>
                 </div>
               </div>
               {/* HeadlineText Component (Modified) */}
               <div className="text-center py-2">
                 <h1 className="text-[#0d121b] dark:text-white tracking-tight text-[32px] font-bold leading-none">
-                  12 Courses Found
+                  找到 12 门课程
                 </h1>
                 <p className="text-[#4c669a] dark:text-gray-400 text-sm mt-2 font-medium">
-                  Analyzing Fall 2024 Semester...
+                  正在分析 2024 年秋季学期...
                 </p>
               </div>
               {/* ReactionBar Component (Modified for Metrics) */}
@@ -114,7 +114,7 @@ export default function ScanPage() {
                     <span className="material-symbols-outlined text-[24px]">book_2</span>
                   </div>
                   <p className="text-[#4c669a] dark:text-gray-300 text-xs font-bold uppercase tracking-wider text-center">
-                    12 Courses
+                    12 门课程
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 bg-background-light dark:bg-[#1e2433] rounded-2xl border border-transparent dark:border-gray-800 transition-all hover:border-primary/20">
@@ -124,7 +124,7 @@ export default function ScanPage() {
                     </span>
                   </div>
                   <p className="text-[#4c669a] dark:text-gray-300 text-xs font-bold uppercase tracking-wider text-center">
-                    5 Exams
+                    5 场考试
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-2 px-3 py-4 bg-background-light dark:bg-[#1e2433] rounded-2xl border border-transparent dark:border-gray-800 transition-all hover:border-primary/20">
@@ -132,7 +132,7 @@ export default function ScanPage() {
                     <span className="material-symbols-outlined text-[24px]">school</span>
                   </div>
                   <p className="text-[#4c669a] dark:text-gray-300 text-xs font-bold uppercase tracking-wider text-center">
-                    32 Credits
+                    32 学分
                   </p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function ScanPage() {
               <div className="flex flex-col gap-2">
                 <div className="flex justify-between items-end">
                   <p className="text-[#0d121b] dark:text-white text-sm font-semibold">
-                    Extracting Schedule
+                    正在提取日程
                   </p>
                   <p className="text-primary text-sm font-bold">{Math.round(progress)}%</p>
                 </div>
@@ -168,11 +168,11 @@ export default function ScanPage() {
                       <span className="material-symbols-outlined text-[14px]">check</span>
                     </div>
                     <p className="text-[#4c669a] dark:text-gray-300 text-sm font-medium">
-                      Fall 2024 Schedule
+                      2024 年秋季日程
                     </p>
                   </div>
                   <p className="text-[#0d121b] dark:text-white text-xs font-semibold bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                    Imported
+                    已导入
                   </p>
                 </div>
                 {/* Log Item 2 */}
@@ -184,7 +184,7 @@ export default function ScanPage() {
                       </span>
                     </div>
                     <p className="text-[#4c669a] dark:text-gray-300 text-sm font-medium">
-                      Final Exam Dates
+                      期末考试日期
                     </p>
                   </div>
                   <p className="text-primary text-xs font-semibold bg-primary/10 px-2 py-1 rounded">

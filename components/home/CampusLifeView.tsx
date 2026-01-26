@@ -15,29 +15,29 @@ interface CampusLifeViewProps {
 // Define card data
 const heroCard: CampusItem = {
   id: "hackathon-2024",
-  title: "AI Hackathon 2024",
+  title: "AI 黑客马拉松 2024",
   type: "event",
-  description: "Teams of 4 recommended",
-  location: "Innovation Hub",
-  time: "Oct 24 • 9:00 AM",
-  tags: ["Hackathon", "Tech"],
+  description: "建议 4 人组队",
+  location: "创新中心",
+  time: "10 月 24 日 • 9:00 AM",
+  tags: ["黑客马拉松", "科技"],
   image: "https://lh3.googleusercontent.com/aida-public/AB6AXuARp15Mb5XKxrpEIW7ajhEcd71yEnrgF5_y3KGwmZ1_Kz2N_K_tNib2JusjrP-yU8CmowcIdyxur8z802UyX9a1wPgL1SCuystLMNpa0DAAnfBh4qG5A24j511zjR6bBZf6zu8WeMUDdWcQIC0E9ixvquELgcXsFqJK8gUUgg7xWK_qKfoDMTncwhH0KGeHFKdm1y-vpBQ6LQtNVTub-jRnCoJ9nhxO7_KTJcFO7jnFqQy4LK9uNC6x7ymvIzqSrhryYUvXNq-93z0",
 };
 
 const marketplaceCards: CampusItem[] = [
   {
     id: "textbook-psych",
-    title: "Psych 101 Textbook",
+    title: "心理学 101 教材",
     type: "marketplace",
-    price: "$15",
+    price: "¥105",
     seller: "Alex M.",
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDI-VPBpd0PUButAihODAZAHMsPzA_iDQ9mFVaVioh1ttKDcyQ-y4Ql0KClSd_2vQ6l93JYh_8gSarJf7r9KGjIbLUfYDn4ksvt0dggW2KsJT4NvaoeXBShJ95_wexTCW7Hbnd7qptfYSJWCyb9sY7nfr7hXgX7Y0iwzNGkqoYi7E63m1ZBhXJpuDaMhUgTr17HwXKRgH3T2ela5CFBkzfydoK6YHEESilHY8pFfUuj4XR0MugkDFVKESYniw2aVYlvGdJc0ohsBnQ',
   },
   {
     id: "camera-polaroid",
-    title: "Polaroid Camera",
+    title: "拍立得相机",
     type: "marketplace",
-    price: "$45",
+    price: "¥315",
     seller: "Sarah J.",
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6V5o1-3Ts_his7HtX9RrkSU36zk38EpX_cZtycDGP7gSYcp8X09Ij3t8KgbXZJLtzz-Qiy81_TfrGy50yaz4Kc2kPfb5imHJN8SW_XfLGAM-aDlh_q0tl5QkjV7BDAvyrf5VQ-QxVjEODef3tKTBADKHgFmXapsogUM2T2M8lmVbP43ZKXVBHECDK_Gfel3FcFC_quq7O_3l3reCtFHfoiqUjBu8uP_8qrIAT0g9uhMwkYSjT3q0LCADCKRhq0BaCDplIs7fGsPc',
   },
@@ -45,47 +45,47 @@ const marketplaceCards: CampusItem[] = [
 
 const socialCard: CampusItem = {
   id: "study-buddy-david",
-  title: "Looking for a study buddy for Chem 202 finals!",
+  title: "寻找化学 202 期末考试的学习伙伴！",
   type: "social",
-  description: "Chemistry Major",
+  description: "化学专业",
   seller: "David K.",
   image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0noYjeEyyXt9pi_ZOIZFrxNSNnDk8v_cE66vT-5Cw5hQeQVg7KRFTqNn7wOVK6R34E2nAYSk8PEfJMPl-AVqPUJQufKCEZXPvqXUfiggXfJ8Qe0a7QXoyJJo-U89I_-GyQsV_uJ14z_AaQnHJk5aFp1tuQAVWQqB8xYMBc8oUQn6RqAHevljHcjJm2NP2bu8YBGIYnTDWQ1BzHyK1JTHho9QoozjVKMhj0PmRjGYi8bYV7ti-_eB3oNxcVOkNf3_pSftWZkUitWo",
 };
 
 const eventCard: CampusItem = {
   id: "jazz-night",
-  title: "Campus Jazz Night",
+  title: "校园爵士之夜",
   type: "event",
-  location: "Main Hall",
-  time: "8 PM",
-  tags: ["Music", "Tonight"],
+  location: "主厅",
+  time: "晚上 8 点",
+  tags: ["音乐", "今晚"],
   image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCg17hgFJ-LpOw_dzfDFAaS54YEsgnxRXHcfn66xLpwQw3oHnpvuKgDUAeMQk1Z9u97_NwWfzcpKOB79AWlaY71MUzWVP481-2xAs0ANlW0yE8iWdr_qYmRuDsR91tWcStHK_ca5iOGssahamvQrczm-0Wnpvdwrp3ANUKwbps0hPNFQcOZoZA0rBm422uEVgc3_LEgex9xHZDXq1b9KPWR0421ZA0OAWnm5ESSVyD6uOJP_jKlk-ruLosEIh8TV3tTo_GE4gMnCv4',
 };
 
 const announcementCard: CampusItem = {
   id: "free-coffee",
-  title: "Free Coffee",
+  title: "免费咖啡",
   type: "announcement",
-  description: "Library Lobby until 11 AM",
+  description: "图书馆大厅至上午 11 点",
 };
 
 const careerFairCard: CampusItem = {
   id: "career-fair-2024",
-  title: "Fall Career Fair 2024",
+  title: "2024 秋季招聘会",
   type: "event",
-  location: "Convention Center",
-  time: "Oct 26 • 10:00 AM",
-  tags: ["Career", "Networking"],
-  description: "50+ companies recruiting",
+  location: "会议中心",
+  time: "10 月 26 日 • 10:00 AM",
+  tags: ["招聘", "社交"],
+  description: "50+ 公司招聘",
 };
 
 const studyGroupCard: CampusItem = {
   id: "study-group-cs",
-  title: "CS 101 Study Group",
+  title: "CS 101 学习小组",
   type: "social",
-  description: "Weekly review sessions",
-  location: "Library Room 201",
-  time: "Every Tuesday • 6 PM",
+  description: "每周复习课",
+  location: "图书馆 201 室",
+  time: "每周二 • 晚上 6 点",
 };
 
 export default function CampusLifeView({
@@ -143,7 +143,7 @@ export default function CampusLifeView({
                 : "text-slate-600 dark:text-slate-300 font-medium"
             }`}
           >
-            All
+            全部
           </p>
         </button>
         <button
@@ -163,7 +163,7 @@ export default function CampusLifeView({
                 : "text-slate-600 dark:text-slate-300 font-medium"
             }`}
           >
-            Events
+            活动
           </p>
         </button>
         <button
@@ -183,7 +183,7 @@ export default function CampusLifeView({
                 : "text-slate-600 dark:text-slate-300 font-medium"
             }`}
           >
-            Marketplace
+            市场
           </p>
         </button>
         <button
@@ -203,7 +203,7 @@ export default function CampusLifeView({
                 : "text-slate-600 dark:text-slate-300 font-medium"
             }`}
           >
-            Social
+            社交
           </p>
         </button>
       </div>
@@ -246,33 +246,33 @@ export default function CampusLifeView({
                 <span className="material-symbols-outlined text-indigo-300 text-[18px]">
                   auto_awesome
                 </span>
-                <span className="text-xs font-semibold text-white tracking-wide">AI Pick</span>
+                <span className="text-xs font-semibold text-white tracking-wide">AI 推荐</span>
               </div>
               <div className="flex items-center gap-1.5 rounded-full bg-emerald-500/80 px-3 py-1.5 backdrop-blur-md shadow-lg border border-emerald-400/20" style={{ height: '30px' }}>
                 <span className="material-symbols-outlined text-white text-[18px]">
                   check_circle
                 </span>
-                <span className="text-xs font-bold text-white">Fits Schedule</span>
+                <span className="text-xs font-bold text-white">适合日程</span>
               </div>
             </div>
             <div className="absolute bottom-6 left-6 right-6 z-10">
               <div className="flex flex-col gap-2 min-w-0">
                 <div className="flex gap-2 mb-1">
                   <span className="inline-flex items-center rounded-lg bg-indigo-500/90 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm border border-indigo-400/30">
-                    Hackathon
+                    黑客马拉松
                   </span>
                   <span className="inline-flex items-center rounded-lg bg-white/20 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm border border-white/20">
-                    Tech
+                    科技
                   </span>
                 </div>
                 <h2 className="text-3xl font-bold text-white leading-tight drop-shadow-md break-words">
-                  AI Hackathon 2024
+                  AI 黑客马拉松 2024
                 </h2>
                 <div className="flex items-center gap-2 text-indigo-100 text-sm font-medium mt-1 min-w-0">
                   <span className="material-symbols-outlined text-[18px] shrink-0">calendar_today</span>
-                  <span className="break-words">Oct 24 • 9:00 AM</span>
+                  <span className="break-words">10 月 24 日 • 9:00 AM</span>
                   <span className="text-white/40 shrink-0">•</span>
-                  <span className="break-words">Innovation Hub</span>
+                  <span className="break-words">创新中心</span>
                 </div>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function CampusLifeView({
             <div className="flex justify-between items-center mb-2.5" style={{ marginLeft: '5px' }}>
               <div className="flex flex-col gap-1.5">
                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                  Friends Going
+                  朋友参加
                 </p>
                 <div className="flex items-center" style={{ gap: '0px' }}>
                   <div className="flex -space-x-3">
@@ -306,12 +306,12 @@ export default function CampusLifeView({
                     ></div>
                   </div>
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
-                    +5 others
+                    +5 人
                   </span>
                 </div>
               </div>
               <button className="relative overflow-hidden rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-lg shadow-slate-200/50 dark:shadow-none hover:scale-105 active:scale-95 transition-all duration-300" style={{ paddingTop: '7px', paddingBottom: '7px', paddingLeft: '17px', paddingRight: '17px' }}>
-                <span className="relative z-10 text-sm font-bold">Register</span>
+                <span className="relative z-10 text-sm font-bold">报名</span>
               </button>
             </div>
             <div className="pt-1 pb-1 pl-4 pr-4 rounded-xl bg-slate-50 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600 flex items-start gap-3" style={{ gap: '12px' }}>
@@ -319,8 +319,8 @@ export default function CampusLifeView({
                 lightbulb
               </span>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                <span className="font-bold text-slate-900 dark:text-white">AI Tip:</span> Teams of
-                4 recommended. Your Python skills match this event perfectly!
+                <span className="font-bold text-slate-900 dark:text-white">AI 提示：</span> 建议
+                4 人组队。您的 Python 技能非常适合这个活动！
               </p>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function CampusLifeView({
             </div>
             <div className="p-3">
               <h3 className="text-slate-900 dark:text-white text-sm font-semibold leading-tight mb-1">
-                Psych 101 Textbook
+                心理学 101 教材
               </h3>
               <div className="flex items-center gap-2 mt-2">
                 <div
@@ -419,10 +419,10 @@ export default function CampusLifeView({
               </div>
             </div>
             <p className="text-sm text-slate-700 dark:text-slate-300 mb-3 leading-relaxed">
-              "Looking for a study buddy for Chem 202 finals!"
+              "寻找化学 202 期末考试的学习伙伴！"
             </p>
             <button className="w-full py-2 rounded-xl bg-white dark:bg-slate-700 text-primary dark:text-blue-300 text-xs font-bold shadow-sm">
-              Connect
+              联系
             </button>
           </motion.div>
 
@@ -459,15 +459,15 @@ export default function CampusLifeView({
             ></div>
             <div className="p-3" style={{ height: '90px' }}>
               <div className="flex justify-between items-start mb-1">
-                <p className="text-xs font-semibold text-rose-500 uppercase tracking-wide">Music</p>
+                <p className="text-xs font-semibold text-rose-500 uppercase tracking-wide">音乐</p>
                 <span className="text-[10px] font-medium bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300 px-2 py-0.5 rounded-full">
-                  Tonight
+                  今晚
                 </span>
               </div>
               <h3 className="text-slate-900 dark:text-white text-base font-bold leading-tight mb-1">
-                Campus Jazz Night
+                校园爵士之夜
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400">Main Hall • 8 PM</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">主厅 • 晚上 8 点</p>
             </div>
           </motion.div>
 
@@ -500,9 +500,9 @@ export default function CampusLifeView({
                 <span className="material-symbols-outlined text-[20px]">local_cafe</span>
               </div>
               <div>
-                <h3 className="text-slate-900 dark:text-white text-sm font-bold">Free Coffee</h3>
+                <h3 className="text-slate-900 dark:text-white text-sm font-bold">免费咖啡</h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400">
-                  Library Lobby until 11 AM
+                  图书馆大厅至上午 11 点
                 </p>
               </div>
             </div>
@@ -547,7 +547,7 @@ export default function CampusLifeView({
             </div>
             <div className="p-3">
               <h3 className="text-slate-900 dark:text-white text-sm font-semibold leading-tight mb-1">
-                Polaroid Camera
+                拍立得相机
               </h3>
               <div className="flex items-center gap-2 mt-2">
                 <div
@@ -592,15 +592,15 @@ export default function CampusLifeView({
                     <span className="material-symbols-outlined text-[20px]">work</span>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">Career</p>
+                    <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">招聘</p>
                     <span className="text-[10px] font-medium bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 px-2 py-0.5 rounded-full">
-                      Networking
+                      社交
                     </span>
                   </div>
                 </div>
               </div>
               <h3 className="text-slate-900 dark:text-white text-base font-bold leading-tight mb-1">
-                Fall Career Fair 2024
+                2024 秋季招聘会
               </h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 mb-2">
                 {careerFairCard.description}
@@ -646,20 +646,20 @@ export default function CampusLifeView({
                 <span className="material-symbols-outlined text-[20px]">groups</span>
               </div>
               <div>
-                <p className="text-sm font-bold text-slate-900 dark:text-white">CS 101 Study Group</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Weekly review sessions</p>
+                <p className="text-sm font-bold text-slate-900 dark:text-white">CS 101 学习小组</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">每周复习课</p>
               </div>
             </div>
             <div className="flex items-center gap-1.5 text-xs text-slate-600 dark:text-slate-400 mb-2">
               <span className="material-symbols-outlined text-[14px]">location_on</span>
-              <span>Library Room 201</span>
+              <span>图书馆 201 室</span>
             </div>
             <div className="flex items-center gap-1.5 text-xs text-slate-600 dark:text-slate-400 mb-3">
               <span className="material-symbols-outlined text-[14px]">schedule</span>
-              <span>Every Tuesday • 6 PM</span>
+              <span>每周二 • 晚上 6 点</span>
             </div>
             <button className="w-full py-2 rounded-xl bg-purple-500 dark:bg-purple-600 text-white text-xs font-bold shadow-sm hover:bg-purple-600 dark:hover:bg-purple-700 transition-colors">
-              Join Group
+              加入小组
             </button>
           </motion.div>
         </div>
