@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync Master Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007AFF","ios-bg": "#F2F2F7","ios-surface": "#FFFFFF",
+                        "ios-separator": "#C6C6C8",
+                        "ios-green": "#34C759",
+                        "ios-red": "#FF3B30",
+                        "ios-gray": "#8E8E93",
+                        "ios-chevron": "#C7C7CC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'ios-card': '0 1px 2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .ios-toggle {
+            position: relative;
+            display: inline-block;
+            width: 51px;
+            height: 31px;
+        }
+        .ios-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #E9E9EA;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 27px;
+            width: 27px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        input:checked + .slider {
+            background-color: #34C759;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-ios-bg text-[#1c1c1e] antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-md mx-auto bg-ios-bg shadow-xl overflow-hidden">
+<div class="pt-12 px-4 pb-2 bg-ios-bg sticky top-0 z-50">
+<h1 class="text-[34px] font-bold text-black leading-tight">Settings</h1>
+</div>
+<div class="flex-1 overflow-y-auto pb-10 px-4">
+<div class="mb-6 flex items-center bg-white rounded-xl p-4 shadow-sm active:bg-gray-50 transition-colors cursor-pointer">
+<div class="h-16 w-16 rounded-full bg-gray-200 overflow-hidden mr-4 border border-gray-100 shrink-0">
+<img alt="Profile Avatar" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyz-7fG_3mUuQFOFGy59g_E63LuBtBT-myZPqlJYwcc61j-R3rYLTwhY9w_b3Euki3eN6oU_8ZmEUD0YkE4hxG8iTnbgePB87j-lYuimB5xE2eWKFDd_uZ2N18vEKB5nffyHmpma1tTYvvvlHIGGJ1tQq7cHBWxzzrKW6MOk5fjhFEn1yprlNT4PXsWhnh98GMk7u8D9nQ1ZD50UTc_ou0jWIKLLYjNRCyOPpg54KuRLyUjQQW4dL_06KH7jvU7Tk3SFWr6U4Jpmg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="text-[19px] font-semibold text-black truncate">Alex Chen</h2>
+<p class="text-[14px] text-gray-500">Pro Plan Active</p>
+</div>
+<span class="material-symbols-outlined text-ios-chevron text-2xl">chevron_right</span>
+</div>
+<div class="mb-6">
+<h3 class="text-gray-500 text-[13px] uppercase font-normal ml-4 mb-2 tracking-wide">Intelligence &amp; Behavior</h3>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-indigo-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<span class="text-[17px] text-black">Agent Personality</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">Supportive Coach</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-blue-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<span class="text-[17px] text-black">Memory Management</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">245 Facts Stored</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-yellow-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<span class="text-[17px] text-black">Proactive Suggestions</span>
+</div>
+<label class="ios-toggle">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-purple-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</div>
+<span class="text-[17px] text-black">Context Window</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">Full Semester</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="text-gray-500 text-[13px] uppercase font-normal ml-4 mb-2 tracking-wide">Academic Preferences</h3>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-red-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<span class="text-[17px] text-black">Grading Scale</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">4.0 Scale (US)</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-orange-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<span class="text-[17px] text-black">Focus Timer</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">Pomodoro (25m)</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-green-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">map</span>
+</div>
+<span class="text-[17px] text-black">Default Map App</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">Google Maps</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="text-gray-500 text-[13px] uppercase font-normal ml-4 mb-2 tracking-wide">Notifications</h3>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-red-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">feed</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] text-black">Smart Digest</span>
+<span class="text-[12px] text-gray-400 -mt-0.5">Daily Briefing</span>
+</div>
+</div>
+<label class="ios-toggle">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-red-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] text-black">Urgent Alerts</span>
+<span class="text-[12px] text-gray-400 -mt-0.5">Exam changes</span>
+</div>
+</div>
+<label class="ios-toggle">
+<input checked="" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 pl-4">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-red-500 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] text-black">Social Nudges</span>
+<span class="text-[12px] text-gray-400 -mt-0.5">Buddy activity</span>
+</div>
+</div>
+<label class="ios-toggle">
+<input type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="mb-10">
+<h3 class="text-gray-500 text-[13px] uppercase font-normal ml-4 mb-2 tracking-wide">App &amp; Data</h3>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-gray-400 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">display_settings</span>
+</div>
+<span class="text-[17px] text-black">Appearance</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[17px] text-ios-gray">System Light</span>
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 pl-4 border-b border-gray-100 active:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-blue-600 flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<span class="text-[17px] text-black">Privacy &amp; Export</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-ios-chevron text-[20px]">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-center p-3 pl-4 active:bg-gray-50 cursor-pointer">
+<span class="text-[17px] text-ios-red font-normal">Sign Out</span>
+</div>
+</div>
+<div class="text-center mt-6">
+<p class="text-gray-400 text-xs">ScholarSync v2.5.0<br/>Powered by NeuralCore Engine</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

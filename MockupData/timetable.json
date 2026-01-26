@@ -1,0 +1,200 @@
+{
+  "semester": "2025-26 Term 2 Postgraduate - Taught",
+  "courses": [
+    {
+      "code": "BMEG 5530",
+      "name": "Tissue Engineering",
+      "status": "Enrolled",
+      "units": 3.0,
+      "grading_basis": "Graded",
+      "components": [
+        {
+          "class_number": "4460",
+          "type": "LEC",
+          "meeting_dates": [
+            "1/5",
+            "1/12",
+            "1/19",
+            "1/26",
+            "2/2",
+            "2/9",
+            "2/23",
+            "3/2",
+            "3/9",
+            "3/16",
+            "3/23",
+            "3/30",
+            "4/13",
+            "4/20",
+            "4/27"
+          ],
+          "day": "Monday",
+          "start_time": "18:45",
+          "end_time": "21:30",
+          "room": "Science Centre L2"
+        }
+      ]
+    },
+    {
+      "code": "BMEG 5760",
+      "name": "Bioelectronics & Nanotechnolog",
+      "status": "Enrolled",
+      "units": 3.0,
+      "grading_basis": "Graded",
+      "components": [
+        {
+          "class_number": "4622",
+          "type": "LEC",
+          "meeting_dates": [
+            "1/9",
+            "1/16",
+            "1/23",
+            "1/30",
+            "2/6",
+            "2/13",
+            "2/27",
+            "3/6",
+            "3/13",
+            "3/20",
+            "3/27",
+            "4/10",
+            "4/17",
+            "4/24"
+          ],
+          "day": "Friday",
+          "start_time": "18:45",
+          "end_time": "21:30",
+          "room": "Esther Lee Bldg LT4"
+        }
+      ]
+    },
+    {
+      "code": "BMEG 5790",
+      "name": "Bioinformatics",
+      "status": "Enrolled",
+      "units": 3.0,
+      "grading_basis": "Graded",
+      "components": [
+        {
+          "class_number": "2005",
+          "type": "LEC",
+          "meeting_dates": [
+            "1/8",
+            "1/15",
+            "1/22",
+            "1/29",
+            "2/5",
+            "2/12",
+            "2/26",
+            "3/5",
+            "3/12",
+            "3/19",
+            "3/26",
+            "4/2",
+            "4/9",
+            "4/16",
+            "4/23",
+            "4/30"
+          ],
+          "day": "Thursday",
+          "start_time": "18:45",
+          "end_time": "21:30",
+          "room": "William MW Mong Eng Bldg 1122"
+        }
+      ]
+    },
+    {
+      "code": "BMEG 5840",
+      "name": "BME Laboratories",
+      "status": "Enrolled",
+      "units": 3.0,
+      "grading_basis": "Graded",
+      "components": [
+        {
+          "class_number": "2021",
+          "type": "LAB",
+          "section": "L01",
+          "meeting_dates": [
+            "1/10",
+            "1/17",
+            "1/24",
+            "1/31",
+            "2/7",
+            "2/14",
+            "2/28",
+            "3/7",
+            "3/14",
+            "3/21",
+            "3/28",
+            "4/11",
+            "4/18",
+            "4/25",
+            "5/2"
+          ],
+          "day": "Saturday",
+          "start_time": "15:30",
+          "end_time": "17:15",
+          "room": "Wu Ho Man Yuen Bldg 304"
+        },
+        {
+          "class_number": "2022",
+          "type": "LEC",
+          "meeting_dates": [
+            "1/10",
+            "1/17",
+            "1/24",
+            "1/31",
+            "2/7",
+            "2/14",
+            "2/28",
+            "3/7",
+            "3/14",
+            "3/21",
+            "3/28",
+            "4/11",
+            "4/18",
+            "4/25",
+            "5/2"
+          ],
+          "day": "Saturday",
+          "start_time": "14:30",
+          "end_time": "15:15",
+          "room": "Wu Ho Man Yuen Bldg 304"
+        }
+      ]
+    },
+    {
+      "code": "BMEG 5850",
+      "name": "Medical Device Regulatory & IP",
+      "status": "Enrolled",
+      "units": 3.0,
+      "grading_basis": "Graded",
+      "components": [
+        {
+          "class_number": "4579",
+          "type": "LEC",
+          "meeting_dates": [
+            "1/6",
+            "1/13",
+            "1/20",
+            "1/27",
+            "2/3",
+            "2/10",
+            "2/24",
+            "3/3",
+            "3/10",
+            "3/17",
+            "3/24",
+            "3/31",
+            "4/14",
+            "4/21"
+          ],
+          "day": "Tuesday",
+          "start_time": "18:45",
+          "end_time": "21:30",
+          "room": "Wu Ho Man Yuen Bldg 505"
+        }
+      ]
+    }
+  ]
+}

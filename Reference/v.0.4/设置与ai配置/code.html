@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - Settings &amp; AI Config</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f2f2f7", // iOS Settings Gray
+                        "background-dark": "#000000",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c1c1e",
+                        "text-primary": "#000000",
+                        "text-secondary": "#8e8e93",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none; 
+            background: transparent; 
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 0.5px solid rgba(0,0,0,0.1);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 1px 2px rgba(0,0,0,0.1);
+            margin-top: -10px; 
+            cursor: pointer;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #e5e7eb;
+            border-radius: 2px;
+        }
+        
+        /* Custom Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #135bec;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #135bec;
+        }
+        
+        .ios-list-item:not(:last-child) {
+            border-bottom: 0.5px solid #c6c6c8; /* iOS separator color */
+        }
+        
+        /* Dark mode overrides for separators if needed */
+        .dark .ios-list-item:not(:last-child) {
+            border-bottom: 0.5px solid #38383a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-text-primary dark:text-white pb-10">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-white/80 dark:bg-[#1c1c1e]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between px-4 h-[52px]">
+<button class="flex items-center text-primary -ml-2 p-2 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[28px]">chevron_left</span>
+<span class="text-[17px] leading-none font-normal -ml-1">Back</span>
+</button>
+<h1 class="text-[17px] font-semibold absolute left-1/2 transform -translate-x-1/2">Settings &amp; AI Config</h1>
+<div class="w-12"></div> <!-- Spacer for balance -->
+</div>
+</div>
+<!-- Main Content -->
+<div class="max-w-md mx-auto px-4 pt-6">
+<!-- Section 1: AI Personality -->
+<div class="mb-6">
+<h3 class="text-text-secondary dark:text-gray-400 text-[13px] font-normal uppercase tracking-wide ml-4 mb-2">AI Personality (The Brain)</h3>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm">
+<!-- Slider Item -->
+<div class="ios-list-item p-4 pb-6">
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary/10 p-1.5 rounded-md text-primary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<p class="text-base font-medium">Coaching Style</p>
+</div>
+<div class="relative px-2">
+<!-- Labels -->
+<div class="flex justify-between text-[11px] font-semibold text-text-secondary uppercase tracking-tight mb-2">
+<span class="text-primary/80">Chill / Supportive</span>
+<span class="text-primary/80">Strict / Drill Sergeant</span>
+</div>
+<!-- Visual Track Background with Gradient -->
+<div class="relative h-2 w-full rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden mb-[-14px]">
+<div class="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-blue-200 to-primary opacity-30"></div>
+</div>
+<!-- Actual Input -->
+<input class="w-full relative z-10 appearance-none bg-transparent focus:outline-none" max="100" min="1" type="range" value="75"/>
+</div>
+</div>
+<!-- Toggle Item -->
+<div class="ios-list-item flex items-center justify-between p-4 min-h-[56px] bg-white dark:bg-[#1c1c1e]">
+<div class="flex flex-col">
+<span class="text-base font-normal text-text-primary dark:text-white">Proactive Suggestions</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+<p class="text-[13px] text-text-secondary dark:text-gray-500 mt-2 ml-4 leading-relaxed">
+                When enabled, ScholarSync will gently nudge you about upcoming deadlines without being asked.
+            </p>
+</div>
+<!-- Section 2: Data Sync -->
+<div class="mb-6">
+<h3 class="text-text-secondary dark:text-gray-400 text-[13px] font-normal uppercase tracking-wide ml-4 mb-2">Data Sync</h3>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm">
+<!-- Sync Grades -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[56px] active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-green-100 dark:bg-green-900/30 p-1.5 rounded-md text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-normal">Sync Grades</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[15px] text-green-600 dark:text-green-400 font-medium">Connected</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+<!-- Sync Location -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[56px] active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-1.5 rounded-md text-primary">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<span class="text-base font-normal">Sync Location</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+<!-- Read Emails -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[56px] active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex items-center gap-3">
+<div class="bg-orange-100 dark:bg-orange-900/30 p-1.5 rounded-md text-orange-500">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<span class="text-base font-normal">Read Emails</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Section 3: Profile -->
+<div class="mb-8">
+<h3 class="text-text-secondary dark:text-gray-400 text-[13px] font-normal uppercase tracking-wide ml-4 mb-2">Profile</h3>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm">
+<!-- Nickname -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[50px]">
+<span class="text-base font-normal w-24">Nickname</span>
+<div class="flex-1">
+<input class="w-full text-right bg-transparent border-none focus:ring-0 p-0 text-text-primary dark:text-white placeholder-gray-400" placeholder="Required" type="text" value="Alex"/>
+</div>
+</div>
+<!-- Major -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[50px]">
+<span class="text-base font-normal w-24">Major</span>
+<div class="flex-1">
+<input class="w-full text-right bg-transparent border-none focus:ring-0 p-0 text-text-primary dark:text-white placeholder-gray-400" type="text" value="Computer Science"/>
+</div>
+</div>
+<!-- Year -->
+<div class="ios-list-item flex items-center justify-between pl-4 pr-4 py-3 min-h-[50px]">
+<span class="text-base font-normal w-24">Year</span>
+<div class="flex-1 flex items-center justify-end gap-2 group cursor-pointer">
+<span class="text-text-secondary dark:text-gray-400">Junior</span>
+<span class="material-symbols-outlined text-gray-400 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Danger Zone -->
+<div class="flex flex-col items-center gap-4 mt-8 mb-12">
+<button class="w-full bg-card-light dark:bg-card-dark text-red-500 font-normal py-3 rounded-xl shadow-sm text-[17px] active:bg-gray-50 transition-colors">
+                Reset AI Memory
+            </button>
+<p class="text-[12px] text-gray-400 text-center">
+                ScholarSync v2.4.1 (Build 890)<br/>
+<a class="underline" href="#">Privacy Policy</a> • <a class="underline" href="#">Terms of Service</a>
+</p>
+</div>
+</div>
+</body></html>

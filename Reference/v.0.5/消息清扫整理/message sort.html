@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - Message Triage</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white antialiased">
+<!-- Main Container -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-[#f8f9fc] dark:bg-[#101622]">
+<!-- Background Layer (Message List) -->
+<div class="flex-1 flex flex-col w-full h-full overflow-y-auto no-scrollbar pb-20">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-[#f8f9fc]/90 dark:bg-[#101622]/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800 transition-colors">
+<div class="text-[#0d121b] dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer transition-opacity hover:opacity-70">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Messages</h2>
+<div class="flex w-12 items-center justify-end absolute right-4">
+<button class="flex items-center justify-center rounded-xl size-10 text-[#0d121b] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</div>
+<!-- List Item 1 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-[#101622] px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer border-b border-gray-100/50 dark:border-gray-800/50">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shrink-0 shadow-sm" data-alt="Basketball textured pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0KzRor9TMZLkGxyl6E7tFIBI_BW2jGcX-XnleGPPKoQ9XM5_KtMzRTtcNFAOdWsp9koJbIYkrPFveEQxE9Uk6w3wtQ8jUdAYqhbH1Fl6QG0OASv8pIHbNXq66GEMUFcrSHas2RlNguUb6YP6VutIvsIwxMctQuoieSXfF29jDkDAoEv-Wvus-yMVDFM7XvjQVTTUn5XudEfE50VjPWtbx4jqkolkpyJcBFEiuGTKzIUx7smWjWkEMHU7N8h275qF5gWwfhfOoaEA");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<p class="text-[#0d121b] dark:text-white text-base font-semibold truncate">Basketball Group</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-medium shrink-0 ml-2">10:30 AM</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm truncate">Game moved to court 3 today!</p>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-[#101622] px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer border-b border-gray-100/50 dark:border-gray-800/50">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shrink-0 shadow-sm" data-alt="Blue announcement icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCB4zJvSokvSv1r89Thug4DT_KwlTS-CjVJ_C1IoN1_tsf9cylG1dnw5rOLtw2KxoMdg2Y5Gl_apqVLDOFGbQwrOfek58etLPuAk64Ka9lneyPJSZF73FwsyCIaLljIBa6QvjzbDpqpSWBHN_yF4q_ylgapeomRczZv-WsBvYSPlYtCxNcC2lA1a25LFphqtY9CFK-GsmQ_eOyR5Jli0vx1fzrzq4u-SDzhZUlCcjpOM1uzizUWMpQcEul4JZBf2DB7BWpOY4AKa3g");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<p class="text-[#0d121b] dark:text-white text-base font-semibold truncate">Class Announce</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-medium shrink-0 ml-2">Yesterday</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm truncate">Reminder: Assignment due next Friday.</p>
+</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-[#101622] px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer border-b border-gray-100/50 dark:border-gray-800/50">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shrink-0 shadow-sm" data-alt="Purple abstract shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVcB4QLSzHY46aiwiNDcDnIgvBqotwigZMGP2blJEyDCK953gRC068issrLexVWveZwVwEYRcJIgjwZNciXXh9A84vnlDmEeFsxBQNFUJXDtZkACBX6doUEKWbE6GJrBCQYYhKuGN8WH9YRGUDDUv0vt5wZddenIJ0WFp2UcA4tPLGtqwbxHV11aWf7_LcKRFCRCIVZ2MZEAAdfeLTWON6fAQXDApkhsGIKKKdQqaudtCyuMiP4_0O4gU5MbqSYdDQkGeRqDg16jk");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<p class="text-[#0d121b] dark:text-white text-base font-semibold truncate">Study Buddies</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-medium shrink-0 ml-2">Yesterday</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm truncate">Can we meet at the library?</p>
+</div>
+</div>
+</div>
+<!-- List Item 4 (Filler) -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-[#101622] px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer border-b border-gray-100/50 dark:border-gray-800/50">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shrink-0 shadow-sm" data-alt="Green leaf icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2B0jygPv1atLEaqJaK1MhT1R1-BfCxvISiiZitzI7C1Xnym6r995xhCp-Ox5acrhsKOzMj9utrd4EOglD2y816-KA3CYNuocJTIfRV7KHC3kSOxuLnDXJXchclo0YDEZP5lEzDytyZTPKMFQyoAwgZ5v-DMypDxpSmjJB5wZ9rijvOhfOE4zlz39JzoLX0m8TvClwse31UEvK7Rr_qalvccGfKXUxu_pnTBuGupz_kYtIP49sikD1yP-vJZM4W3mzJleSvWLb_Pw");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<p class="text-[#0d121b] dark:text-white text-base font-semibold truncate">Campus Life</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-medium shrink-0 ml-2">Tue</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm truncate">New events posted for next week.</p>
+</div>
+</div>
+</div>
+<!-- List Item 5 (Filler) -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-[#101622] px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 shrink-0 shadow-sm" data-alt="Red exclamation icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIUwDcVrWxW5wve7ilBURQM0r2AvSsuv0ZMTSa9Spj83KhTKdK2qd-0wIMTZMfujm61E6V1wxh0xN-0UyjXkpP1hY4-SlefSSbKu-vk0EEi9pcXF02rDyvDhtKyVI93ugz7MQjzH5q5hcPl6hQ3fA1qEkkD2kDAB9lWSglt4WIC8x_fRa9FmWCuvjRskj1p9Y-wwD07UtpJpFhjHTc_3wIJF9vdKr8EHgGYlych0ZMcG-3drWtA1btzAf5LjUKf94ZZ3IYX8s4qxs");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<p class="text-[#0d121b] dark:text-white text-base font-semibold truncate">Exam Prep</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-medium shrink-0 ml-2">Mon</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm truncate">Review session link is here.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlay / Dimmer -->
+<div class="fixed inset-0 z-40 bg-slate-200/40 dark:bg-black/40 backdrop-blur-[6px] transition-all duration-500"></div>
+<!-- Glass Modal -->
+<div class="fixed inset-x-4 bottom-8 top-auto md:top-1/2 md:-translate-y-1/2 md:bottom-auto z-50 flex flex-col items-center justify-center pointer-events-none">
+<!-- Modal Container -->
+<div class="pointer-events-auto relative w-full max-w-sm overflow-hidden rounded-[2rem] border border-white/60 bg-white/85 p-6 shadow-glass backdrop-blur-2xl ring-1 ring-white/20 dark:bg-[#161e2e]/85 dark:border-white/10 dark:ring-white/5 transition-all">
+<!-- Close Button (Top Right) -->
+<button class="absolute right-5 top-5 flex size-8 items-center justify-center rounded-full bg-gray-100/50 text-gray-500 hover:bg-gray-200/50 dark:bg-white/5 dark:text-gray-400 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<!-- Header Section -->
+<div class="flex flex-col items-center text-center mt-2">
+<div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-blue-50 to-blue-100 text-primary shadow-inner dark:from-blue-900/20 dark:to-blue-800/20">
+<span class="material-symbols-outlined text-[32px] drop-shadow-sm">auto_awesome</span>
+</div>
+<h3 class="font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white">AI Inbox Triage</h3>
+<p class="mt-2 text-[15px] leading-relaxed text-slate-500 dark:text-slate-400 max-w-[260px]">
+<span class="font-bold text-primary dark:text-blue-400">150</span> Low-priority messages found.
+                    </p>
+</div>
+<!-- Action List -->
+<div class="mt-8 space-y-3 w-full">
+<!-- Row 1: Basketball Group -->
+<div class="group relative flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/60 p-3 pr-2 shadow-sm ring-1 ring-black/5 transition-all hover:bg-white/80 dark:bg-white/5 dark:ring-white/5 dark:hover:bg-white/10">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white dark:ring-white/10" data-alt="Basketball icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANf1HHDCVyOkYp0OFDlDAvlgSNHEGk9zFdgm45iT_WPxo_E1VTp3Iokv9DK7oPUS8gYI5EydEegwYo7ENDQjcOr--svR3rruNI6xnQhLSpMNXIiXFmIxdB1oAl4rqYEGjspP_QkLO-IH3-KzVXLr0HsIl1v4S7Gf8PiKBx4P-dyo0t57gm8aor5cVGqkwPZ5-2AlJxgQzQO2dnXQ4Mz-1eQlspmknxBCedw2NeLCaqJ0brPpl9OYIvY-vIfLOaMYH9muOZaKsnzJE"); background-size: cover;'></div>
+<div class="flex flex-col min-w-0 pr-2">
+<span class="truncate text-sm font-bold text-slate-900 dark:text-white">Basketball Group</span>
+<span class="truncate text-xs font-medium text-slate-400">2h ago</span>
+</div>
+</div>
+<!-- Smart Action Badge -->
+<div class="flex shrink-0 items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-xs font-bold text-primary dark:bg-blue-500/10 dark:text-blue-400">
+<span class="material-symbols-outlined text-sm font-bold">summarize</span>
+<span>Summarize 1 Update</span>
+</div>
+</div>
+<!-- Row 2: Class Announce -->
+<div class="group relative flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/60 p-3 pr-2 shadow-sm ring-1 ring-black/5 transition-all hover:bg-white/80 dark:bg-white/5 dark:ring-white/5 dark:hover:bg-white/10">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white dark:ring-white/10" data-alt="Class icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoUvyDn297_4tep8ZoWEYfMKXdSwBrZYKzmywr7RkXqVJKgYi3LLlJ0ZEYSLDySi0m7Mg2WRiQgf3jdOnNnXcPNWHwjXWYMvDl_H78Zumw4ikSA1u7b4_wAAudqACOy4l8Vhqs7_aD1yUt4MEQ9EcTKXDwns7iidwhgCvxZgUVxT0OiudYIC-FaFp9EzpooSYs_qeqreGe_lpN4wkMv2yavs6avl5jAbUo3SJPGgOIw5ES9mU2-42zjsXVXfHy8WeAeEGQFOI-WpI"); background-size: cover;'></div>
+<div class="flex flex-col min-w-0 pr-2">
+<span class="truncate text-sm font-bold text-slate-900 dark:text-white">Class Announce</span>
+<span class="truncate text-xs font-medium text-slate-400">Prof. Smith</span>
+</div>
+</div>
+<!-- Secondary Action Badge -->
+<div class="flex shrink-0 items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-1.5 text-xs font-bold text-gray-500 dark:bg-white/5 dark:text-gray-400">
+<span class="material-symbols-outlined text-sm">mark_chat_unread</span>
+<span>Keep Unread</span>
+</div>
+</div>
+<div class="flex items-center justify-center pt-1">
+<span class="text-xs font-medium text-gray-400 dark:text-gray-600">+148 more items</span>
+</div>
+</div>
+<!-- Footer Primary Button -->
+<button class="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 text-[15px] font-bold text-white shadow-lg shadow-blue-500/30 ring-1 ring-blue-600 transition-all hover:bg-blue-600 hover:shadow-blue-500/40 active:scale-[0.98]">
+<span class="material-symbols-outlined text-lg">done_all</span>
+                    Execute Triage &amp; Mark Read
+                </button>
+</div>
+</div>
+</div>
+</body></html>

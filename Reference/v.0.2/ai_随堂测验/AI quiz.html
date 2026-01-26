@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync AI Quiz</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "glass": "0 8px 32px 0 rgba(31, 38, 135, 0.07)",
+                        "glow": "0 0 20px -5px rgba(19, 91, 236, 0.5)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for animations and refined details */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .sparkle-anim {
+            animation: sparkle-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes sparkle-pop {
+            0% { transform: scale(0) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display relative h-screen w-full overflow-hidden text-[#0d121b]">
+<!-- BACKGROUND CONTENT (Blurred) -->
+<div class="absolute inset-0 z-0 flex flex-col filter blur-[6px] opacity-60 scale-[1.02] origin-center pointer-events-none transition-all duration-500">
+<!-- Top App Bar (From Components) -->
+<div class="flex items-center bg-[#f8f9fc] p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 border border-gray-200" data-alt="User profile avatar showing a smiling student" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1FfK5bAJhgZQq1F90Tq48rOstm895oz3B_OWiVCPsPttXlQrxouI2rubAI8gsZ-D_oNNOYez2fdEHr3gfIAs5iPVgZF_SGpVF-_dycY7aeA0i7Dz-foh7bVM52-MoJBqraNS27f8aCtkpb3sB5bLEq1I-m-3PwsqeJzvos6mmcGGoi64DDIm6mrnPN6feYLK8RR3bOv2r6nLEIqwSnvLTZpz7ndgy15X8Jcb7lr_0c_hnjaeAQXFBEIWg7LoymPAu-mxQAJvBhGg");'>
+</div>
+</div>
+<h2 class="text-[#0d121b] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">ScholarSync</h2>
+</div>
+<!-- Timeline Content (From Components) -->
+<div class="flex-1 overflow-hidden px-4 mt-2">
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<!-- Item 1 -->
+<div class="flex flex-col items-center gap-1 pt-3">
+<span class="material-symbols-outlined text-[#0d121b] text-[24px]">calculate</span>
+<div class="w-[1.5px] bg-[#cfd7e7] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col pt-3 pb-5 border-b border-gray-100">
+<p class="text-[#0d121b] text-base font-medium leading-normal">Calculus 101</p>
+<p class="text-xs text-gray-400">8:00 AM - 9:30 AM • Hall A</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[1.5px] bg-[#cfd7e7] h-2"></div>
+<span class="material-symbols-outlined text-[#0d121b] text-[24px]">functions</span>
+<div class="w-[1.5px] bg-[#cfd7e7] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col pt-3 pb-5 border-b border-gray-100">
+<p class="text-[#0d121b] text-base font-medium leading-normal">Linear Algebra</p>
+<p class="text-xs text-gray-400">10:00 AM - 11:30 AM • Lab 3</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[1.5px] bg-[#cfd7e7] h-2"></div>
+<span class="material-symbols-outlined text-[#0d121b] text-[24px]">restaurant</span>
+<div class="w-[1.5px] bg-[#cfd7e7] h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col pt-3 pb-5 border-b border-gray-100">
+<p class="text-[#0d121b] text-base font-medium leading-normal">Lunch Break</p>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="w-[1.5px] bg-[#cfd7e7] h-2"></div>
+<span class="material-symbols-outlined text-[#0d121b] text-[24px]">code</span>
+</div>
+<div class="flex flex-1 flex-col pt-3 pb-5">
+<p class="text-[#0d121b] text-base font-medium leading-normal">CS Algorithms</p>
+<p class="text-xs text-gray-400">1:00 PM - 2:30 PM • Room 404</p>
+</div>
+</div>
+</div>
+<!-- Bottom Nav (From Components) -->
+<div class="flex gap-2 border-t border-[#e7ebf3] bg-[#f8f9fc] px-4 pb-8 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#0d121b]" href="#">
+<span class="material-symbols-outlined filled text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#4c669a]" href="#">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#4c669a]" href="#">
+<span class="material-symbols-outlined text-[24px]">book_2</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#4c669a]" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</a>
+</div>
+</div>
+<!-- FOREGROUND: AI Pop Quiz Card -->
+<div class="absolute bottom-0 left-0 right-0 z-50 flex flex-col justify-end h-full pointer-events-none">
+<!-- Interactive Card Container -->
+<div class="pointer-events-auto glass-panel rounded-t-[32px] shadow-[0_-10px_60px_-15px_rgba(0,0,0,0.1)] w-full max-w-md mx-auto h-auto min-h-[55%] animate-[slideUp_0.4s_ease-out]">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-3 pb-2">
+<div class="h-1.5 w-12 rounded-full bg-gray-300/80"></div>
+</div>
+<div class="px-6 pb-8 pt-2 flex flex-col h-full">
+<!-- Card Header -->
+<div class="flex items-start justify-between mb-5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/5">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wide">Generated from Syllabus</span>
+</div>
+</div>
+<h3 class="text-gray-500 font-semibold text-sm pl-1 mt-1">Advanced Calculus</h3>
+</div>
+<!-- Expansion Trigger -->
+<button class="group flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md hover:bg-gray-50 transition-all">
+<span class="text-xs font-bold text-primary">Deep Dive</span>
+<span class="material-symbols-outlined text-primary text-[18px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
+</button>
+</div>
+<!-- The Question -->
+<div class="mb-8">
+<h1 class="text-[28px] leading-tight font-extrabold text-[#0d121b] tracking-tight">
+                        What is the time complexity of QuickSort?
+                    </h1>
+</div>
+<!-- Options Stack -->
+<div class="flex flex-col gap-3.5 w-full mb-4">
+<!-- Option A -->
+<button class="group w-full p-4 rounded-full bg-white hover:bg-gray-50 border border-gray-200 shadow-sm hover:shadow text-left transition-all duration-200 flex items-center justify-between relative overflow-hidden">
+<span class="text-lg font-semibold text-gray-600 pl-2">O(n)</span>
+<div class="w-6 h-6 rounded-full border-2 border-gray-300 group-hover:border-primary/50 mr-1"></div>
+</button>
+<!-- Option B (Correct/Active) -->
+<button class="relative w-full p-4 rounded-full bg-primary text-left transition-all duration-300 flex items-center justify-between shadow-glow transform scale-[1.02] ring-2 ring-primary ring-offset-2 ring-offset-[#f8f9fc]">
+<span class="text-lg font-bold text-white pl-2">O(n log n)</span>
+<!-- Checkmark Circle -->
+<div class="flex items-center justify-center w-7 h-7 bg-white rounded-full shadow-sm mr-1">
+<span class="material-symbols-outlined text-primary text-[20px] font-bold">check</span>
+</div>
+<!-- Sparkle Decorations (Absolute) -->
+<div class="absolute -top-3 -right-2 sparkle-anim" style="animation-delay: 0.1s;">
+<span class="material-symbols-outlined filled text-yellow-400 text-[28px] drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">spark</span>
+</div>
+<div class="absolute -bottom-1 right-8 sparkle-anim" style="animation-delay: 0.3s;">
+<span class="material-symbols-outlined filled text-blue-300 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<!-- Success Feedback Text -->
+<div class="absolute -right-2 -bottom-8 flex items-center gap-1 opacity-0 animate-[fadeIn_0.5s_0.4s_forwards]">
+<span class="text-primary font-bold text-sm bg-primary/10 px-2 py-0.5 rounded-full backdrop-blur-sm">Correct! +50xp</span>
+</div>
+</button>
+<!-- Option C -->
+<button class="group w-full p-4 rounded-full bg-white hover:bg-gray-50 border border-gray-200 shadow-sm hover:shadow text-left transition-all duration-200 flex items-center justify-between">
+<span class="text-lg font-semibold text-gray-600 pl-2">O(n<sup>2</sup>)</span>
+<div class="w-6 h-6 rounded-full border-2 border-gray-300 group-hover:border-primary/50 mr-1"></div>
+</button>
+</div>
+<!-- Spacer for bottom safe area -->
+<div class="h-8"></div>
+</div>
+</div>
+</div>
+<style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</body></html>

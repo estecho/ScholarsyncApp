@@ -1,0 +1,63 @@
+{
+  "users": {
+    "currentUser": {
+      "name": "Alex Chen",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAmR5FOVS4dxhl_KsU_i9HQehd1vcIJ-8hBka7-eWzGgFEAoh6Ui7-M0NSxdbW1Wgml70H7e4jyHIteh1PrePY8yTnBYaLWW3uTr_gcsiSvvZU547NER6thIgFeP-7zfzvt65mBuMKJJsELK_ACJLwofR1A1lLJCk-DGftjkBNBadVc3M7nFPREg_It8dihQ7IKv3W9apAhpRFiKxwh5T5luLSE0ojuv2LZcCXne7A1BJkemDRsMdTQutVZ267Tu4LK_mFWVXAq2o4"
+    },
+    "groupMembers": [
+      {
+        "name": "Emma W.",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDwgypZ_wytDN_-MX2MiIYAaEV7Xf8XTPp88o-HlFqpYBXrVUxqEorRIIAnUZaATY_WOrIBm22t39LW3c38MAsHTdeCM2XUyDPdQE6cwHSElXLMnJSd0He7-G6OnqdctNHkoY84Qpi531kc__afKPTetg6Q7QFJl2Qov2ISY5nvxLToykC5TuuVQ-Tj77OLhsCBgJ8xeFtegEizYRQwbwtuguZ363uYBnLEsaL5CEb1eEBDEMhKQF7DH5pYeZaOKh2fcRT5vXTSrmI"
+      },
+      {
+        "name": "Ryan M.",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCU8ynHHmHmGwYWl25pADhagHFregF0uOS7f7L1iw4865284_6ml5UlCNqGgslc0QD4B3e_eJ6gkfe-iefsAAUvijOVNhHoPVdLzaHr3ur461gcnS15YizYn0G9lBE17l9xhLe8g2D2LE2y8dPsmccSBgKGWsZJwOb244BT4b7FwMYvyA1ny79LoIRM0s5Xk4tKL5HTsW4JAsoKtqIjm1mYxizdF4GjQaX9eU56i77X6Wec67zmph03HvG8XOst6g39LA388VthEtY"
+      },
+      {
+        "name": "Sophie L.",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1UspjaLFx_bYqcf0ZpLhUvFPwwGEOdPtzV8Z64Dw7RvcDCkEjTG4wK167xsr0FP40KPabBNZ-cqx6R-s1kf3BhnTZcg2YIbvnw3HSgZqBG9iMb1SJYlS3EYpyoghNR6PeQ536S6xIGMMw1WkObgzVHBtu6RyE94hVYL3jEylH5X3O02SRIp4pk0YJI1PzPayIMtG6MEP7WCPHizOm8NUUnJMSIqOotDuQrMrM0wkJ2nCv06ZITvPaEJxiX7tVV44lHm-ykcDF53k"
+      }
+    ]
+  },
+  "professors": {
+    "alanGrant": {
+      "name": "Prof. Alan Grant",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoYUYWzjaimkgnR6_eDlLikk4RvlcD2DMsLvz_A-h1BnZWlTlMIctb3f-20Xr8KGxTVeeFEfdudyD5YoVXQrJTQCFHTIfNLYGf6_2ZoXwxsqtSUtlQMxAqLS7C8Bpx7wLhuZS9K-EkAtNDNGww0kdgvnuDEKPRNDX3EYPOrK5Ei7gTZGtWV7-O2cJKk3k8GBS0jom2aPhW44xv0Dc2XQv26kWvNCEcOXBkYVSjymXPf5Polw5N3RGHtg2d5Ex1-pRwHsXdT20o9bI"
+    },
+    "rivera": {
+      "name": "Prof. Rivera",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAP3VWgfGl63LDNPS0uReLqf3a8d3w_VCnFhtaD-5vBOCZMZINtTLJpckx1XkqkIZddIFJanPy19Vv6v2rFjZ9_NDj4DBtKhcayyqFSiX25mjL2j2aiz28aYM7qQ-LaOIcI01W2u3xYMmpxm4_1ken_NR1H3RD0XapEdcz82D1PuTz1uWNdpwkXJskv8ZCf5Rd3zfBJCUi4rbaPmD9ZoqosE-glZb4p3_aoNptTM9QWXClFSGAIm7r7hlAIToGvAopRmUAz6Qy1uAc"
+    },
+    "smith": {
+      "name": "Prof. Smith",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuB1FfK5bAJhgZQq1F90Tq48rOstm895oz3B_OWiVCPsPttXlQrxouI2rubAI8gsZ-D_oNNOYez2fdEHr3gfIAs5iPVgZF_SGpVF-_dycY7aeA0i7Dz-foh7bVM52-MoJBqraNS27f8aCtkpb3sB5bLEq1I-m-3PwsqeJzvos6mmcGGoi64DDIm6mrnPN6feYLK8RR3bOv2r6nLEIqwSnvLTZpz7ndgy15X8Jcb7lr_0c_hnjaeAQXFBEIWg7LoymPAu-mxQAJvBhGg"
+    }
+  },
+  "students": {
+    "alexT": {
+      "name": "Alex T.",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyz-7fG_3mUuQFOFGy59g_E63LuBtBT-myZPqlJYwcc61j-R3rYLTwhY9w_b3Euki3eN6oU_8ZmEUD0YkE4hxG8iTnbgePB87j-lYuimB5xE2eWKFDd_uZ2N18vEKB5nffyHmpma1tTYvvvlHIGGJ1tQq7cHBWxzzrKW6MOk5fjhFEn1yprlNT4PXsWhnh98GMk7u8D9nQ1ZD50UTc_ou0jWIKLLYjNRCyOPpg54KuRLyUjQQW4dL_06KH7jvU7Tk3SFWr6U4Jpmg"
+    },
+    "jordanL": {
+      "name": "Jordan L.",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ddfohV_5YxQSv7BrSOLZFc7srayNRYKGs0HKXdnMIAuWuBpgYsE57wUtOf3XWkZpPXU9wsdPKvn_24Us1NEz6S976x4w3G0RDtB6267791MZRg86h2sHblLFFsbBkcY-DWpi_r-1gT8_gYFJJLl14vb2mtZPfNWGM2fOd8hQX9_HADZ481iqgUySq_HCX7-DhfyI81JQSBnCqrA4yzzGNJbBL3WuWCXmDEYFG8zH9vGWKAoDi6FLpMsx5A2_MD5ygorJWJyontQ"
+    },
+    "mayaR": {
+      "name": "Maya R.",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCe3i2a39k14iCT7KehVBG8GjyAsJPLvgFpSnrnOmrd9fZl1cjYJ3pLto7dnpsTOPo3ALvOzUVVnMKY4MAIkHj7wVRlyA8OcXDTZu6iovhiKsXYNmt23wJzZT_WCXLY9W-6X5tUpbw1Rsh1ai901ZR5gCwZzQsX7Jao7zFfMUvdVS9udiNsFT3G0386Yf7zSIlwRb0mD3MULSA5oV6B-Q4-F54p-u17d6QUad-Uzczz2NrTYHYX9VxJz80ZznWJZMa3FntNSsFcR4A"
+    },
+    "chrisP": {
+      "name": "Chris P.",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDcoJ1TCwG5s-zMwwXgInfywfpB0dAHwrpHieJ8NZFY4bwBSpvDsEFeLKUw9JlaD8PRYFr9R5GUnPtC08zAo6WgVN1RCVruLhmi-EYRqWsiG13Dd_gkVNLlv8tdIeP9MrPtG4zs_kWNVUMa7y-Ps1WiYYZ7KpRtin758sFb6K1JZEy-uXCyJCos8Mnfbx32odsg74kxhwqRDVCjzy0H239GaNFBYtiaNwqzbnEOQ3Qmav0fMrqfXJbna22kJa1XQ5Tq_Hy16NfrICg"
+    }
+  },
+  "defaults": {
+    "fallbackService": "ui-avatars",
+    "colors": {
+      "background": "6366f1",
+      "foreground": "ffffff"
+    }
+  }
+}
+
+

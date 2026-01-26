@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - New Task Modal</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .backdrop-blur-custom {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<!-- Main Mobile Container -->
+<div class="relative mx-auto h-screen w-full max-w-md bg-white dark:bg-gray-900 overflow-hidden shadow-2xl flex flex-col">
+<!-- Simulated Chat Interface (Background Layer) -->
+<div class="absolute inset-0 z-0 flex flex-col bg-[#f0f2f5] dark:bg-[#1a1a1a] pb-20">
+<!-- Simulated Chat Header -->
+<div class="h-24 bg-white dark:bg-gray-800 shadow-sm flex items-end pb-4 px-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary font-bold">PJ</div>
+<div>
+<div class="text-sm font-bold text-gray-900 dark:text-white">Prof. Jenkins</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">Online</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400">more_horiz</span>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 p-4 space-y-6 overflow-hidden opacity-80">
+<div class="text-xs text-center text-gray-400">Today 10:23 AM</div>
+<!-- Message Left -->
+<div class="flex gap-3 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex-shrink-0"></div>
+<div class="bg-white dark:bg-gray-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-gray-800 dark:text-gray-200">
+                        Please remember to submit the draft for the research paper by this Friday.
+                    </div>
+</div>
+<!-- Message Right -->
+<div class="flex gap-3 max-w-[85%] ml-auto flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0"></div>
+<div class="bg-primary p-3 rounded-2xl rounded-tr-none shadow-sm text-sm text-white">
+                        Will do, Professor. I'll have it ready before midnight.
+                    </div>
+</div>
+<!-- Message Left -->
+<div class="flex gap-3 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex-shrink-0"></div>
+<div class="bg-white dark:bg-gray-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-gray-800 dark:text-gray-200">
+                        Excellent. Make sure to include the citations from the email thread I sent yesterday.
+                    </div>
+</div>
+</div>
+</div>
+<!-- Overlay/Backdrop -->
+<div class="absolute inset-0 z-10 bg-black/30 dark:bg-black/50 backdrop-blur-custom transition-opacity"></div>
+<!-- Bottom Sheet Modal -->
+<div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col justify-end">
+<!-- Modal Card -->
+<div class="w-full bg-background-light dark:bg-gray-900 rounded-t-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)] transform transition-transform duration-300 ease-out">
+<!-- BottomSheetHandle -->
+<div class="flex w-full flex-col items-center pt-3 pb-2 cursor-grab active:cursor-grabbing">
+<div class="h-1.5 w-12 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<!-- TopAppBar / Header -->
+<div class="px-6 pb-2 pt-2 flex items-center justify-between">
+<h2 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-tight">New Task</h2>
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200/50 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-500 dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Scrollable Content Area -->
+<div class="px-6 pb-8 pt-2 overflow-y-auto max-h-[70vh]">
+<!-- Chips (AI Extracted Badge) -->
+<div class="mb-6">
+<div class="inline-flex h-8 items-center justify-center gap-x-1.5 rounded-full bg-primary/10 pl-3 pr-4 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<p class="text-primary text-xs font-semibold uppercase tracking-wide">AI Extracted</p>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="space-y-5">
+<!-- Title Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">Title</label>
+<input class="form-input w-full rounded-xl border-none bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary/50 text-[#0d121b] dark:text-white placeholder:text-gray-400 p-4 text-base font-medium shadow-sm transition-all" type="text" value="Submit Draft to Prof. Jenkins"/>
+</div>
+<!-- Time Field (Highlighted) -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold ml-1">Due Date</label>
+<div class="relative flex items-center w-full">
+<input class="form-input w-full rounded-xl border-none bg-primary/5 dark:bg-primary/10 focus:ring-2 focus:ring-primary/50 text-primary dark:text-blue-400 placeholder:text-gray-400 p-4 pr-12 text-base font-bold shadow-sm transition-all" type="text" value="Friday, Oct 24 @ 11:59 PM"/>
+<div class="absolute right-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary dark:text-blue-400">calendar_month</span>
+</div>
+</div>
+</div>
+<!-- Context Link -->
+<div class="flex items-center gap-2 px-1">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 group cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-gray-500 text-[16px] rotate-45">link</span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Source: Email Thread</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-8 pt-4">
+<button class="group relative flex w-full items-center justify-center gap-2 rounded-xl bg-primary hover:bg-blue-600 py-4 px-6 text-white shadow-lg shadow-primary/30 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+<span class="text-base font-bold">Add to Calendar &amp; Remind Me</span>
+</button>
+</div>
+<div class="h-6"></div> <!-- Bottom Spacer for safe area -->
+</div>
+</div>
+</div>
+</div>
+</body></html>

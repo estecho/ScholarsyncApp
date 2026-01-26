@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Orb Search Trigger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom animations for the orb pulsing */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        .orb-ring {
+            animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        .orb-ring-delay {
+            animation-delay: 1.5s;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .dark .glass-panel {
+            background: rgba(16, 22, 34, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden h-screen w-full relative">
+<!-- Background Layer: The Inbox (Blurred) -->
+<!-- The content is visible but heavily blurred to act as context -->
+<div class="absolute inset-0 z-0 flex flex-col pointer-events-none filter blur-[5px] scale-[1.02]">
+<!-- Top App Bar Content -->
+<div class="flex items-center bg-[#f8f9fc] dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile picture placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1ddfohV_5YxQSv7BrSOLZFc7srayNRYKGs0HKXdnMIAuWuBpgYsE57wUtOf3XWkZpPXU9wsdPKvn_24Us1NEz6S976x4w3G0RDtB6267791MZRg86h2sHblLFFsbBkcY-DWpi_r-1gT8_gYFJJLl14vb2mtZPfNWGM2fOd8hQX9_HADZ481iqgUySq_HCX7-DhfyI81JQSBnCqrA4yzzGNJbBL3WuWCXmDEYFG8zH9vGWKAoDi6FLpMsx5A2_MD5ygorJWJyontQ");'></div>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Smart Messages</h2>
+<div class="flex w-12 items-center justify-end">
+<span class="material-symbols-outlined text-[#0d121b] dark:text-white">search</span>
+</div>
+</div>
+<!-- List Items (Repeated to fill background) -->
+<div class="flex-1 overflow-y-auto px-2 opacity-60">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of CS 101 Group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAP3VWgfGl63LDNPS0uReLqf3a8d3w_VCnFhtaD-5vBOCZMZINtTLJpckx1XkqkIZddIFJanPy19Vv6v2rFjZ9_NDj4DBtKhcayyqFSiX25mjL2j2aiz28aYM7qQ-LaOIcI01W2u3xYMmpxm4_1ken_NR1H3RD0XapEdcz82D1PuTz1uWNdpwkXJskv8ZCf5Rd3zfBJCUi4rbaPmD9ZoqosE-glZb4p3_aoNptTM9QWXClFSGAIm7r7hlAIToGvAopRmUAz6Qy1uAc");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d121b] dark:text-white text-base font-medium leading-normal line-clamp-1">CS 101 Group</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-1">Alex: Anyone has the updated slide deck?</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal">10:30 AM</p></div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Dr. Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoYUYWzjaimkgnR6_eDlLikk4RvlcD2DMsLvz_A-h1BnZWlTlMIctb3f-20Xr8KGxTVeeFEfdudyD5YoVXQrJTQCFHTIfNLYGf6_2ZoXwxsqtSUtlQMxAqLS7C8Bpx7wLhuZS9K-EkAtNDNGww0kdgvnuDEKPRNDX3EYPOrK5Ei7gTZGtWV7-O2cJKk3k8GBS0jom2aPhW44xv0Dc2XQv26kWvNCEcOXBkYVSjymXPf5Polw5N3RGHtg2d5Ex1-pRwHsXdT20o9bI");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d121b] dark:text-white text-base font-medium leading-normal line-clamp-1">Dr. Smith (Advisor)</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-1">Please review the draft by Friday.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal">Yesterday</p></div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg7GXzDa9C_TEniPuS925hZ0oGBUhAEVYwMzuMnero-Q4rMOkEG7tI5BW8Bi8GGqMpmZcLqfr2NgNjRZWpT6CPHG1HmtmWL2nx2Sc7wVsaxmvf9xoEBqa23YPS_gEq9ECc0G2RkBZfLntXqPo6oIgSBhpfHxhuALiBJWlI6Dapq6nK6DUWEumgZChIwb8Lx-94StmFtWT5fD3FYOpBHRv9K5B9hGpL8n2eb2YPtiRdbdg4sNF7EBibodJLZQvvlHNXgpWvG7yZhUI");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d121b] dark:text-white text-base font-medium leading-normal line-clamp-1">Sarah Jenkins</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-1">Are we still meeting at the library?</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal">Yesterday</p></div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of History 202 Group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNZpKIQHAapOJVHLGSSIYxz0gYTVgZKhlqzliMHoCp4LOY4V8mwIjqkDWfGA7LZFrRJCytLn4jTlzH6zUwr10Wt_cAL_cYv0__aE-oI7DGYQUqXTumF_1RisWIZQPThOm2c4fCk5MUH8VdZ5It0ESzPDN1ACG-lkkYDBF-nDXWY3Wggh36VgIILRHQFT021VoHEiMo95_CGOMpt52ZRFcVxFk1LjCyU5fIilzjdqB2-0QfpmlDqzD050mNQRA5ZImWH2stKtxyW3k");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d121b] dark:text-white text-base font-medium leading-normal line-clamp-1">History 202 Study Group</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-1">Mark: I found a great source for the essay.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal">Mon</p></div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center gap-4 bg-[#f8f9fc] dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Library Services" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBazFKaUjiiOXOrJi7D6_ckNpnZ6QTeuI_EnoQU2mm0AK30v9JrGWrN-y4of1-FRK6AvYCWZsub4pYKLqr2ZwkNIt8yVqcfMZ7uK-Y6d8plxFrwt0CPi42lRfLra0wYwMukcxzzhIQgeNkNIZKotw7uoAzISqNDX0K4Mtgc9ZtlaoDCor8Eq_vVhQu1v_7apXryLfrXbKjAOBw7Ji0uOBKtOWaUjKsm1Nw5NsYLYAvNThBlWGoZC---D6-rEYBls6TG7O9OqLdIu0");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d121b] dark:text-white text-base font-medium leading-normal line-clamp-1">Library Services</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-1">Your book is due in 3 days.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal">Mon</p></div>
+</div>
+</div>
+</div>
+<!-- Background overlay to dim content -->
+<div class="absolute inset-0 bg-white/50 dark:bg-black/70 z-0"></div>
+<!-- Active Overlay Layer -->
+<div class="relative z-10 flex flex-col h-full w-full justify-between items-center px-4 pt-16 pb-8">
+<!-- Top Section: Search Interface -->
+<div class="w-full max-w-md flex flex-col gap-5 items-center animate-fade-in-down transition-all duration-500">
+<!-- Search Bar -->
+<div class="w-full glass-panel shadow-[0_8px_32px_rgba(19,91,236,0.1)] rounded-2xl p-1 flex items-center gap-2 pr-4 pl-4 h-14 ring-1 ring-white/50 hover:ring-primary/30 transition-all">
+<span class="material-symbols-outlined text-primary">search</span>
+<input autofocus="" class="flex-1 bg-transparent border-none focus:ring-0 text-[#0d121b] dark:text-white font-medium text-lg placeholder-gray-400 outline-none" type="text" value="PPT from Alex last week"/>
+<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-primary transition-colors">mic</span>
+</div>
+<!-- Smart Chips -->
+<div class="flex flex-wrap justify-center gap-2.5 w-full">
+<!-- Chip 1 -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary/10 dark:bg-primary/20 backdrop-blur-md rounded-full border border-primary/20 shadow-sm cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary text-[18px]">person</span>
+<span class="text-primary text-sm font-semibold">Alex</span>
+</button>
+<!-- Chip 2 -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary/10 dark:bg-primary/20 backdrop-blur-md rounded-full border border-primary/20 shadow-sm cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span class="text-primary text-sm font-semibold">Last 7 Days</span>
+</button>
+<!-- Chip 3 -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary/10 dark:bg-primary/20 backdrop-blur-md rounded-full border border-primary/20 shadow-sm cursor-pointer hover:bg-primary/20 hover:scale-105 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary text-[18px]">attachment</span>
+<span class="text-primary text-sm font-semibold">PPT</span>
+</button>
+</div>
+</div>
+<!-- Middle Section: Result Card (Projected) -->
+<!-- This feels like it's floating in the beam -->
+<div class="flex-1 w-full max-w-[340px] flex items-center justify-center relative z-20">
+<!-- Result Card -->
+<div class="float-animation relative w-full glass-panel p-5 rounded-2xl shadow-[0_20px_50px_rgba(19,91,236,0.25)] border border-white/60 dark:border-white/10 flex flex-col gap-4 transform translate-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<!-- File Icon container -->
+<div class="size-12 rounded-xl bg-[#FCEBE9] flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[#EA4335] text-[28px]">slideshow</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-[#0d121b] dark:text-white font-bold text-lg leading-tight">Group_Presentation_v2.pptx</h3>
+<p class="text-gray-500 text-xs mt-1 font-medium uppercase tracking-wide">PowerPoint • 4.2 MB</p>
+</div>
+</div>
+<button class="text-gray-400 hover:text-primary transition-colors p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Context Snippet -->
+<div class="bg-background-light dark:bg-gray-800/80 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-gray-400 text-[16px]">forum</span>
+<span class="text-gray-600 dark:text-gray-300 text-xs font-semibold">CS 101 Group</span>
+<span class="text-gray-400 text-[10px]">•</span>
+<span class="text-gray-400 text-xs">2 days ago</span>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm italic line-clamp-2">"Here is the draft for the presentation, please review slides 4-6..."</p>
+</div>
+<!-- Action Button -->
+<button class="w-full h-11 bg-primary hover:bg-blue-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+                    Open File
+                </button>
+</div>
+</div>
+<!-- Bottom Section: AI Orb & Beam -->
+<div class="relative w-full h-24 flex justify-center items-end mt-4">
+<!-- The Light Beam (Vertical Gradient Projection) -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[320px] h-[50vh] bg-gradient-to-t from-primary/30 via-primary/5 to-transparent blur-3xl pointer-events-none z-[-1]"></div>
+<!-- The AI Orb -->
+<div class="relative flex items-center justify-center">
+<!-- Outer Pulse Rings -->
+<div class="absolute size-24 rounded-full border border-primary/40 orb-ring bg-primary/5"></div>
+<div class="absolute size-24 rounded-full border border-primary/20 orb-ring orb-ring-delay bg-primary/5"></div>
+<!-- Main Core -->
+<div class="size-20 rounded-full bg-gradient-to-tr from-[#135bec] via-[#5b4eff] to-[#a78bfa] shadow-[0_0_50px_rgba(91,78,255,0.6)] flex items-center justify-center relative z-20 cursor-pointer group hover:scale-105 transition-transform duration-300 border-2 border-white/20">
+<!-- Inner Core texture/icon -->
+<span class="material-symbols-outlined text-white text-[32px] animate-pulse">graphic_eq</span>
+</div>
+<!-- Glow Aura -->
+<div class="absolute size-32 rounded-full bg-primary/40 blur-2xl z-10 animate-pulse"></div>
+</div>
+</div>
+</div>
+</body></html>

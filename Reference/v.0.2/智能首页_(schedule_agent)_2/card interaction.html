@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - Drag to AI</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "tech-blue": "#0056D2",
+                        "electric-blue": "#00F0FF",
+                        "background-light": "#F5F5F7",
+                        "background-dark": "#101622",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "accent-purple": "#8B5CF6",
+                        "status-green": "#34C759",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "1.75rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 20px rgba(139, 92, 246, 0.4)',
+                        'neon': '0 0 15px rgba(139, 92, 246, 0.3), 0 0 5px rgba(19, 91, 236, 0.2)',
+                        'float': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                        'ai-catch': '0 0 40px 10px rgba(0, 240, 255, 0.3)',
+                    },
+                    keyframes: {
+                        wave: {
+                            '0%, 100%': { height: '6px' },
+                            '50%': { height: '18px' },
+                        },
+                        pulseRed: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.6' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) rotate(-3deg)' },
+                            '50%': { transform: 'translateY(-10px) rotate(-3deg)' },
+                        },
+                        particle: {
+                            '0%': { transform: 'translateY(0) scale(1)', opacity: '0' },
+                            '50%': { opacity: '1' },
+                            '100%': { transform: 'translateY(-60px) scale(0)', opacity: '0' },
+                        }
+                    },
+                    animation: {
+                        wave: 'wave 1.2s ease-in-out infinite',
+                        pulseRed: 'pulseRed 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        float: 'float 3s ease-in-out infinite',
+                        particle: 'particle 1.5s ease-out infinite',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;}
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-nav {
+            background: rgba(16, 22, 34, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.finger-touch {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+            z-index: 60;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#1d1d1f] dark:text-gray-100 antialiased selection:bg-primary/20 overflow-hidden">
+<div class="relative w-full max-w-md mx-auto min-h-screen pb-32">
+<div class="transition-all duration-500 filter blur-[2px] opacity-60 pointer-events-none select-none">
+<header class="sticky top-0 z-40 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm pt-12 pb-2 px-6 transition-all">
+<div class="flex items-center justify-between mb-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-[20px]" data-icon="partly_cloudy_day">partly_cloudy_day</span>
+<span class="text-sm font-medium">24°C Sunny</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-[#1d1d1f] dark:text-white">Good Morning, Alex</h1>
+</div>
+<button aria-label="Scan Schedule" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-surface-dark shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200" data-icon="document_scanner">document_scanner</span>
+</button>
+</div>
+<div class="flex p-1 bg-gray-200/50 dark:bg-gray-800/50 rounded-lg w-full max-w-[280px] mb-1">
+<button class="flex-1 px-4 py-1.5 rounded-md bg-tech-blue dark:bg-tech-blue shadow-sm text-sm font-semibold text-white transition-all">My Day</button>
+<button class="flex-1 px-4 py-1.5 rounded-md text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">Campus Life</button>
+</div>
+</header>
+<main class="px-5 mt-4 flex flex-col gap-5">
+<div class="h-[280px] rounded-3xl bg-gray-200/50 dark:bg-gray-800/30 border-2 border-dashed border-gray-300 dark:border-gray-700"></div>
+<div class="grid grid-cols-2 gap-5">
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-soft flex flex-col justify-between h-40 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">assignment</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-500">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+</div>
+<div>
+<p class="text-3xl font-bold text-gray-900 dark:text-white">2</p>
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">Assignments<br/>Due Today</p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-soft flex flex-col justify-between h-40 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-purple-500">timelapse</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-accent-purple">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+</div>
+<div>
+<p class="text-3xl font-bold text-gray-900 dark:text-white">3h 20m</p>
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">Focus Time<br/>Today</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-6 shadow-soft">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Up Next</h3>
+<button class="text-primary text-sm font-semibold hover:opacity-80">Full Schedule</button>
+</div>
+<div class="relative pl-2">
+<div class="absolute left-[19px] top-2 bottom-4 w-[2px] bg-gray-100 dark:bg-gray-700"></div>
+<div class="relative flex gap-4 mb-8">
+<div class="relative z-10 flex-shrink-0 w-10 h-10 rounded-full border-4 border-white dark:border-surface-dark bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-status-green">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div class="flex-1 pt-1">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-bold text-gray-800 dark:text-gray-100 text-base">Lunch Recommendation</h4>
+<span class="text-xs font-semibold text-gray-400">12:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed inset-0 z-50 pointer-events-none flex flex-col items-center justify-center">
+<div class="relative w-[340px] transform -translate-y-24 rotate-[-6deg] transition-transform duration-300 ease-out z-50">
+<div class="absolute -right-4 top-1/2 z-50 animate-pulse">
+<div class="w-12 h-12 rounded-full bg-white/20 border border-white/40 backdrop-blur-md flex items-center justify-center shadow-lg">
+<div class="w-4 h-4 rounded-full bg-white/80"></div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-3xl bg-white dark:bg-surface-dark p-6 shadow-float ring-1 ring-black/5 dark:ring-white/10">
+<div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-blue-100/50 via-purple-100/30 to-transparent blur-3xl dark:from-blue-900/20 dark:via-purple-900/10"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-5">
+<div class="flex items-center gap-2 text-primary font-bold bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full">
+<span class="text-xs tracking-wide">10:00 - 11:30 AM</span>
+</div>
+<div class="flex items-center gap-1.5 bg-red-50 dark:bg-red-900/20 px-3 py-1 rounded-full border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined text-[16px] text-red-500 fill-1">warning</span>
+<span class="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wide">Due Soon</span>
+</div>
+</div>
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-2 tracking-tight">Advanced<br/>Calculus</h2>
+<div class="flex items-center gap-3 text-gray-500 dark:text-gray-400 text-sm font-medium mb-6">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Room 304</span>
+</div>
+<span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span>Prof. Smith</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-3 border border-gray-100 dark:border-gray-700/50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-900 dark:text-white">Syllabus PDF</span>
+<span class="text-[10px] text-gray-500">Tap to view</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<div class="absolute left-1/2 bottom-[-100px] w-[2px] h-[100px] bg-gradient-to-b from-transparent to-electric-blue/50 blur-[1px]"></div>
+</div>
+<div class="absolute bottom-32 w-full text-center z-50">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 dark:bg-white/10 backdrop-blur-md border border-white/10">
+<span class="material-symbols-outlined text-electric-blue text-sm animate-pulse">auto_awesome</span>
+<span class="text-sm font-semibold text-white tracking-wide">Drop to Analyze Syllabus &amp; Quiz</span>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 h-32 z-40 flex items-end justify-center pb-6 pointer-events-none">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-t from-tech-blue/20 to-transparent blur-3xl -bottom-32"></div>
+<div class="absolute inset-0 w-full h-full flex justify-center">
+<div class="absolute bottom-10 w-1 h-1 bg-electric-blue rounded-full animate-particle" style="animation-delay: 0.1s; left: 45%;"></div>
+<div class="absolute bottom-8 w-1 h-1 bg-electric-blue rounded-full animate-particle" style="animation-delay: 0.4s; left: 55%;"></div>
+<div class="absolute bottom-12 w-1.5 h-1.5 bg-accent-purple rounded-full animate-particle" style="animation-delay: 0.7s; left: 48%;"></div>
+<div class="absolute bottom-6 w-1 h-1 bg-electric-blue rounded-full animate-particle" style="animation-delay: 0.2s; left: 52%;"></div>
+</div>
+<div class="relative w-24 h-24 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-500 to-purple-500 shadow-ai-catch flex items-center justify-center text-white scale-110 transition-transform duration-300 ring-4 ring-white/20 dark:ring-white/10 animate-pulse">
+<div class="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 to-transparent opacity-50 blur-sm animate-[spin_4s_linear_infinite]"></div>
+<span class="material-symbols-outlined text-[40px] drop-shadow-lg z-10">smart_toy</span>
+</div>
+</div>
+</div>
+<nav class="fixed bottom-6 left-6 right-6 h-[72px] glass-nav rounded-2xl flex items-center justify-between px-6 shadow-xl shadow-black/5 z-30 opacity-40 blur-[2px]">
+<button class="flex flex-col items-center justify-center gap-1 w-12 text-primary">
+<span class="material-symbols-outlined text-[26px] fill-1">home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-12 text-gray-400">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+</button>
+<div class="relative -top-6 w-16">
+</div>
+<button class="flex flex-col items-center justify-center gap-1 w-12 text-gray-400">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-12 text-gray-400">
+<span class="material-symbols-outlined text-[26px]">person</span>
+</button>
+</nav>
+</div>
+
+</body></html>

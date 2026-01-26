@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - AI Omni-Post Text Mode</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "1.75rem", "3xl": "2rem", "full": "9999px"},
+            boxShadow: {
+                'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                'glow': '0 0 15px rgba(13, 89, 242, 0.3)',
+                'card-hover': '0 10px 40px -10px rgba(0,0,0,0.1)',
+            }
+          },
+        },
+      }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark .glass-nav {
+            background: rgba(16, 22, 34, 0.85);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .mask-gradient-right {
+             mask-image: linear-gradient(to right, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+        }
+        .keyboard-key {
+            @apply h-10 grow rounded-lg bg-white dark:bg-slate-600 shadow-[0_1px_0_rgba(0,0,0,0.3)] flex items-center justify-center text-lg font-medium text-slate-900 dark:text-white active:bg-slate-200 dark:active:bg-slate-500 transition-colors cursor-pointer select-none;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary/20">
+<div class="fixed inset-0 z-[100] flex flex-col items-center justify-end sm:justify-center pb-0 sm:pb-0">
+<div class="absolute inset-0 bg-slate-900/20 dark:bg-slate-950/40 backdrop-blur-md transition-all duration-500"></div>
+<div class="relative w-full max-w-[95%] sm:max-w-sm mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border border-white/60 dark:border-white/10 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.1)] rounded-t-[2.5rem] sm:rounded-[2.5rem] p-6 overflow-hidden animate-in slide-in-from-bottom-8 fade-in duration-500 mb-0 sm:mb-8">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2.5">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-2xl drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]">auto_awesome</span>
+</div>
+<h2 class="text-lg font-bold text-slate-800 dark:text-white tracking-tight">AI Composer</h2>
+</div>
+<button class="h-8 w-8 rounded-full bg-slate-200/50 dark:bg-slate-700/50 hover:bg-slate-200 dark:hover:bg-slate-600 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-300 text-lg">close</span>
+</button>
+</div>
+<div class="flex flex-col mb-6">
+<div class="w-full relative min-h-[100px] outline-none">
+<p class="text-[22px] font-medium text-slate-900 dark:text-white leading-relaxed">
+                        Selling my old calc textbook<span class="text-blue-400 dark:text-blue-300/80 opacity-70 italic">...for Math 101? Condition: Good?</span><span class="animate-pulse text-primary ml-0.5 inline-block w-0.5 h-6 align-middle bg-primary rounded-full"></span>
+</p>
+</div>
+<div class="flex flex-wrap gap-2.5 mt-2">
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-indigo-100 dark:border-indigo-500/30 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-slate-800 transition-all group">
+<span class="text-sm">🏷️</span>
+<span class="text-xs font-bold text-indigo-600 dark:text-indigo-300 group-hover:text-indigo-700">Add Price</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-blue-100 dark:border-blue-500/30 shadow-sm hover:shadow-md hover:bg-white dark:hover:bg-slate-800 transition-all group">
+<span class="text-sm">📚</span>
+<span class="text-xs font-bold text-blue-600 dark:text-blue-300 group-hover:text-blue-700">Link Course</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-purple-50/80 to-pink-50/80 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border border-purple-100 dark:border-purple-500/30 shadow-sm hover:shadow-md transition-all group">
+<span class="text-sm">✨</span>
+<span class="text-xs font-bold text-purple-600 dark:text-purple-300 group-hover:text-purple-700">Rephrase</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-center gap-6 px-4 mb-6">
+<button class="group relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-100/80 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200 dark:border-white/5 transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">mic</span>
+</button>
+<button class="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 shadow-[0_0_25px_rgba(79,70,229,0.5)] border-[3px] border-white/20 dark:border-white/10 transition-transform hover:scale-105 active:scale-95 z-10">
+<span class="material-symbols-outlined text-white text-[32px]">edit_note</span>
+</button>
+<button class="group relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-100/80 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200 dark:border-white/5 transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">photo_camera</span>
+</button>
+</div>
+<div class="w-full bg-[#d1d5db]/80 dark:bg-[#1c1c1e]/90 backdrop-blur-xl rounded-t-2xl p-1.5 pb-0 shadow-inner border-t border-white/20 dark:border-white/5 -mb-6 pb-6">
+<div class="flex justify-center gap-1.5 px-1 pt-2 mb-2">
+<div class="keyboard-key">q</div>
+<div class="keyboard-key">w</div>
+<div class="keyboard-key">e</div>
+<div class="keyboard-key">r</div>
+<div class="keyboard-key">t</div>
+<div class="keyboard-key">y</div>
+<div class="keyboard-key">u</div>
+<div class="keyboard-key">i</div>
+<div class="keyboard-key">o</div>
+<div class="keyboard-key">p</div>
+</div>
+<div class="flex justify-center gap-1.5 px-4 mb-2">
+<div class="keyboard-key">a</div>
+<div class="keyboard-key">s</div>
+<div class="keyboard-key">d</div>
+<div class="keyboard-key">f</div>
+<div class="keyboard-key">g</div>
+<div class="keyboard-key">h</div>
+<div class="keyboard-key">j</div>
+<div class="keyboard-key">k</div>
+<div class="keyboard-key">l</div>
+</div>
+<div class="flex justify-center gap-1.5 px-8 mb-2">
+<div class="keyboard-key !bg-[#b4b8bf] dark:!bg-[#3a3a3c] !grow-0 w-12"><span class="material-symbols-outlined text-lg">arrow_upward</span></div>
+<div class="keyboard-key">z</div>
+<div class="keyboard-key">x</div>
+<div class="keyboard-key">c</div>
+<div class="keyboard-key">v</div>
+<div class="keyboard-key">b</div>
+<div class="keyboard-key">n</div>
+<div class="keyboard-key">m</div>
+<div class="keyboard-key !bg-[#b4b8bf] dark:!bg-[#3a3a3c] !grow-0 w-12"><span class="material-symbols-outlined text-lg">backspace</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative min-h-screen w-full mx-auto max-w-md bg-white dark:bg-background-dark shadow-2xl overflow-hidden flex flex-col pb-24 blur-sm opacity-60 pointer-events-none">
+<header class="sticky top-0 z-40 w-full glass-nav pt-safe-top">
+<div class="px-4 py-3 flex flex-col gap-3">
+<div class="flex h-12 w-full items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 p-1 shadow-inner">
+<label class="group flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 transition-all duration-300">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-semibold group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">My Day</span>
+<input class="hidden" name="mode-toggle" type="radio" value="My Day"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 bg-primary shadow-md transition-all duration-300 transform scale-100">
+<span class="text-white text-sm font-semibold">Campus Life</span>
+<input checked="" class="hidden" name="mode-toggle" type="radio" value="Campus Life"/>
+</label>
+</div>
+</div>
+</header>
+<div class="px-4 pt-4 pb-2">
+<div class="flex gap-3 items-center">
+<label class="flex h-12 grow items-center rounded-2xl bg-slate-100 dark:bg-slate-800 px-4 transition-shadow focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-[24px]">search</span>
+<input class="h-full w-full bg-transparent border-none px-3 text-base text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-0 font-medium" placeholder="Search events, items, people..."/>
+</label>
+<button class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<div class="flex gap-2 px-4 py-2 mb-2 overflow-x-auto no-scrollbar mask-gradient-right">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-slate-900 dark:bg-white px-5 shadow-soft">
+<p class="text-white dark:text-slate-900 text-sm font-semibold">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Events</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Marketplace</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Social</p>
+</button>
+</div>
+<div class="px-4 pb-6">
+<div class="relative w-full overflow-hidden rounded-[2rem] bg-white dark:bg-slate-800 shadow-xl shadow-indigo-100 dark:shadow-none border border-slate-100 dark:border-slate-700 group transition-all hover:shadow-card-hover">
+<div class="relative h-72 w-full">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARp15Mb5XKxrpEIW7ajhEcd71yEnrgF5_y3KGwmZ1_Kz2N_K_tNib2JusjrP-yU8CmowcIdyxur8z802UyX9a1wPgL1SCuystLMNpa0DAAnfBh4qG5A24j511zjR6bBZf6zu8WeMUDdWcQIC0E9ixvquELgcXsFqJK8gUUgg7xWK_qKfoDMTncwhH0KGeHFKdm1y-vpBQ6LQtNVTub-jRnCoJ9nhxO7_KTJcFO7jnFqQy4LK9uNC6x7ymvIzqSrhryYUvXNq-93z0');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90"></div>
+<div class="absolute top-5 left-5 right-5 flex justify-between items-start z-10">
+<div class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-md border border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-indigo-300 text-[18px]">auto_awesome</span>
+<span class="text-xs font-semibold text-white tracking-wide">AI Pick</span>
+</div>
+<div class="flex items-center gap-1.5 rounded-full bg-emerald-500/80 px-3 py-1.5 backdrop-blur-md shadow-lg border border-emerald-400/20">
+<span class="material-symbols-outlined text-white text-[18px]">check_circle</span>
+<span class="text-xs font-bold text-white">Fits Schedule</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 z-10">
+<div class="flex flex-col gap-2">
+<div class="flex gap-2 mb-1">
+<span class="inline-flex items-center rounded-lg bg-indigo-500/90 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm border border-indigo-400/30">
+                                    Hackathon
+                                </span>
+<span class="inline-flex items-center rounded-lg bg-white/20 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm border border-white/20">
+                                    Tech
+                                </span>
+</div>
+<h2 class="text-3xl font-bold text-white leading-tight drop-shadow-md">AI Hackathon 2024</h2>
+<div class="flex items-center gap-2 text-indigo-100 text-sm font-medium mt-1">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Oct 24 • 9:00 AM</span>
+<span class="text-white/40">•</span>
+<span>Innovation Hub</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col gap-1.5">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Friends Going</p>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-3">
+<div class="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3Ug4-arhozSCSa3MvMkvDekkheImaq8KHnO8TylmiDEeDWEWgJR4eLFEPy9C9byuEbF8PoXxC2t_rycxtFFfZgVfkJUyxVGYzceHX6qU5f5Ye60WwOQpZJMglgqFs0efWWng_KhwhBRl4JYCDpbjnQDiISNuAkhRU2FT4SuqHdhuTDEeqOfwb1I5Lcq5YBqfDxrIrzlpxhDSIzTxxBYO2ul5kiS6W5z4rTSyfWqa0X5bm1QYaR7-W8xQiqRKNKxchViaAJc6Brjc');"></div>
+<div class="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0noYjeEyyXt9pi_ZOIZFrxNSNnDk8v_cE66vT-5Cw5hQeQVg7KRFTqNn7wOVK6R34E2nAYSk8PEfJMPl-AVqPUJQufKCEZXPvqXUfiggXfJ8Qe0a7QXoyJJo-U89I_-GyQsV_uJ14z_AaQnHJk5aFp1tuQAVWQqB8xYMBc8oUQn6RqAHevljHcjJm2NP2bu8YBGIYnTDWQ1BzHyK1JTHho9QoozjVKMhj0PmRjGYi8bYV7ti-_eB3oNxcVOkNf3_pSftWZkUitWo');"></div>
+<div class="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5ZNiqzDmu4WlVYHL-EB4fAyi46OZswQdSMT9b2GeceFJ4AmPjFm-ypNuo-RMHZelt14ZjbLpdDE9fFD3DYQLOBJKpnyKFIKzxMCCY1h8-OWviOP-QXfGf-wjSqKM8cIS6nCYbZ6t5ahsuCIWfLPJg-pQ8lUqvgWlA_dYyF7Amlys95qyR66GlhWRJGxPjYf5y4Wmedpg6zkdNQBsq-xnuJ9Vo5ZEF8uA-cZJVY6GYL32m7TW3B7yDWQpsKUCr4a37F3Mdr09y5i0');"></div>
+</div>
+<span class="text-xs font-bold text-slate-700 dark:text-slate-200">+5 others</span>
+</div>
+</div>
+<button class="relative overflow-hidden rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 shadow-lg shadow-slate-200/50 dark:shadow-none hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="relative z-10 text-sm font-bold">Register</span>
+</button>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-600 flex items-start gap-3">
+<span class="material-symbols-outlined text-indigo-500 mt-0.5 fill-1 text-[20px]">lightbulb</span>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="font-bold text-slate-900 dark:text-white">AI Tip:</span> Teams of 4 recommended. Your Python skills match this event perfectly!
+                         </p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="columns-2 gap-4 space-y-4">
+<div class="break-inside-avoid relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-soft transition-transform hover:scale-[1.02] duration-300">
+<div class="relative">
+<div class="h-32 w-full bg-cover bg-center" data-alt="Stack of academic textbooks on a wooden desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDI-VPBpd0PUButAihODAZAHMsPzA_iDQ9mFVaVioh1ttKDcyQ-y4Ql0KClSd_2vQ6l93JYh_8gSarJf7r9KGjIbLUfYDn4ksvt0dggW2KsJT4NvaoeXBShJ95_wexTCW7Hbnd7qptfYSJWCyb9sY7nfr7hXgX7Y0iwzNGkqoYi7E63m1ZBhXJpuDaMhUgTr17HwXKRgH3T2ela5CFBkzfydoK6YHEESilHY8pFfUuj4XR0MugkDFVKESYniw2aVYlvGdJc0ohsBnQ");'></div>
+<div class="absolute bottom-2 left-2 rounded-lg bg-black/70 px-2 py-1 backdrop-blur-sm">
+<p class="text-xs font-bold text-white">$15</p>
+</div>
+</div>
+<div class="p-3">
+<h3 class="text-slate-900 dark:text-white text-sm font-semibold leading-tight mb-1">Psych 101 Textbook</h3>
+<div class="flex items-center gap-2 mt-2">
+<div class="h-5 w-5 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Portrait of student seller" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3Ug4-arhozSCSa3MvMkvDekkheImaq8KHnO8TylmiDEeDWEWgJR4eLFEPy9C9byuEbF8PoXxC2t_rycxtFFfZgVfkJUyxVGYzceHX6qU5f5Ye60WwOQpZJMglgqFs0efWWng_KhwhBRl4JYCDpbjnQDiISNuAkhRU2FT4SuqHdhuTDEeqOfwb1I5Lcq5YBqfDxrIrzlpxhDSIzTxxBYO2ul5kiS6W5z4rTSyfWqa0X5bm1QYaR7-W8xQiqRKNKxchViaAJc6Brjc");'></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Alex M.</p>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid flex flex-col p-4 rounded-2xl bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-900/30 shadow-soft border border-indigo-100 dark:border-indigo-800">
+<div class="flex items-center gap-3 mb-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait of a male student wearing glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0noYjeEyyXt9pi_ZOIZFrxNSNnDk8v_cE66vT-5Cw5hQeQVg7KRFTqNn7wOVK6R34E2nAYSk8PEfJMPl-AVqPUJQufKCEZXPvqXUfiggXfJ8Qe0a7QXoyJJo-U89I_-GyQsV_uJ14z_AaQnHJk5aFp1tuQAVWQqB8xYMBc8oUQn6RqAHevljHcjJm2NP2bu8YBGIYnTDWQ1BzHyK1JTHho9QoozjVKMhj0PmRjGYi8bYV7ti-_eB3oNxcVOkNf3_pSftWZkUitWo");'></div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">David K.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Chemistry Major</p>
+</div>
+</div>
+<p class="text-sm text-slate-700 dark:text-slate-300 mb-3 leading-relaxed">"Looking for a study buddy for Chem 202 finals!"</p>
+<button class="w-full py-2 rounded-xl bg-white dark:bg-slate-700 text-primary dark:text-blue-300 text-xs font-bold shadow-sm">Connect</button>
+</div>
+</div>
+</div>
+<nav class="fixed bottom-0 z-50 w-full max-w-md glass-nav pb-safe-bottom">
+<div class="flex items-end justify-between px-2 h-[80px] pb-2">
+<button class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-primary">
+<span class="material-symbols-outlined text-[26px] fill-1">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+<span class="text-[10px] font-medium">Schedule</span>
+</button>
+<div class="relative flex flex-1 flex-col items-center justify-end -top-4">
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-primary to-blue-400 shadow-glow text-white hover:scale-105 active:scale-95 transition-all duration-300 border-4 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-[32px]">smart_toy</span>
+</button>
+</div>
+<button class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<div class="relative">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+<span class="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-rose-500 border border-white dark:border-background-dark"></span>
+</div>
+<span class="text-[10px] font-medium">Chat</span>
+</button>
+<button class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+
+</body></html>

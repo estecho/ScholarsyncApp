@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync - Action Mode Schedule</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4c7fe6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e2433",
+                        "action-red": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 15px rgba(76, 127, 230, 0.5)',
+                        'action': '0 4px 20px -2px rgba(239, 68, 68, 0.25)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark pb-24 overflow-hidden shadow-2xl">
+<header class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">ScholarSync</h2>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<img alt="Profile" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx-d-b6f8SoJIBbXIavKZd1nGwbCxxIsrScpAPumBOmHqnB5GBDh0rCDhA883dQldIk_XnHBi01jCEozi3YpO6Arl4iKzik-UvL41Uvxfn5vlMrLe_DQfI6hfB2ANESD21q9NedQJRqbJwYe3xXVVwMUfItH4TySemDOv9r7ujt9J09JWNfPc01WCO3EIQX3LLXhv1V3ZtGmOIV74JtGusby3Van8BCEuNk69Y_nHWvb5PbQCiscc0t0sK3JdJQtKckRx2Eb6IeZE"/>
+</button>
+</div>
+<div class="px-5 pb-2 flex items-end justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Wednesday</p>
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight">Oct 24</h1>
+</div>
+<div class="flex items-center gap-2 bg-white dark:bg-surface-dark px-3 py-1.5 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">wb_sunny</span>
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">22°C</span>
+</div>
+</div>
+<div class="px-5 py-3">
+<div class="flex h-10 w-full items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 p-1">
+<button class="flex h-full flex-1 items-center justify-center rounded-lg bg-white dark:bg-surface-dark shadow-sm text-primary dark:text-primary text-sm font-bold transition-all">
+                        Day
+                    </button>
+<button class="flex h-full flex-1 items-center justify-center rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-medium transition-colors">
+                        Week
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 py-6 relative">
+<div class="absolute left-[70px] top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800 h-full"></div>
+<div class="flex w-full mb-8 relative group">
+<div class="w-14 flex flex-col items-end pr-3 pt-1 shrink-0">
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">8 AM</span>
+</div>
+<div class="flex-1 relative pl-4">
+<div class="absolute left-[-5px] top-2 h-2.5 w-2.5 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-background-light dark:bg-background-dark z-10"></div>
+</div>
+</div>
+<div class="flex w-full mb-6 relative group">
+<div class="w-14 flex flex-col items-end pr-3 pt-1 shrink-0">
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">9 AM</span>
+</div>
+<div class="flex-1 relative pl-4">
+<div class="absolute left-[-5px] top-2 h-2.5 w-2.5 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-background-light dark:bg-background-dark z-10"></div>
+<div class="p-3 rounded-2xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 shadow-sm flex items-center gap-3 w-fit">
+<div class="h-8 w-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
+<span class="material-symbols-outlined text-[18px]">coffee</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Morning Coffee</span>
+</div>
+</div>
+</div>
+<div class="flex w-full relative group mb-2 z-20">
+<div class="w-14 flex flex-col items-end pr-3 shrink-0 pt-2">
+<span class="text-xs font-bold text-action-red">9:50</span>
+<span class="text-[10px] text-red-400 mt-0.5">AM</span>
+</div>
+<div class="flex-1 relative pl-4 pb-6">
+<div class="absolute left-[-6px] top-3 h-3.5 w-3.5 rounded-full border-2 border-white dark:border-background-dark bg-action-red shadow-[0_0_0_4px_rgba(239,68,68,0.2)] z-30">
+<div class="absolute inset-0 rounded-full bg-action-red animate-ping opacity-75"></div>
+</div>
+<div class="absolute left-[-1px] top-6 -bottom-6 w-1 bg-gradient-to-b from-action-red/80 to-primary/80 z-0 rounded-full"></div>
+<div class="relative bg-action-red text-white rounded-2xl rounded-tl-none shadow-action p-3 flex items-center justify-between transform transition-all hover:scale-[1.02] w-full max-w-[280px]">
+<div class="absolute -left-2 top-0 w-0 h-0 border-t-[10px] border-t-action-red border-l-[10px] border-l-transparent"></div>
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-[20px] animate-pulse">directions_walk</span>
+</div>
+<div>
+<p class="font-bold text-sm leading-tight">Leave in 10 min</p>
+<p class="text-xs text-red-100 font-medium">for Room 304</p>
+</div>
+</div>
+<div class="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full relative group">
+<div class="w-14 flex flex-col items-end pr-3 shrink-0">
+<span class="text-xs font-bold text-slate-800 dark:text-slate-200">10:00</span>
+<span class="text-[10px] text-slate-400 mt-0.5">AM</span>
+</div>
+<div class="flex-1 relative pl-4 pb-12">
+<div class="absolute left-[-6px] top-1.5 h-3.5 w-3.5 rounded-full border-4 border-white dark:border-background-dark bg-primary shadow-sm z-10"></div>
+<div class="absolute left-[-1px] top-4 bottom-0 w-0.5 bg-primary/20 z-0"></div>
+<div class="relative overflow-hidden rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 transition-transform active:scale-[0.99]">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[80px]">terminal</span>
+</div>
+<div class="p-5 relative z-10">
+<div class="flex flex-wrap items-center gap-2 mb-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-white/20 text-white backdrop-blur-sm border border-white/10">Lecture</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold bg-red-500/90 text-white border border-red-400 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                                Assignment Due Today
+                            </span>
+</div>
+<h3 class="text-xl font-bold mb-1">Computer Science 101</h3>
+<div class="flex flex-col gap-1 mt-2">
+<div class="flex items-center gap-2 text-white/90 text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Room 304, Science Block</span>
+</div>
+<div class="flex items-center gap-2 text-white/80 text-sm">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Prof. Alan Grant</span>
+</div>
+</div>
+<div class="mt-4 bg-white/10 rounded-xl p-3 flex items-center gap-3 backdrop-blur-md border border-white/10 hover:bg-white/15 transition-colors cursor-pointer group/task">
+<div class="h-5 w-5 rounded border-2 border-white/60 flex items-center justify-center group-hover/task:border-white transition-colors">
+</div>
+<span class="text-sm font-medium text-white group-hover/task:text-white transition-colors">Submit PDF</span>
+</div>
+</div>
+</div>
+<div class="absolute left-4 bottom-4 translate-y-1/2 z-20 opacity-60 grayscale">
+<div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 border border-white dark:border-slate-700 px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[14px]">schedule</span>
+<span class="text-xs font-semibold text-slate-600 dark:text-slate-300">Class ends 11:30</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full relative group">
+<div class="w-14 flex flex-col items-end pr-3 shrink-0 pt-2">
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">12:00</span>
+<span class="text-[10px] text-slate-400 mt-0.5">PM</span>
+</div>
+<div class="flex-1 relative pl-4 pb-10">
+<div class="absolute left-[-5px] top-3 h-2.5 w-2.5 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-background-light dark:bg-background-dark z-10"></div>
+<div class="absolute left-[-1px] top-4 bottom-0 w-0.5 border-l-2 border-dashed border-slate-300 dark:border-slate-700 z-0 h-[calc(100%-20px)] ml-[0.5px]"></div>
+<div class="rounded-2xl border-2 border-dashed border-primary/30 bg-primary/5 dark:bg-primary/10 p-4">
+<div class="flex items-start gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-800 dark:text-white mb-1">Smart Suggestions</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-3">
+                                    You have a 2h gap. Based on crowd levels:
+                                </p>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-start gap-2 p-2.5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-600 rounded-xl shadow-sm hover:border-green-500/50 hover:shadow-md transition-all text-left active:scale-95">
+<span class="text-xl">☕</span>
+<div>
+<span class="block text-xs font-bold text-slate-800 dark:text-white">Cafeteria</span>
+<span class="block text-[10px] text-green-600 dark:text-green-400 font-bold bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded-md w-fit mt-0.5">Low Crowd</span>
+</div>
+</button>
+<button class="flex flex-col items-start gap-2 p-2.5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-600 rounded-xl shadow-sm hover:border-primary/50 hover:shadow-md transition-all text-left active:scale-95">
+<span class="text-xl">📚</span>
+<div>
+<span class="block text-xs font-bold text-slate-800 dark:text-white">Library</span>
+<span class="block text-[10px] text-primary font-medium bg-primary/10 px-1.5 py-0.5 rounded-md w-fit mt-0.5">Quiet</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full relative group">
+<div class="w-14 flex flex-col items-end pr-3 shrink-0 pt-1">
+<span class="text-xs font-medium text-slate-800 dark:text-slate-300">2:30</span>
+<span class="text-[10px] text-slate-400 mt-0.5">PM</span>
+</div>
+<div class="flex-1 relative pl-4 pb-8">
+<div class="absolute left-[-5px] top-2 h-2.5 w-2.5 rounded-full border-2 border-indigo-500 bg-background-light dark:bg-background-dark z-10"></div>
+<div class="absolute left-[-1px] top-4 bottom-0 w-0.5 bg-indigo-500/20 z-0 h-full"></div>
+<div class="flex items-stretch overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border-l-4 border-indigo-500 shadow-soft">
+<div class="p-4 flex-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-white">History of Art</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Hall B • Prof. Rivera</p>
+<div class="mt-3 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300">Seminar</span>
+</div>
+</div>
+<div class="w-24 bg-cover bg-center" data-alt="Abstract colorful art details representing art history class" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCe3i2a39k14iCT7KehVBG8GjyAsJPLvgFpSnrnOmrd9fZl1cjYJ3pLto7dnpsTOPo3ALvOzUVVnMKY4MAIkHj7wVRlyA8OcXDTZu6iovhiKsXYNmt23wJzZT_WCXLY9W-6X5tUpbw1Rsh1ai901ZR5gCwZzQsX7Jao7zFfMUvdVS9udiNsFT3G0386Yf7zSIlwRb0mD3MULSA5oV6B-Q4-F54p-u17d6QUad-Uzczz2NrTYHYX9VxJz80ZznWJZMa3FntNSsFcR4A');">
+<div class="h-full w-full bg-indigo-900/10 dark:bg-indigo-900/40 backdrop-blur-[1px]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full mb-8 relative group">
+<div class="w-14 flex flex-col items-end pr-3 pt-1 shrink-0">
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">4 PM</span>
+</div>
+<div class="flex-1 relative pl-4">
+<div class="absolute left-[-4px] top-2 h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600 z-10"></div>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">Classes finished for the day</p>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 z-50 w-full max-w-md bg-white/90 dark:bg-surface-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex items-center justify-around h-16 px-2">
+<a class="flex flex-col items-center justify-center w-14 h-full gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-14 h-full gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-1">calendar_month</span>
+<span class="text-[10px] font-medium">Schedule</span>
+</a>
+<div class="relative -top-5">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-glow hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</button>
+</div>
+<a class="flex flex-col items-center justify-center w-14 h-full gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span class="text-[10px] font-medium">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center w-14 h-full gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+<div class="h-4 w-full"></div>
+</nav>
+</div>
+<style>::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }.material-symbols-outlined.fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</body></html>

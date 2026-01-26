@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarSync Control Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f2f2f7", /* iOS Grouped Background Color */
+                        "background-dark": "#101622",
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'ios': '0 1px 2px rgba(0, 0, 0, 0.05)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.1)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom range input styling for a better look */
+        input[type=range] {
+            -webkit-appearance: none; 
+            width: 100%; 
+            background: transparent; 
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: -10px; 
+            border: 0.5px solid rgba(0,0,0,0.04);
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: transparent;
+            border-radius: 2px;
+        }
+        
+        .ios-switch {
+            transition: background-color 0.3s;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#1c1c1e] antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root max-w-md mx-auto border-x border-gray-100 bg-background-light dark:bg-background-dark shadow-xl">
+<!-- Header -->
+<div class="flex items-end bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
+<h2 class="text-[#000000] dark:text-white text-3xl font-bold leading-tight tracking-tight flex-1">Control Center</h2>
+<div class="flex items-center justify-end pb-1">
+<button class="text-primary text-[17px] font-semibold leading-normal tracking-tight shrink-0 active:opacity-70 transition-opacity">
+                    Help &amp; Feedback
+                </button>
+</div>
+</div>
+<div class="px-4 py-2">
+<!-- Hero Section: AI Persona Tuning -->
+<div class="w-full relative overflow-hidden bg-surface dark:bg-[#1c2533] rounded-2xl shadow-glass mb-6">
+<!-- Decorative background blob for "Glass" feel -->
+<div class="absolute top-0 left-0 w-full h-full opacity-40 bg-gradient-to-b from-white to-gray-50 dark:from-[#1c2533] dark:to-[#101622] z-0"></div>
+<div class="relative z-10 p-6 flex flex-col items-center">
+<!-- AI Orb Visual -->
+<div class="relative w-32 h-32 mb-6 flex items-center justify-center">
+<!-- Abstract Gradient Orb -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 via-primary to-purple-500 blur-xl opacity-60 animate-pulse" data-alt="Glowing AI orb representing the brain of the assistant"></div>
+<div class="relative z-10 bg-gradient-to-br from-blue-100 to-white w-24 h-24 rounded-full flex items-center justify-center shadow-inner border border-white/50">
+<span class="material-symbols-outlined text-4xl text-primary opacity-80">smart_toy</span>
+</div>
+</div>
+<!-- Slider Label -->
+<div class="w-full flex justify-between items-center mb-2">
+<span class="text-xs font-semibold uppercase tracking-wider text-red-500">Strict</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">Coaching Style</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-primary">Chill</span>
+</div>
+<!-- Gradient Slider -->
+<div class="relative w-full h-6 flex items-center justify-center mb-6">
+<!-- Custom track background gradient -->
+<div class="absolute w-full h-1.5 rounded-full bg-gradient-to-r from-red-400 via-purple-300 to-primary"></div>
+<input aria-label="AI Coaching Style Slider" class="relative w-full z-20 focus:outline-none" max="100" min="0" type="range" value="75"/>
+</div>
+<!-- Proactive Nudges Toggle inside Card -->
+<div class="w-full flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4 mt-2">
+<div class="flex flex-col">
+<p class="text-gray-900 dark:text-white text-[17px] font-medium leading-normal">Proactive Nudges</p>
+<p class="text-gray-500 dark:text-gray-400 text-[13px] leading-normal">Allow interruptions for deadlines</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-sm"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Neural Connections Section -->
+<div class="mb-6">
+<h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide ml-4 mb-2">Neural Connections</h3>
+<div class="bg-surface dark:bg-[#1c2533] rounded-xl overflow-hidden shadow-ios">
+<!-- University Portal -->
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700 active:bg-gray-50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] font-medium text-gray-900 dark:text-white">University Portal</span>
+<span class="text-[13px] text-gray-500 dark:text-gray-400">Last sync: 2m ago</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[15px] text-gray-400 hidden sm:block">Connected</span>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700 active:bg-gray-50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] font-medium text-gray-900 dark:text-white">Email</span>
+<span class="text-[13px] text-gray-500 dark:text-gray-400">Gmail / Outlook</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[15px] text-gray-400 italic">Parsing tasks...</span>
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-500"></span>
+</span>
+</div>
+</div>
+<!-- Calendar -->
+<div class="flex items-center justify-between p-4 active:bg-gray-50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[17px] font-medium text-gray-900 dark:text-white">Calendar Export</span>
+<span class="text-[13px] text-gray-500 dark:text-gray-400">Read &amp; Write Access</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-gray-400">
+<span class="text-[15px]">Active</span>
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Smart Features Section -->
+<div class="mb-8">
+<h3 class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide ml-4 mb-2">Smart Features</h3>
+<div class="bg-surface dark:bg-[#1c2533] rounded-xl overflow-hidden shadow-ios">
+<!-- Focus Mode -->
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined text-[20px]">do_not_disturb_on</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-[17px] font-medium leading-normal">Focus Mode</p>
+<p class="text-gray-500 dark:text-gray-400 text-[13px] leading-normal">Auto-trigger during Class</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-sm"></div>
+</label>
+</div>
+</div>
+<!-- Message Triage -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-[17px] font-medium leading-normal">Message Triage</p>
+<p class="text-gray-500 dark:text-gray-400 text-[13px] leading-normal">Summarize Group Chats</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary shadow-sm"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Text -->
+<div class="text-center pb-8 px-4">
+<p class="text-gray-400 text-xs text-center">ScholarSync v2.4.1 (Build 8902)<br/>Powered by NeuralCore Engine</p>
+</div>
+</div>
+</div>
+</body></html>

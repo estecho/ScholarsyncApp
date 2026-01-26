@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Focus Session Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0066FF", 
+              "primary-light": "#E0ECFF",
+              "background-light": "#F5F7FA",
+              "background-dark": "#0A1120",
+              "text-main": "#0F172A",
+              "text-secondary": "#64748B",
+            },
+            fontFamily: {
+              "display": ["-apple-system", "BlinkMacSystemFont", "San Francisco", "Segoe UI", "Helvetica Neue", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+            boxShadow: {
+                "soft": "0 8px 30px -4px rgba(0, 102, 255, 0.15)",
+                "card": "0 4px 20px rgba(0, 0, 0, 0.03)",
+            }
+          },
+        },
+      }
+    </script>
+<style>.conic-progress {background: conic-gradient(#0066FF 0% 92%, #E0ECFF 92% 100%);
+            transition: background 1s ease-out;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col group/design-root overflow-x-hidden max-w-md mx-auto bg-white dark:bg-[#0A1120] sm:border-x sm:border-slate-100">
+<div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between">
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Focus Session Report</h2>
+<button class="flex w-16 items-center justify-end hover:opacity-70 transition-opacity">
+<p class="text-primary dark:text-blue-400 text-base font-bold leading-normal tracking-[0.015em] shrink-0">Done</p>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center pt-8 pb-6 px-6">
+<div class="relative w-48 h-48 rounded-full conic-progress flex items-center justify-center shadow-soft mb-6">
+<div class="w-40 h-40 bg-white dark:bg-gray-900 rounded-full flex flex-col items-center justify-center relative z-10 shadow-inner">
+<span class="text-text-secondary text-sm font-medium mb-1">Focus Quality</span>
+<h1 class="text-6xl font-black text-text-main dark:text-white tracking-tighter leading-none">92</h1>
+<div class="flex items-center gap-1 mt-2 text-primary">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span class="text-xs font-bold">+4%</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full -z-0"></div>
+</div>
+<div class="text-center space-y-1 max-w-[280px]">
+<h3 class="text-text-main dark:text-white text-xl font-bold">Deep Work State</h3>
+<p class="text-text-secondary text-sm font-medium">Deep Work State achieved for 45 mins.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 px-4 mb-8">
+<div class="bg-slate-50 dark:bg-white/5 p-4 rounded-xl flex flex-col gap-2 border border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="text-xs font-medium">Total Duration</span>
+</div>
+<p class="text-xl font-bold text-text-main dark:text-white">52 <span class="text-sm font-normal text-gray-500">mins</span></p>
+</div>
+<div class="bg-slate-50 dark:bg-white/5 p-4 rounded-xl flex flex-col gap-2 border border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">notifications_off</span>
+<span class="text-xs font-medium">Blocked</span>
+</div>
+<p class="text-xl font-bold text-text-main dark:text-white">3 <span class="text-sm font-normal text-gray-500">Notifications</span></p>
+</div>
+</div>
+<div class="h-2 bg-slate-50 dark:bg-white/5 w-full"></div>
+<div class="flex flex-col pt-6 pb-2">
+<div class="flex items-center justify-between px-4 mb-4">
+<h3 class="text-text-main dark:text-white tracking-tight text-lg font-bold">Focus Timeline</h3>
+<button class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-gray-400">info</span>
+</button>
+</div>
+<div class="overflow-x-auto hide-scrollbar px-4 pb-4">
+<div class="min-w-[340px] flex flex-col gap-2">
+<div class="flex justify-between text-xs text-text-secondary font-medium px-1">
+<span>14:00</span>
+<span>14:15</span>
+<span>14:30</span>
+<span>14:45</span>
+<span>14:52</span>
+</div>
+<div class="relative h-14 bg-primary-light dark:bg-white/10 rounded-xl w-full flex items-center overflow-hidden">
+<div class="absolute left-[10%] width-[70%] h-full bg-primary/10 dark:bg-primary/30 border-l-2 border-r-2 border-primary/40 flex items-center justify-center">
+<span class="text-[10px] font-bold text-primary dark:text-blue-300 uppercase tracking-wider bg-white/60 dark:bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">Deep Work</span>
+</div>
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-primary/20 -translate-y-1/2"></div>
+<div class="absolute left-0 h-full w-1 bg-primary rounded-l-xl"></div>
+<div class="absolute left-[35%] top-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="w-6 h-6 rounded-full bg-white dark:bg-[#10221f] border-2 border-rose-400 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-rose-400">notifications_off</span>
+</div>
+<div class="absolute -top-8 bg-black/80 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">Instagram Blocked</div>
+</div>
+<div class="absolute left-[62%] top-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+<div class="w-6 h-6 rounded-full bg-white dark:bg-[#10221f] border-2 border-rose-400 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-rose-400">notifications_off</span>
+</div>
+<div class="absolute -top-8 bg-black/80 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">WeChat Blocked (2)</div>
+</div>
+<div class="absolute right-0 h-full w-1 bg-gray-300 dark:bg-gray-600 rounded-r-xl"></div>
+</div>
+<div class="flex gap-4 mt-1 justify-center">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-xs text-text-secondary">Deep Focus</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full border-2 border-rose-400"></div>
+<span class="text-xs text-text-secondary">Blocked Notifications</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-2 bg-slate-50 dark:bg-white/5 w-full"></div>
+<div class="flex flex-col px-4 pt-6 pb-24">
+<h3 class="text-text-main dark:text-white tracking-tight text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                AI Insight
+            </h3>
+<div class="bg-gradient-to-br from-white to-blue-50 dark:from-white/10 dark:to-white/5 rounded-2xl p-5 border border-primary/10 shadow-card relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="relative z-10">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="text-text-main dark:text-gray-100 text-sm font-medium leading-relaxed mb-3">
+                                You focus <span class="text-primary font-bold">20%</span> better when listening to <span class="bg-blue-100 dark:bg-primary/30 text-primary dark:text-blue-200 px-1.5 py-0.5 rounded text-xs mx-0.5 font-bold">'Rain Sounds'</span> compared to <span class="bg-gray-100 dark:bg-white/20 px-1.5 py-0.5 rounded text-xs mx-0.5">'White Noise'</span>.
+                            </p>
+<p class="text-xs text-text-secondary leading-normal">
+                                Suggestion: Try the "Rainy Cafe" playlist for your next deep reading session.
+                            </p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-white/10 flex gap-3">
+<button class="flex-1 bg-white dark:bg-black/20 hover:bg-gray-50 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 text-text-main dark:text-white text-xs font-semibold py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+                            Preview Rain
+                        </button>
+<button class="flex-1 bg-primary text-white hover:bg-primary/90 text-xs font-semibold py-2.5 px-4 rounded-lg shadow-sm transition-colors shadow-soft">
+                            Apply Suggestion
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 left-0 w-full px-6 flex justify-center pointer-events-none">
+<button class="pointer-events-auto bg-text-main dark:bg-white text-white dark:text-text-main shadow-xl hover:scale-105 active:scale-95 transition-all rounded-full px-6 py-3 font-semibold text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+                Share Report
+             </button>
+</div>
+</div>
+
+</body></html>
