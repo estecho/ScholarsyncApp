@@ -37,9 +37,9 @@ export default function PriorityBriefing({ items }: PriorityBriefingProps) {
                     {item.icon}
                   </span>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-sm font-semibold text-slate-800 dark:text-slate-100">{item.sender}</span>
-                  <span className="text-sm text-slate-500 dark:text-slate-400 leading-snug">{item.preview}</span>
+                <div className="flex flex-col min-w-0 flex-1">
+                  <span className="text-sm font-semibold text-slate-800 dark:text-slate-100 break-words">{item.sender}</span>
+                  <span className="text-sm text-slate-500 dark:text-slate-400 leading-snug break-words">{item.preview}</span>
                 </div>
               </div>
             );

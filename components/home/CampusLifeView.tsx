@@ -237,8 +237,7 @@ export default function CampusLifeView({
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
               style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuARp15Mb5XKxrpEIW7ajhEcd71yEnrgF5_y3KGwmZ1_Kz2N_K_tNib2JusjrP-yU8CmowcIdyxur8z802UyX9a1wPgL1SCuystLMNpa0DAAnfBh4qG5A24j511zjR6bBZf6zu8WeMUDdWcQIC0E9ixvquELgcXsFqJK8gUUgg7xWK_qKfoDMTncwhH0KGeHFKdm1y-vpBQ6LQtNVTub-jRnCoJ9nhxO7_KTJcFO7jnFqQy4LK9uNC6x7ymvIzqSrhryYUvXNq-93z0')",
+                backgroundImage: "url('https://placehold.co/600x400/png?text=AI+Hackathon+2024')",
               }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90" style={{ top: '66px', height: '164px' }}></div>
@@ -257,7 +256,7 @@ export default function CampusLifeView({
               </div>
             </div>
             <div className="absolute bottom-6 left-6 right-6 z-10">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 min-w-0">
                 <div className="flex gap-2 mb-1">
                   <span className="inline-flex items-center rounded-lg bg-indigo-500/90 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm border border-indigo-400/30">
                     Hackathon
@@ -266,14 +265,14 @@ export default function CampusLifeView({
                     Tech
                   </span>
                 </div>
-                <h2 className="text-3xl font-bold text-white leading-tight drop-shadow-md">
+                <h2 className="text-3xl font-bold text-white leading-tight drop-shadow-md break-words">
                   AI Hackathon 2024
                 </h2>
-                <div className="flex items-center gap-2 text-indigo-100 text-sm font-medium mt-1">
-                  <span className="material-symbols-outlined text-[18px]">calendar_today</span>
-                  <span>Oct 24 • 9:00 AM</span>
-                  <span className="text-white/40">•</span>
-                  <span>Innovation Hub</span>
+                <div className="flex items-center gap-2 text-indigo-100 text-sm font-medium mt-1 min-w-0">
+                  <span className="material-symbols-outlined text-[18px] shrink-0">calendar_today</span>
+                  <span className="break-words">Oct 24 • 9:00 AM</span>
+                  <span className="text-white/40 shrink-0">•</span>
+                  <span className="break-words">Innovation Hub</span>
                 </div>
               </div>
             </div>
@@ -290,22 +289,19 @@ export default function CampusLifeView({
                     <div
                       className="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center"
                       style={{
-                        backgroundImage:
-                          "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3Ug4-arhozSCSa3MvMkvDekkheImaq8KHnO8TylmiDEeDWEWgJR4eLFEPy9C9byuEbF8PoXxC2t_rycxtFFfZgVfkJUyxVGYzceHX6qU5f5Ye60WwOQpZJMglgqFs0efWWng_KhwhBRl4JYCDpbjnQDiISNuAkhRU2FT4SuqHdhuTDEeqOfwb1I5Lcq5YBqfDxrIrzlpxhDSIzTxxBYO2ul5kiS6W5z4rTSyfWqa0X5bm1QYaR7-W8xQiqRKNKxchViaAJc6Brjc')",
+                        backgroundImage: "url('https://ui-avatars.com/api/?name=Friend1&size=40&background=6366f1&color=ffffff&bold=true&format=png')",
                       }}
                     ></div>
                     <div
                       className="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center"
                       style={{
-                        backgroundImage:
-                          "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0noYjeEyyXt9pi_ZOIZFrxNSNnDk8v_cE66vT-5Cw5hQeQVg7KRFTqNn7wOVK6R34E2nAYSk8PEfJMPl-AVqPUJQufKCEZXPvqXUfiggXfJ8Qe0a7QXoyJJo-U89I_-GyQsV_uJ14z_AaQnHJk5aFp1tuQAVWQqB8xYMBc8oUQn6RqAHevljHcjJm2NP2bu8YBGIYnTDWQ1BzHyK1JTHho9QoozjVKMhj0PmRjGYi8bYV7ti-_eB3oNxcVOkNf3_pSftWZkUitWo')",
+                        backgroundImage: "url('https://ui-avatars.com/api/?name=Friend2&size=40&background=8b5cf6&color=ffffff&bold=true&format=png')",
                       }}
                     ></div>
                     <div
                       className="h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-800 bg-cover bg-center"
                       style={{
-                        backgroundImage:
-                          "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5ZNiqzDmu4WlVYHL-EB4fAyi46OZswQdSMT9b2GeceFJ4AmPjFm-ypNuo-RMHZelt14ZjbLpdDE9fFD3DYQLOBJKpnyKFIKzxMCCY1h8-OWviOP-QXfGf-wjSqKM8cIS6nCYbZ6t5ahsuCIWfLPJg-pQ8lUqvgWlA_dYyF7Amlys95qyR66GlhWRJGxPjYf5y4Wmedpg6zkdNQBsq-xnuJ9Vo5ZEF8uA-cZJVY6GYL32m7TW3B7yDWQpsKUCr4a37F3Mdr09y5i0')",
+                        backgroundImage: "url('https://ui-avatars.com/api/?name=Friend3&size=40&background=d946ef&color=ffffff&bold=true&format=png')",
                       }}
                     ></div>
                   </div>
@@ -362,8 +358,7 @@ export default function CampusLifeView({
               <div
                 className="h-32 w-full bg-cover bg-center"
                 style={{
-                  backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDI-VPBpd0PUButAihODAZAHMsPzA_iDQ9mFVaVioh1ttKDcyQ-y4Ql0KClSd_2vQ6l93JYh_8gSarJf7r9KGjIbLUfYDn4ksvt0dggW2KsJT4NvaoeXBShJ95_wexTCW7Hbnd7qptfYSJWCyb9sY7nfr7hXgX7Y0iwzNGkqoYi7E63m1ZBhXJpuDaMhUgTr17HwXKRgH3T2ela5CFBkzfydoK6YHEESilHY8pFfUuj4XR0MugkDFVKESYniw2aVYlvGdJc0ohsBnQ")',
+                  backgroundImage: 'url("https://placehold.co/400x300/png?text=Textbook")',
                 }}
               ></div>
               <div className="absolute bottom-2 left-2 rounded-lg bg-black/70 px-2 py-1 backdrop-blur-sm">
@@ -378,8 +373,7 @@ export default function CampusLifeView({
                 <div
                   className="h-5 w-5 rounded-full bg-slate-200 bg-cover bg-center"
                   style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3Ug4-arhozSCSa3MvMkvDekkheImaq8KHnO8TylmiDEeDWEWgJR4eLFEPy9C9byuEbF8PoXxC2t_rycxtFFfZgVfkJUyxVGYzceHX6qU5f5Ye60WwOQpZJMglgqFs0efWWng_KhwhBRl4JYCDpbjnQDiISNuAkhRU2FT4SuqHdhuTDEeqOfwb1I5Lcq5YBqfDxrIrzlpxhDSIzTxxBYO2ul5kiS6W5z4rTSyfWqa0X5bm1QYaR7-W8xQiqRKNKxchViaAJc6Brjc')",
+                    backgroundImage: "url('https://ui-avatars.com/api/?name=Alex+M&size=20&background=6366f1&color=ffffff&bold=true&format=png')",
                   }}
                 ></div>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Alex M.</p>
@@ -416,8 +410,7 @@ export default function CampusLifeView({
               <div
                 className="h-10 w-10 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-700 shadow-sm"
                 style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0noYjeEyyXt9pi_ZOIZFrxNSNnDk8v_cE66vT-5Cw5hQeQVg7KRFTqNn7wOVK6R34E2nAYSk8PEfJMPl-AVqPUJQufKCEZXPvqXUfiggXfJ8Qe0a7QXoyJJo-U89I_-GyQsV_uJ14z_AaQnHJk5aFp1tuQAVWQqB8xYMBc8oUQn6RqAHevljHcjJm2NP2bu8YBGIYnTDWQ1BzHyK1JTHho9QoozjVKMhj0PmRjGYi8bYV7ti-_eB3oNxcVOkNf3_pSftWZkUitWo')",
+                  backgroundImage: "url('https://ui-avatars.com/api/?name=David+K&size=40&background=8b5cf6&color=ffffff&bold=true&format=png')",
                 }}
               ></div>
               <div>
@@ -459,11 +452,10 @@ export default function CampusLifeView({
           >
             <div
               className="w-full bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg17hgFJ-LpOw_dzfDFAaS54YEsgnxRXHcfn66xLpwQw3oHnpvuKgDUAeMQk1Z9u97_NwWfzcpKOB79AWlaY71MUzWVP481-2xAs0ANlW0yE8iWdr_qYmRuDsR91tWcStHK_ca5iOGssahamvQrczm-0Wnpvdwrp3ANUKwbps0hPNFQcOZoZA0rBm422uEVgc3_LEgex9xHZDXq1b9KPWR0421ZA0OAWnm5ESSVyD6uOJP_jKlk-ruLosEIh8TV3tTo_GE4gMnCv4")',
-                height: '175px',
-              }}
+                style={{
+                  backgroundImage: 'url("https://placehold.co/400x300/png?text=Campus+Jazz+Night")',
+                  height: '175px',
+                }}
             ></div>
             <div className="p-3" style={{ height: '90px' }}>
               <div className="flex justify-between items-start mb-1">
@@ -545,7 +537,7 @@ export default function CampusLifeView({
                 className="w-full bg-cover bg-center"
                 style={{
                   backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6V5o1-3Ts_his7HtX9RrkSU36zk38EpX_cZtycDGP7gSYcp8X09Ij3t8KgbXZJLtzz-Qiy81_TfrGy50yaz4Kc2kPfb5imHJN8SW_XfLGAM-aDlh_q0tl5QkjV7BDAvyrf5VQ-QxVjEODef3tKTBADKHgFmXapsogUM2T2M8lmVbP43ZKXVBHECDK_Gfel3FcFC_quq7O_3l3reCtFHfoiqUjBu8uP_8qrIAT0g9uhMwkYSjT3q0LCADCKRhq0BaCDplIs7fGsPc")',
+                    'url("https://placehold.co/400x300/png?text=Polaroid+Camera")',
                   height: '133px',
                 }}
               ></div>
@@ -561,8 +553,7 @@ export default function CampusLifeView({
                 <div
                   className="h-5 w-5 rounded-full bg-slate-200 bg-cover bg-center"
                   style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5ZNiqzDmu4WlVYHL-EB4fAyi46OZswQdSMT9b2GeceFJ4AmPjFm-ypNuo-RMHZelt14ZjbLpdDE9fFD3DYQLOBJKpnyKFIKzxMCCY1h8-OWviOP-QXfGf-wjSqKM8cIS6nCYbZ6t5ahsuCIWfLPJg-pQ8lUqvgWlA_dYyF7Amlys95qyR66GlhWRJGxPjYf5y4Wmedpg6zkdNQBsq-xnuJ9Vo5ZEF8uA-cZJVY6GYL32m7TW3B7yDWQpsKUCr4a37F3Mdr09y5i0')",
+                    backgroundImage: "url('https://ui-avatars.com/api/?name=Sarah+J&size=20&background=d946ef&color=ffffff&bold=true&format=png')",
                   }}
                 ></div>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Sarah J.</p>

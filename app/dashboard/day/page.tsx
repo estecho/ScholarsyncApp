@@ -386,7 +386,7 @@ export default function DashboardDayPage() {
                     className="w-24 bg-cover bg-center"
                     data-alt="Abstract colorful art details representing art history class"
                     style={{
-                      backgroundImage: `url('${course.mapImage}')`,
+                      backgroundImage: `url('https://placehold.co/200x200/png?text=${encodeURIComponent(course.name)}')`,
                     }}
                   >
                     <div className="h-full w-full bg-indigo-900/10 dark:bg-indigo-900/40 backdrop-blur-[1px]"></div>

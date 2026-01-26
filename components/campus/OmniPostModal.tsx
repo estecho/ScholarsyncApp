@@ -258,9 +258,7 @@ function PhotoModeContent({ contextItem }: { contextItem?: CampusItem | null }) 
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90 transition-transform duration-1000 group-hover:scale-105"
           style={{
-            backgroundImage:
-              contextItem?.image ||
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLCilZw6LhHI-blW_mf74-Y-uDsEo4kgtet6D3MoOgJ3lNTq5Q6JLBhzrvK-RLV7KGY1j72YU5jJAI4HxrmsuB-iZb70BTG7aEhNOXk91l-aJYbFQg86bHSsUusgz0YbFqZZrunVycB3rKVTJR78OyIXG6Uva1TesgYb--WhTPa_dnAPhwkGmtd0C3IJSRPLJxoQKWfuzCAjpBynOfC2-hhZAoodrMyMlu4u5wOzCNrLhy0uK2Y3YrKX9xLThDLFatXwMKntq_vfU')",
+            backgroundImage: contextItem?.image || "url('https://placehold.co/600x800/png?text=Photo')",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>

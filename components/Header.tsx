@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { PROFILE_DATA } from "@/constants/profile";
+import { getAvatarUrl } from "@/lib/avatarUtils";
 
 interface DashboardHeaderProps {
   date?: string;
@@ -35,12 +36,8 @@ export function DashboardHeader({
             <img
               alt="Profile"
               className="h-8 w-8 rounded-full"
-              src={PROFILE_DATA.user.avatar}
+              src={getAvatarUrl(PROFILE_DATA.user.name, 32)}
               loading="lazy"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(PROFILE_DATA.user.name)}&size=32&background=6366f1&color=ffffff&bold=true&format=png`;
-              }}
             />
           </button>
         </div>

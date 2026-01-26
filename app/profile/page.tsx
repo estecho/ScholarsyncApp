@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { PROFILE_DATA } from "@/constants/profile";
+import { getAvatarUrl } from "@/lib/avatarUtils";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function ProfilePage() {
               <div className="size-16 rounded-full p-[3px] border-2 border-red-500">
                 <div
                   className="w-full h-full rounded-full bg-center bg-cover bg-no-repeat"
-                  style={{ backgroundImage: `url('${PROFILE_DATA.user.avatar}')` }}
+                  style={{ backgroundImage: `url('${getAvatarUrl(PROFILE_DATA.user.name, 64)}')` }}
                 ></div>
               </div>
               <div className="absolute bottom-1 right-1 size-4 bg-red-500 border-2 border-white dark:border-[#101622] rounded-full"></div>

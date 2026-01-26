@@ -7,6 +7,7 @@ import { getMessageById } from "@/constants/chat";
 import Toast from "@/components/Toast";
 import TaskCreationModal from "@/components/chat/TaskCreationModal";
 import SchedulingPollCard from "@/components/chat/SchedulingPollCard";
+import { getAvatarUrl } from "@/lib/avatarUtils";
 
 export default function ChatDetailPage() {
   const params = useParams();
@@ -105,20 +106,14 @@ export default function ChatDetailPage() {
               <span className="material-symbols-outlined">arrow_back_ios_new</span>
             </button>
             <div className="relative">
-              {message.avatar ? (
-                <div
-                  className="w-10 h-10 rounded-full bg-gray-200 bg-cover bg-center ring-2 ring-offset-2 ring-transparent group-hover:ring-primary transition-all"
-                  style={{ backgroundImage: `url('${message.avatar}')` }}
-                ></div>
-              ) : (
-                <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-gray-500">person</span>
-                </div>
-              )}
+              <div
+                className="w-10 h-10 rounded-full bg-gray-200 bg-cover bg-center ring-2 ring-offset-2 ring-transparent group-hover:ring-primary transition-all"
+                style={{ backgroundImage: `url('${getAvatarUrl(message.sender, 40, message.avatar)}')` }}
+              ></div>
               <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white dark:border-surface-dark rounded-full"></div>
             </div>
-            <div className="flex flex-col">
-              <h1 className="text-base font-bold leading-tight">{message.sender}</h1>
+            <div className="flex flex-col min-w-0 flex-1">
+              <h1 className="text-base font-bold leading-tight break-words">{message.sender}</h1>
               <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                 <span className="material-symbols-outlined text-[14px]">mail</span>
                 <span>Active via Email</span>
@@ -140,18 +135,12 @@ export default function ChatDetailPage() {
         {/* Scheduling Card (if message has scheduling card) */}
         {message.hasSchedulingCard && (
           <div className="flex items-start gap-3 group">
-            <div className="shrink-0 w-8 h-8 rounded-full bg-gray-200 bg-cover bg-center self-start">
-              {message.avatar ? (
-                <div
-                  className="w-full h-full rounded-full bg-cover bg-center"
-                  style={{ backgroundImage: `url('${message.avatar}')` }}
-                ></div>
-              ) : (
-                <div className="w-full h-full rounded-full bg-gray-300 dark:bg-gray-600"></div>
-              )}
-            </div>
-            <div className="flex flex-col items-start gap-1 max-w-[85%]">
-              <p className="text-slate-500 dark:text-slate-400 text-[11px] font-medium ml-1">{message.sender}</p>
+            <div 
+              className="shrink-0 w-8 h-8 rounded-full bg-gray-200 bg-cover bg-center self-start"
+              style={{ backgroundImage: `url('${getAvatarUrl(message.sender, 32, message.avatar)}')` }}
+            ></div>
+            <div className="flex flex-col items-start gap-1 max-w-[85%] min-w-0">
+              <p className="text-slate-500 dark:text-slate-400 text-[11px] font-medium ml-1 break-words">{message.sender}</p>
               <SchedulingPollCard
                 onVote={(slotId) => {
                   console.log("Voted for slot:", slotId);
@@ -164,20 +153,14 @@ export default function ChatDetailPage() {
         {/* Incoming Message + AI Analysis */}
         {!message.hasSchedulingCard && (
           <div className="flex items-end gap-3 group">
-            <div className="shrink-0 w-8 h-8 rounded-full bg-gray-200 bg-cover bg-center self-end mb-8">
-              {message.avatar ? (
-                <div
-                  className="w-full h-full rounded-full bg-cover bg-center"
-                  style={{ backgroundImage: `url('${message.avatar}')` }}
-                ></div>
-              ) : (
-                <div className="w-full h-full rounded-full bg-gray-300 dark:bg-gray-600"></div>
-              )}
-            </div>
-            <div className="flex flex-col items-start gap-2 max-w-[85%]">
+            <div 
+              className="shrink-0 w-8 h-8 rounded-full bg-gray-200 bg-cover bg-center self-end mb-8"
+              style={{ backgroundImage: `url('${getAvatarUrl(message.sender, 32, message.avatar)}')` }}
+            ></div>
+            <div className="flex flex-col items-start gap-2 max-w-[85%] min-w-0">
               {/* Message Bubble */}
-              <div className="bg-white dark:bg-surface-dark p-4 rounded-2xl rounded-bl-none shadow-sm border border-gray-100 dark:border-gray-800">
-                <p className="text-[15px] leading-relaxed text-slate-800 dark:text-slate-100">
+              <div className="bg-white dark:bg-surface-dark p-4 rounded-2xl rounded-bl-none shadow-sm border border-gray-100 dark:border-gray-800 min-w-0 w-full">
+                <p className="text-[15px] leading-relaxed text-slate-800 dark:text-slate-100 break-words">
                   {message.preview}
                 </p>
               </div>
@@ -240,7 +223,7 @@ export default function ChatDetailPage() {
             <button className="p-1.5 text-gray-400 hover:text-primary transition-colors shrink-0">
               <span className="material-symbols-outlined text-[20px]">add_circle</span>
             </button>
-            <div className="flex-1 py-1 relative">
+            <div className="flex-1 py-1 relative min-w-0">
               <input
                 className="w-full bg-transparent border-none p-0 text-[16px] text-slate-900 dark:text-white placeholder-gray-400 focus:ring-0 leading-normal"
                 placeholder="Message..."

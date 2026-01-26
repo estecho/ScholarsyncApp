@@ -36,9 +36,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-[100dvh]">
+      <body className="min-h-[100dvh] max-w-[100vw] overflow-x-hidden">
         <NavProvider>
-          <main className="pb-24">
+          <main className="pb-24 max-w-[100vw] overflow-x-hidden">
             {children}
           </main>
           <BottomNav />

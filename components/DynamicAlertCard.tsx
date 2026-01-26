@@ -138,7 +138,7 @@ export default function DynamicAlertCard({
               borderTopColor: triangleColor,
             }}
           ></div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0 flex-1">
             <div className="h-9 w-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
               <span
                 className={`material-symbols-outlined text-[20px] ${
@@ -148,9 +148,9 @@ export default function DynamicAlertCard({
                 directions_walk
               </span>
             </div>
-            <div>
-              <p className="font-bold text-sm leading-tight">{getText()}</p>
-              <p className="text-xs text-white/80 font-medium">for {location}</p>
+            <div className="min-w-0 flex-1">
+              <p className="font-bold text-sm leading-tight break-words">{getText()}</p>
+              <p className="text-xs text-white/80 font-medium break-words">for {location}</p>
             </div>
           </div>
           <div className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center">

@@ -52,11 +52,11 @@ export default function BottomNav() {
             transition={{ duration: 0.3 }}
             className="fixed bottom-0 z-50 w-full max-w-md glass-nav"
             style={{ 
-              maxWidth: '430px', 
+              maxWidth: 'min(430px, 100vw)', 
               paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))'
             }}
           >
-            <div className="flex items-end justify-between px-2 h-[75px]" style={{ width: '430px' }}>
+            <div className="flex items-end justify-between px-2 h-[75px] w-full">
               {/* Home */}
               <Link
                 href="/home"

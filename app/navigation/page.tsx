@@ -16,7 +16,7 @@ export default function NavigationPage() {
   const [isNavigating, setIsNavigating] = useState(false);
   
   const course = courseId ? getCourseById(courseId) : null;
-  const mapImage = course?.mapImage || "https://via.placeholder.com/400x600/1a202c/ffffff?text=Map";
+  const mapImage = course?.mapImage || "https://placehold.co/400x600/png?text=Map";
 
   const handleStartNavigation = () => {
     setIsNavigating(true);
@@ -69,16 +69,16 @@ export default function NavigationPage() {
             className="rounded-2xl bg-white dark:bg-[#1a2235] p-4 shadow-sm border border-gray-100 dark:border-gray-800"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-primary" style={{ fontSize: "24px" }}>
                   location_on
                 </span>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Destination</p>
-                <p className="text-base font-bold text-[#0d121b] dark:text-white">{destination}</p>
+                <p className="text-base font-bold text-[#0d121b] dark:text-white break-words">{destination}</p>
                 {course && (
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{course.title}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 break-words">{course.title}</p>
                 )}
               </div>
             </div>

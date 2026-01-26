@@ -1,5 +1,6 @@
 import { Message } from "@/constants/chat";
 import Link from "next/link";
+import { getAvatarUrl } from "@/lib/avatarUtils";
 
 interface MessageItemProps {
   message: Message;
@@ -8,15 +9,16 @@ interface MessageItemProps {
 export default function MessageItem({ message }: MessageItemProps) {
   const isEmail = message.type === "email";
   const isChat = message.type === "chat";
+  const avatarUrl = message.avatar ? getAvatarUrl(message.sender, 56, message.avatar) : null;
 
   return (
     <Link href={`/chat/${message.id}`}>
       <div className="group relative flex items-center gap-4 px-5 py-4 hover:bg-slate-50 dark:hover:bg-surface-dark/50 transition-colors cursor-pointer border-b border-slate-50 dark:border-slate-800/50 last:border-0">
         <div className="relative shrink-0">
-          {message.avatar ? (
+          {avatarUrl ? (
             <div
               className="h-14 w-14 rounded-full bg-cover bg-center shadow-sm"
-              style={{ backgroundImage: `url('${message.avatar}')` }}
+              style={{ backgroundImage: `url('${avatarUrl}')` }}
             ></div>
           ) : isChat ? (
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 shadow-sm">
@@ -43,9 +45,9 @@ export default function MessageItem({ message }: MessageItemProps) {
           )}
         </div>
         <div className="flex flex-1 flex-col min-w-0">
-          <div className="flex items-center justify-between mb-0.5">
-            <div className="flex items-center gap-2">
-              <p className="text-base font-semibold text-slate-900 dark:text-white truncate">{message.sender}</p>
+          <div className="flex items-center justify-between mb-0.5 min-w-0">
+            <div className="flex items-center gap-2 min-w-0 flex-1">
+              <p className="text-base font-semibold text-slate-900 dark:text-white truncate min-w-0">{message.sender}</p>
               {message.badge && (
                 <span
                   className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ring-1 ring-inset ${
@@ -81,7 +83,7 @@ export default function MessageItem({ message }: MessageItemProps) {
               </span>
             </div>
           ) : null}
-          <p className={`text-sm line-clamp-1 ${isChat && message.badge === "Summary Available" ? "text-slate-900 dark:text-slate-200 font-medium" : "text-slate-500 dark:text-slate-400"}`}>
+          <p className={`text-sm line-clamp-1 break-words ${isChat && message.badge === "Summary Available" ? "text-slate-900 dark:text-slate-200 font-medium" : "text-slate-500 dark:text-slate-400"}`}>
             {isChat && message.preview.includes(":") ? (
               <>
                 <span className="text-slate-500 font-normal">
