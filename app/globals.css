@@ -12,7 +12,7 @@
   html {
     max-width: 430px;
     width: 100%;
-    min-height: 852px;
+    min-height: 100dvh;
     margin: 0 auto;
     overflow-x: hidden;
   }
@@ -20,7 +20,6 @@
   body {
     @apply bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased;
     width: 100%;
-    min-height: 852px;
     margin: 0 auto;
     overflow-x: hidden;
   }

@@ -16,6 +16,7 @@ export const viewport: Viewport = {
   maximumScale: 1.0,
   minimumScale: 1.0,
   userScalable: false,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -28,16 +29,18 @@ export default function RootLayout({
       <head>
         <meta
           name="viewport"
-          content="width=430, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+          content="width=430, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="min-h-[100dvh]">
         <NavProvider>
-          {children}
+          <main className="pb-24">
+            {children}
+          </main>
           <BottomNav />
           <SearchOverlay />
           <PortalDebugScript />

@@ -50,10 +50,13 @@ export default function BottomNav() {
             initial={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-0 z-50 w-full max-w-md glass-nav pb-safe-bottom"
-            style={{ maxWidth: '430px', height: '75px' }}
+            className="fixed bottom-0 z-50 w-full max-w-md glass-nav"
+            style={{ 
+              maxWidth: '430px', 
+              paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))'
+            }}
           >
-            <div className="flex items-end justify-between px-2 h-[80px] pb-2" style={{ width: '430px', height: '75px' }}>
+            <div className="flex items-end justify-between px-2 h-[75px]" style={{ width: '430px' }}>
               {/* Home */}
               <Link
                 href="/home"
