@@ -13,6 +13,7 @@ import OmniPostModal from "@/components/campus/OmniPostModal";
 import { CampusItem, getInitialMode } from "@/types/campus";
 import { PanInfo } from "framer-motion";
 import { getCurrentUserAvatar } from "@/lib/avatarUtils";
+export const dynamic = "force-dynamic";
 
 export default function HomePage() {
   const searchParams = useSearchParams();

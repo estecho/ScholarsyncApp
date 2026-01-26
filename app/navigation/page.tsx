@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import BottomNav from "@/components/BottomNav";
 import { getCourseById } from "@/constants/courses";
+export const dynamic = "force-dynamic";
 
 export default function NavigationPage() {
   const router = useRouter();
