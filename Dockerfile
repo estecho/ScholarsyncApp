@@ -1,5 +1,5 @@
 # ---------------------------------------------------
-# 修复白屏版 Dockerfile
+# 修复白屏 404 终极版 Dockerfile
 # ---------------------------------------------------
 
 # 1. 使用 Node.js 18 镜像
@@ -21,15 +21,24 @@ COPY . .
 RUN npm run build
 
 # ==========================================
-# 👇 关键修复步骤在这里 👇
-# 手动把静态资源复制到 standalone 目录，否则浏览器找不到 JS 文件
+# 👇 核心修复逻辑 (严格执行) 👇
 # ==========================================
-RUN cp -r public .next/standalone/public || true
-RUN cp -r .next/static .next/standalone/.next/static || true
+
+# 第一步：必须先创建目标目录！(这是之前失败的原因)
+# -p 参数意味着如果父目录不存在，就顺便一起创建
+RUN mkdir -p .next/standalone/.next/static
+RUN mkdir -p .next/standalone/public
+
+# 第二步：复制静态资源
+# 我们去掉了 "|| true"，如果复制失败，构建会直接报错，方便排查
+RUN cp -r .next/static/* .next/standalone/.next/static/
+RUN cp -r public/* .next/standalone/public/
+
+# ==========================================
 
 # 7. 暴露端口
 EXPOSE 3000
 ENV PORT 3000
 
-# 8. 启动应用 (改为使用 standalone 模式启动，配合 next.config.js)
+# 8. 启动应用 (Standalone 模式)
 CMD ["node", ".next/standalone/server.js"]
